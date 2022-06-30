@@ -1,6 +1,6 @@
 import { Box, Divider } from '@mui/material';
 import { ReactNode } from 'react';
-import { AppTypography } from '../../base/AppTypography';
+import { AppTypography } from '../../../base/AppTypography';
 
 export function SectionHeader({ children }: { children: ReactNode }) {
     return (

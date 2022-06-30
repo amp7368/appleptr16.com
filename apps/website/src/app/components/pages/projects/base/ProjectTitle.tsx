@@ -1,4 +1,4 @@
-import { AppTypography } from '../../base/AppTypography';
+import { AppTypography } from '../../../base/AppTypography';
 
 export interface ProjectTitleProps {
     title: string;

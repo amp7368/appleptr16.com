@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material';
 import { useState } from 'react';
 
-import { Page } from '../common/Page';
+import { Page } from '../../common/Page';
 import { Project } from './Project';
 import { ProjectsFilter } from './ProjectsFilter';
 import { useProjects } from './projectStore';

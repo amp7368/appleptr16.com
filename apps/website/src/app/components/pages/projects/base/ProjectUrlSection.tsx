@@ -1,9 +1,9 @@
 import { Button, ImageList, ImageListItem } from '@mui/material';
 import { ReactNode } from 'react';
 
-import { AppTypography } from '../../base/AppTypography';
+import { AppTypography } from '../../../base/AppTypography';
 import { SectionHeader } from '../common/SectionHeader';
-import { ProjectUrl } from '../../types/ProjectTypes';
+import { ProjectUrl } from '../../../types/ProjectTypes';
 
 export interface ProjectUrlsProps {
     urls?: Record<string, ProjectUrl>;

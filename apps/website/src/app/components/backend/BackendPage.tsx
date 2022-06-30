@@ -5,7 +5,7 @@ import { AppPaper } from '../base/AppPaper';
 import { AppTypography } from '../base/AppTypography';
 import { AppHeader } from '../common/AppHeader';
 import { Page } from '../common/Page';
-import { SectionHeader } from '../projects/common/SectionHeader';
+import { SectionHeader } from '../pages/projects/common/SectionHeader';
 interface SubDomainProps {
     name: string;
     newSubdomain: string;

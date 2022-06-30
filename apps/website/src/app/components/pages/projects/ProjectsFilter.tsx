@@ -15,8 +15,8 @@ import {
     orderByValues,
     setUIOrderBy,
     useUIOrderDirection,
-} from '../../elf/ui/UI.repository';
-import { AppTypography } from '../base/AppTypography';
+} from '../../../elf/ui/UI.repository';
+import { AppTypography } from '../../base/AppTypography';
 
 export function ProjectsFilter({ uiId }: { uiId: string }) {
     const orderAsc = useUIOrderDirection(uiId);

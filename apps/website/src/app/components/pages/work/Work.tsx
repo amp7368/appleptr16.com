@@ -1,11 +1,11 @@
 import { AddCircle } from '@mui/icons-material';
 import { Divider, Stack } from '@mui/material';
 
-import { AppPaper } from '../base/AppPaper';
-import { DatesDisplay } from '../common/DatesDisplay';
-import { SummaryDisplay } from '../common/ProjectSummary';
-import { ToolsDisplay } from '../common/ToolsDisplay';
-import { WorkProps } from '../types/WorkTypes';
+import { AppPaper } from '../../base/AppPaper';
+import { DatesDisplay } from '../../common/DatesDisplay';
+import { SummaryDisplay } from '../../common/ProjectSummary';
+import { ToolsDisplay } from '../../common/ToolsDisplay';
+import { WorkProps } from '../../types/WorkTypes';
 import { WorkTitle } from './base/WorkTitle';
 
 export function Work(props: WorkProps) {

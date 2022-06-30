@@ -1,5 +1,5 @@
 import { Stack } from '@mui/material';
-import { AppTypography } from '../../base/AppTypography';
+import { AppTypography } from '../../../base/AppTypography';
 
 export interface WorkTitleProps {
     company: string;

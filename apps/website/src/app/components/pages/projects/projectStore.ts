@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
-import { useUIOrderBy, useUIOrderDirection } from '../../elf/ui/UI.repository';
+import { useUIOrderBy, useUIOrderDirection } from '../../../elf/ui/UI.repository';
 import { fixData, relativeRating } from './projectFixData';
-import projectsRaw from '../database/projects.json';
-import { ProjectProps, ProjectRawData } from '../types/ProjectTypes';
+import projectsRaw from '../../database/projects.json';
+import { ProjectProps, ProjectRawData } from '../../types/ProjectTypes';
 
 const rawData: ProjectRawData[] = Object.values<ProjectRawData>(
     projectsRaw as any

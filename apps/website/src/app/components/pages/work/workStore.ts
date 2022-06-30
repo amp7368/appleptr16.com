@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
-import { useUIOrderBy, useUIOrderDirection } from '../../elf/ui/UI.repository';
-import worksRaw from '../database/work.json';
-import { fixDates, getDuration } from '../types/fixDates';
-import { WorkProps, WorkRawData } from '../types/WorkTypes';
+import { useUIOrderBy, useUIOrderDirection } from '../../../elf/ui/UI.repository';
+import worksRaw from '../../database/work.json';
+import { fixDates, getDuration } from '../../types/fixDates';
+import { WorkProps, WorkRawData } from '../../types/WorkTypes';
 
 const rawData: WorkRawData[] = Object.values<WorkRawData>(worksRaw as any);
 function sortFromExtract<P, T>(extractFn: (p: P) => T) {

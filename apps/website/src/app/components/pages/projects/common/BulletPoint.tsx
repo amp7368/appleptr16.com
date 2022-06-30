@@ -2,7 +2,7 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 import { Stack, useTheme } from '@mui/material';
 import { ReactNode } from 'react';
 
-import { AppTypography } from '../../base/AppTypography';
+import { AppTypography } from '../../../base/AppTypography';
 
 export function Bulletpoint({ children }: { children: ReactNode }) {
     const fontSize = useTheme().typography.body2.fontSize;

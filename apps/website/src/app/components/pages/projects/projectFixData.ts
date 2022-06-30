@@ -1,8 +1,8 @@
 import { Optional } from '@appleptr16/utilities';
 
-import { DateRangePropsWithBreaks } from '../types/DateTypes';
-import { fixDates, getDuration } from '../types/fixDates';
-import { ProjectProps, ProjectRawData } from '../types/ProjectTypes';
+import { DateRangePropsWithBreaks } from '../../types/DateTypes';
+import { fixDates, getDuration } from '../../types/fixDates';
+import { ProjectProps, ProjectRawData } from '../../types/ProjectTypes';
 
 export function fixData(raw: ProjectRawData): ProjectProps {
     const dates = fixDates(raw.dates);

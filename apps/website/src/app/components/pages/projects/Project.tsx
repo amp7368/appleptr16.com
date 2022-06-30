@@ -2,14 +2,14 @@ import { AddCircle } from '@mui/icons-material';
 import { Divider, Stack } from '@mui/material';
 import { ReactNode } from 'react';
 
-import { AppPaper } from '../base/AppPaper';
-import { DatesDisplay } from '../common/DatesDisplay';
+import { AppPaper } from '../../base/AppPaper';
+import { DatesDisplay } from '../../common/DatesDisplay';
 import { ProjectRating } from './base/ProjectRating';
-import { SummaryDisplay } from '../common/ProjectSummary';
+import { SummaryDisplay } from '../../common/ProjectSummary';
 import { ProjectTitle } from './base/ProjectTitle';
-import { ToolsDisplay } from '../common/ToolsDisplay';
+import { ToolsDisplay } from '../../common/ToolsDisplay';
 import { ProjectUrlSection } from './base/ProjectUrlSection';
-import { ProjectProps } from '../types/ProjectTypes';
+import { ProjectProps } from '../../types/ProjectTypes';
 
 export function Project(props: ProjectProps) {
     return (

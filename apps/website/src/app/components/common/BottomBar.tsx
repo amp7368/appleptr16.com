@@ -3,7 +3,7 @@ import { AppBar, Box, Divider, Link, Stack, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
 import { ReactNode } from 'react';
 import { AppTypography } from '../base/AppTypography';
-import { SectionHeader } from '../projects/common/SectionHeader';
+import { SectionHeader } from '../pages/projects/common/SectionHeader';
 
 import { Logo } from './Logo';
 
@@ -49,6 +49,7 @@ export function BottomBar() {
                     spacing={1}
                     alignItems="start"
                     direction="column"
+                    padding={3}
                 >
                     <Divider variant="fullWidth" flexItem>
                         <AppTypography variant="h4">Contact</AppTypography>

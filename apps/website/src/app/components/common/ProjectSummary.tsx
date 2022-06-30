@@ -1,8 +1,8 @@
 import { Stack } from '@mui/material';
 import { ReactNode } from 'react';
 
-import { Bulletpoint } from '../projects/common/BulletPoint';
-import { SectionHeader } from '../projects/common/SectionHeader';
+import { Bulletpoint } from '../pages/projects/common/BulletPoint';
+import { SectionHeader } from '../pages/projects/common/SectionHeader';
 
 export interface SummaryDisplayProps {
     summary: string[];
