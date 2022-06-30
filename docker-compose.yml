@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+    nginx:
+        restart: unless-stopped
+        container_name: ${COMPOSE_NAME}.nginx
+        image: ${COMPOSE_NAME}/nginx
+        build:
+            context: .
+            dockerfile: ./apps/nginx/Dockerfile
+            args:
+                - NGINX_VERSION=${NGINX_VERSION}
+                - WORKINGDIR=${WORKINGDIR}
+                - COMPOSE_NAME=${COMPOSE_NAME}
+                - BASE_IMAGE=${BASE_IMAGE}
+        networks:
+            - 'appleptr16'
+        environment:
+            - WORKINGDIR=${WORKINGDIR}
+            - AMBROSIA_DOMAIN=${AMBROSIA_DOMAIN}
+            - AMBROSIA_IMAGE=${AMBROSIA_IMAGE}
+            - AMBROSIA_LOANS_DOMAIN=${AMBROSIA_LOANS_DOMAIN}
+            - AMBROSIA_LOANS_IMAGE=${AMBROSIA_LOANS_IMAGE}
+            - HOST_DOMAIN=${HOST_DOMAIN}
+            - HOST_IMAGE=${HOST_IMAGE}
+            - REGISTRY_DOMAIN=${REGISTRY_DOMAIN}
+            - REGISTRY_IMAGE=${REGISTRY_IMAGE}
+            - REPOSILITE_IMAGE=${REPOSILITE_IMAGE}
+            - REPOSILITE_DOMAIN=${REPOSILITE_DOMAIN}
+            - NGINX_PORT=${NGINX_PORT}
+            - HTTPS_PORT=${HTTPS_PORT}
+        ports:
+            - '${HTTPS_PORT}:${HTTPS_PORT}'
+networks:
+    appleptr16:
+        name: appleptr16

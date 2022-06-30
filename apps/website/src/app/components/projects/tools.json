@@ -1,0 +1,24 @@
+{
+    "IntelliJ": {
+        "comments": ["Used as an IDE", "Used to commit to Github"],
+        "tags": ["ENVIRONMENT"]
+    },
+    "VSCode": {
+        "tags": ["ENVIRONMENT"]
+    },
+    "Github": {
+        "comments": [],
+        "tags": ["UTILITY"]
+    },
+    "SourceTree": {},
+    "PaperMC": {},
+    "JDA": {},
+    "React": {},
+    "Typescript": {},
+    "@mui/material": {},
+    "@ngneat/elf": {},
+    "NX": {},
+    "Firebase": {},
+    "Docker": {},
+    "TesseractJS": {}
+}
