@@ -1,13 +1,12 @@
-import { Box, Divider, Stack, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 
 import img from '../../../assets/common/Logo.jpeg';
 import { urls } from '../../util/routes';
-import { AppTypography } from '../base/AppTypography';
 
 export function Logo() {
     return (
         <Box height="4rem" width="7.5rem">
-            <a href={urls.home}>
+            <a href={urls.egg}>
                 <img
                     src={img}
                     alt="applept16 Logo"

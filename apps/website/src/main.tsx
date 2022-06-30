@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 
 import { ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { Box, CssBaseline, Stack } from '@mui/material';
 import { StrictMode } from 'react';
 import { render } from 'react-dom';
 
@@ -10,13 +10,23 @@ import { defaultTheme } from './app/util/appTheme';
 import { enableElfProdMode } from '@ngneat/elf';
 import { environment } from './environments/environment';
 import { AppHeader } from './app/components/common/AppHeader';
+import { BottomBar } from './app/components/common/BottomBar';
 
 render(
     <StrictMode>
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <AppHeader />
-            <App />
+            <Stack
+                direction="column"
+                justifyContent="space-between"
+                minHeight="100vh"
+            >
+                <>
+                    <AppHeader />
+                    <App />
+                </>
+                <BottomBar />
+            </Stack>
         </ThemeProvider>
     </StrictMode>,
     document.getElementById('root')

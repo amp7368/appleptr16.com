@@ -1,4 +1,15 @@
-import { Box, AppBar, Button, Divider, Stack, useTheme } from '@mui/material';
+import {
+    Box,
+    AppBar,
+    Button,
+    Divider,
+    Stack,
+    useTheme,
+    Link,
+    useScrollTrigger,
+    Slide,
+} from '@mui/material';
+import { ReactNode } from 'react';
 
 import { urls } from '../../util/routes';
 import { AppTypography } from '../base/AppTypography';
@@ -9,9 +20,13 @@ interface AppLinkProps {
     title: string;
 }
 function AppLink(props: AppLinkProps) {
+    const color =
+        location.pathname === props.route
+            ? 'secondary'
+            : 'primary.contrastText';
     return (
         <Button variant="text" color="secondary" href={props.route}>
-            <AppTypography color="primary.contrastText" variant="h4">
+            <AppTypography color={color} variant="h4">
                 {props.title}
             </AppTypography>
         </Button>
@@ -21,7 +36,7 @@ function AppLink(props: AppLinkProps) {
 export function AppHeader() {
     const appBarColor = '#333333';
     return (
-        <Stack direction="column">
+        <Stack>
             <AppBar
                 position="static"
                 sx={{
@@ -47,7 +62,6 @@ export function AppHeader() {
                     >
                         <AppLink route={urls.work} title="Work" />
                         <AppLink route={urls.projects} title="Projects" />
-                        <AppLink route={urls.contact} title="Contact" />
                         <AppLink route={urls.backend} title="Portal" />
                     </Stack>
                 </Stack>
@@ -61,17 +75,22 @@ export function AppHeader() {
                 sx={{ transform: 'perspective(10px) rotateX(-1deg)' }}
                 paddingLeft="2.5rem"
                 paddingRight="2.5rem"
+                paddingBottom={1}
                 marginLeft="7.5rem"
             >
-                <AppTypography
-                    fontWeight={500}
-                    sx={{ transform: 'perspective(10px) rotateX(1deg)' }}
-                    color="text.primary"
-                    variant="h3"
-                    noWrap
-                >
-                    Aaron Peterham
-                </AppTypography>
+                <Link href={urls.home} color="secondary">
+                    <AppTypography
+                        fontWeight={500}
+                        sx={{
+                            transform: 'perspective(10px) rotateX(1deg)',
+                        }}
+                        color="text.primary"
+                        variant="h3"
+                        noWrap
+                    >
+                        Aaron Peterham
+                    </AppTypography>
+                </Link>
             </Box>
         </Stack>
     );
