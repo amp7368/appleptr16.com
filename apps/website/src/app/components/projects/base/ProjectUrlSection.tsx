@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 
 import { AppTypography } from '../../base/AppTypography';
 import { SectionHeader } from '../common/SectionHeader';
-import { ProjectUrl } from '../ProjectTypes';
+import { ProjectUrl } from '../../types/ProjectTypes';
 
 export interface ProjectUrlsProps {
     urls?: Record<string, ProjectUrl>;

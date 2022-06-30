@@ -1,12 +1,12 @@
 import { Button, Stack } from '@mui/material';
 
-import { AppTypography } from '../../base/AppTypography';
-import { ProjectTool, ProjectToolNotes } from '../ProjectTypes';
+import { AppTypography } from '../base/AppTypography';
+import { Tool, ToolNotes } from '../types/ToolTypes';
 
-export interface ProjectToolsProps {
-    tools: Record<string, ProjectToolNotes | ProjectTool>;
+export interface ToolsProps {
+    tools: Record<string, ToolNotes | Tool>;
 }
-export function ProjectTools({ tools }: ProjectToolsProps) {
+export function ToolsDisplay({ tools }: ToolsProps) {
     return (
         <Stack direction="column" spacing={1} justifyContent="flex-end">
             {Object.entries(tools).map(([id, tool]) => (

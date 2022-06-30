@@ -1,17 +1,15 @@
-import { Divider, Rating, Stack } from '@mui/material';
+import { AddCircle } from '@mui/icons-material';
+import { Divider, Stack } from '@mui/material';
 import { ReactNode } from 'react';
 
 import { AppPaper } from '../base/AppPaper';
-import { AppTypography } from '../base/AppTypography';
-import { ProjectSummary } from './base/ProjectSummary';
-import { ProjectTitle } from './base/ProjectTitle';
-import { ProjectTools } from './base/ProjectTools';
-import { ProjectProps } from './ProjectTypes';
-import { ProjectUrlSection } from './base/ProjectUrlSection';
-import { SectionHeader } from './common/SectionHeader';
-import { Add, AddCircle } from '@mui/icons-material';
+import { DatesDisplay } from '../common/DatesDisplay';
 import { ProjectRating } from './base/ProjectRating';
-import { ProjectDates } from './base/ProjectDates';
+import { SummaryDisplay } from '../common/ProjectSummary';
+import { ProjectTitle } from './base/ProjectTitle';
+import { ToolsDisplay } from '../common/ToolsDisplay';
+import { ProjectUrlSection } from './base/ProjectUrlSection';
+import { ProjectProps } from '../types/ProjectTypes';
 
 export function Project(props: ProjectProps) {
     return (
@@ -32,10 +30,10 @@ export function Project(props: ProjectProps) {
                     direction="column"
                 >
                     <ProjectTitle title={props.title} />
-                    <ProjectTools tools={props.tools} />
+                    <ToolsDisplay tools={props.tools} />
                 </Stack>
                 <Stack maxWidth="35rem" direction="column">
-                    <ProjectSummary
+                    <SummaryDisplay
                         summary={props.summary}
                         comments={props.comments}
                     />
@@ -62,9 +60,9 @@ export function Project(props: ProjectProps) {
                         icon={<AddCircle />}
                         value={props.ratingRelative.duration}
                     >
-                        <ProjectDates
+                        <DatesDisplay
                             {...props.dates}
-                            rating={props.ratingRaw}
+                            duration={props.duration}
                         />
                     </ProjectRating>
                 </Stack>
