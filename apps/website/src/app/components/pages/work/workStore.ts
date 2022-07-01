@@ -1,6 +1,9 @@
 import { useMemo } from 'react';
 
-import { useUIOrderBy, useUIOrderDirection } from '../../../elf/ui/UI.repository';
+import {
+    useUIOrderBy,
+    useUIOrderDirection,
+} from '../../../elf/ui/UI.repository';
 import worksRaw from '../../database/work.json';
 import { fixDates, getDuration } from '../../types/fixDates';
 import { WorkProps, WorkRawData } from '../../types/WorkTypes';

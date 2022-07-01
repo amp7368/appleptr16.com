@@ -7,7 +7,7 @@ import { DatesDisplay } from '../../common/DatesDisplay';
 import { ProjectRating } from './base/ProjectRating';
 import { SummaryDisplay } from '../../common/ProjectSummary';
 import { ProjectTitle } from './base/ProjectTitle';
-import { ToolsDisplay } from '../../common/ToolsDisplay';
+import { ToolsDisplayList } from '../../common/ToolsDisplayList';
 import { ProjectUrlSection } from './base/ProjectUrlSection';
 import { ProjectProps } from '../../types/ProjectTypes';
 
@@ -30,7 +30,7 @@ export function Project(props: ProjectProps) {
                     direction="column"
                 >
                     <ProjectTitle title={props.title} />
-                    <ToolsDisplay tools={props.tools} />
+                    <ToolsDisplayList toolIds={props.tools} />
                 </Stack>
                 <Stack maxWidth="35rem" direction="column">
                     <SummaryDisplay

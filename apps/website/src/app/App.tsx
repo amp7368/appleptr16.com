@@ -4,6 +4,7 @@ import { EggPage } from './components/pages/egg/EggPage';
 
 import { OverviewPage } from './components/pages/overview/OverviewPage';
 import { ProjectsPage } from './components/pages/projects/ProjectsPage';
+import { ToolsPage } from './components/pages/tools/ToolsPage';
 import { WorkPage } from './components/pages/work/WorkPage';
 import { urls } from './util/routes';
 
@@ -15,6 +16,7 @@ export function App() {
                 <Route path={urls.egg} element={<EggPage />} />
                 <Route path={urls.work} element={<WorkPage />} />
                 <Route path={urls.projects} element={<ProjectsPage />} />
+                <Route path={urls.tools} element={<ToolsPage />} />
                 <Route path={urls.backend} element={<BackendPage />} />
             </Routes>
         </BrowserRouter>

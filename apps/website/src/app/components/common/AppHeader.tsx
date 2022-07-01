@@ -1,15 +1,4 @@
-import {
-    Box,
-    AppBar,
-    Button,
-    Divider,
-    Stack,
-    useTheme,
-    Link,
-    useScrollTrigger,
-    Slide,
-} from '@mui/material';
-import { ReactNode } from 'react';
+import { AppBar, Box, Button, Divider, Link, Stack } from '@mui/material';
 
 import { urls } from '../../util/routes';
 import { AppTypography } from '../base/AppTypography';
@@ -60,8 +49,9 @@ export function AppHeader() {
                             />
                         }
                     >
-                        <AppLink route={urls.work} title="Work" />
                         <AppLink route={urls.projects} title="Projects" />
+                        <AppLink route={urls.work} title="Work" />
+                        <AppLink route={urls.tools} title="Tools" />
                         <AppLink route={urls.backend} title="Portal" />
                     </Stack>
                 </Stack>
