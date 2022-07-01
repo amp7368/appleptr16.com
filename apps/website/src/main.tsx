@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 
 import { ThemeProvider } from '@emotion/react';
-import { Box, CssBaseline, Stack } from '@mui/material';
+import { Box, Container, CssBaseline, Stack } from '@mui/material';
 import { StrictMode } from 'react';
 import { render } from 'react-dom';
 
@@ -21,10 +21,10 @@ render(
                 justifyContent="space-between"
                 minHeight="100vh"
             >
-                <>
+                <Box>
                     <AppHeader />
                     <App />
-                </>
+                </Box>
                 <BottomBar />
             </Stack>
         </ThemeProvider>

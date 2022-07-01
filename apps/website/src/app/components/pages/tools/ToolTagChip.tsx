@@ -15,7 +15,15 @@ export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
         );
     return (
         <Chip
-            label={toolTag}
+            label={
+                <AppTypography
+                    variant="h6"
+                    color={active ? 'default' : 'secondary'}
+                    fontWeight={500}
+                >
+                    {toolTag}
+                </AppTypography>
+            }
             onClick={() => setUIToolFilter('toolTags', (tags) => [toolTag])}
             onDelete={active ? onDelete : undefined}
             color={active ? 'secondary' : 'default'}

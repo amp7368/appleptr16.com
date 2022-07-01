@@ -25,7 +25,7 @@ function AppLink(props: AppLinkProps) {
 export function AppHeader() {
     const appBarColor = '#333333';
     return (
-        <Stack>
+        <Stack marginBottom={3}>
             <AppBar
                 position="static"
                 sx={{

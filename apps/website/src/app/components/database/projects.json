@@ -51,7 +51,7 @@
         },
         "title": "BuildBot",
         "urls": {
-            "Github": "https://github.com/amp7368/BuildBot"
+            "Github": { "link": "https://github.com/amp7368/BuildBot" }
         },
         "dates": {
             "dateApproximation": "DAY",
@@ -81,7 +81,7 @@
         },
         "title": "Excursion",
         "urls": {
-            "Github": "https://github.com/amp7368/Excursion"
+            "Github": { "link": "https://github.com/amp7368/Excursion" }
         },
         "dates": {
             "dateApproximation": "MONTH",
@@ -111,7 +111,7 @@
         },
         "title": "MAllyene",
         "urls": {
-            "Github": "https://mallyene.web.app"
+            "Github": { "link": "https://mallyene.web.app" }
         },
         "dates": {
             "dateApproximation": "DAY",
@@ -144,7 +144,7 @@
         },
         "title": "Ambrosia Loans",
         "urls": {
-            "Github": "https://github.com/amp7368/AmbrosiaLoans"
+            "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" }
         },
         "dates": {
             "dateApproximation": "DAY",
@@ -175,7 +175,9 @@
         },
         "title": "Ambrosia Marketplace",
         "urls": {
-            "Github": "https://github.com/amp7368/AmbrosiaMarketplace"
+            "Github": {
+                "link": "https://github.com/amp7368/AmbrosiaMarketplace"
+            }
         },
         "dates": {
             "dateApproximation": "DAY",

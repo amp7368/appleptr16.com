@@ -33,7 +33,6 @@ export function relativeRating(projects: ProjectProps[]): ProjectProps[] {
             if (minVal === undefined || ratingVal < minVal) minVal = ratingVal;
             if (maxVal === undefined || ratingVal > maxVal) maxVal = ratingVal;
         }
-        console.log(`min ${minVal} max ${maxVal}`);
         if (minVal === undefined || maxVal === undefined)
             [minVal, maxVal] = [0, 10];
         if (minVal === maxVal) [minVal, maxVal] = [minVal - 5, minVal + 5];

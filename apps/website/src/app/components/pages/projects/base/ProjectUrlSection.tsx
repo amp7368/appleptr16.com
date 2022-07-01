@@ -20,6 +20,8 @@ export function ProjectUrlSection({ urls }: ProjectUrlsProps) {
                             variant="outlined"
                             size="small"
                             color="secondary"
+                            href={url.link}
+                            LinkComponent={'a'}
                         >
                             <AppTypography
                                 noWrap
