@@ -10,7 +10,12 @@ export interface PageProps {
 }
 export function Page(props: PageProps) {
     return (
-        <Stack direction="column" alignItems="center">
+        <Stack
+            direction="column"
+            alignItems="center"
+            justifyContent="start"
+            spacing={5}
+        >
             <Container>
                 <Stack direction="row" justifyContent="space-around">
                     <AppTypography
@@ -23,7 +28,6 @@ export function Page(props: PageProps) {
                     {props.filter}
                 </Stack>
             </Container>
-            <br />
             {props.children}
         </Stack>
     );

@@ -1,25 +1,74 @@
 {
     "IntelliJ": {
-        "comments": ["Used as an IDE", "Used to commit to Github"],
-        "tags": ["ENVIRONMENT"]
+        "comments": ["I use for Java development"],
+        "tags": ["IDE"]
     },
     "VSCode": {
-        "tags": ["ENVIRONMENT"]
+        "comments": ["I use for development in languages besides Java"],
+        "tags": ["IDE"]
     },
     "Github": {
-        "comments": [],
+        "comments": [
+            "I use github most of the time. I find it much more useful when working on projects in teams"
+        ],
         "tags": ["UTILITY"]
     },
-    "SourceTree": {},
-    "PaperMC": {},
-    "JDA": {},
-    "React": {},
-    "Typescript": {},
-    "@mui/material": {},
-    "@ngneat/elf": {},
-    "NX": {},
-    "Firebase": {},
-    "Docker": {},
-    "TesseractJS": {},
-    "Java": {}
+    "SourceTree": {
+        "comments": [
+            "SourceTree is epic for visualizing git progress and managing commits"
+        ],
+        "tags": ["UTILITY"]
+    },
+    "PaperMC": {
+        "comments": [
+            "Used to develop plugins for minecraft servers that are hosted using Paper",
+            "Paper adds some utilities for controlling almost anything in a server through code"
+        ],
+        "tags": ["LIBRARY"]
+    },
+    "JDA": {
+        "comments": ["A java library to make Discord bots"],
+        "tags": ["LIBRARY"]
+    },
+    "React": {
+        "comments": ["It's not a language, but practically it is"],
+        "tags": ["LANGUAGE"]
+    },
+    "Typescript": {
+        "comments": ["A typed version of JavaScript"],
+        "tags": ["LANGUAGE"]
+    },
+    "@mui/material": {
+        "comments": [
+            "A react library for styling and building React components"
+        ],
+        "tags": ["LIBRARY"]
+    },
+    "@ngneat/elf": {
+        "comments": [
+            "\"A Reactive Store with Magical Powers\"",
+            "Useful for managing state in react"
+        ],
+        "tags": ["LIBRARY"]
+    },
+    "NX": {
+        "comments": [],
+        "tags": ["ENVIRONMENT"]
+    },
+    "Firebase": {
+        "comments": [],
+        "tags": ["ENVIRONMENT"]
+    },
+    "Docker": {
+        "comments": [""],
+        "tags": ["ENVIRONMENT"]
+    },
+    "TesseractJS": {
+        "comments": ["A trained/trainable AI to recognize text in images"],
+        "tags": ["LIBRARY"]
+    },
+    "Java": {
+        "comments": [""],
+        "tags": ["LANGUAGE"]
+    }
 }
