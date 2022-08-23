@@ -3,13 +3,7 @@ services:
     website:
         restart: unless-stopped
         container_name: ${COMPOSE_NAME}.${APPLEPTR16_IMAGE}
-        image: ${COMPOSE_NAME}/${APPLEPTR16_IMAGE}
-        build:
-            context: .
-            dockerfile: ./apps/website/Dockerfile
-            args:
-                - NGINX_VERSION=${NGINX_VERSION}
-                - NODE_VERSION=${NODE_VERSION}
+        image: docker.appleptr16.com/${COMPOSE_NAME}/${APPLEPTR16_IMAGE}
         environment:
             - NGINX_PORT=${NGINX_PORT}
         networks:

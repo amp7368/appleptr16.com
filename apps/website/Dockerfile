@@ -1,16 +1,23 @@
-ARG COMPOSE_NAME
-ARG BASE_IMAGE
+ARG NODE_VERSION
 ARG NGINX_VERSION
 
-FROM ${COMPOSE_NAME}/${BASE_IMAGE} as base
+FROM ${NODE_VERSION} as base
+WORKDIR /base
+
+COPY ./package*.json ./
+RUN npm install 
+
+COPY ./nx.json ./
+COPY ./workspace.json ./
+COPY ./apps ./apps
+COPY ./libs ./libs
+COPY ./tsconfig* ./
+COPY ./babel* ./
+
+RUN npx nx run-many --target=build --configuration=remote --all=true
+RUN npm prune --production 
+
 FROM ${NGINX_VERSION} as servestage
-ARG WORKINGDIR
-WORKDIR ${WORKINGDIR}
-ENV PROJECT_DIR ./apps/website
-
-# COPY --from=base /base/node_modules ./node_modules
-# COPY --from=base /base/dist/libs ./dist/libs
-COPY --from=base /base/dist/${PROJECT_DIR} ./dist/${PROJECT_DIR}
-
+COPY --from=base /base/dist/apps/website /dist/apps/website
 RUN rm /etc/nginx/conf.d/default.conf
-COPY ${PROJECT_DIR}/*.template  /etc/nginx/templates/
+COPY ./apps/website/*.template  /etc/nginx/templates/

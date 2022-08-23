@@ -1,8 +1,7 @@
 import { useObservableMemo } from '@appleptr16/elemental';
 import { Optional } from '@appleptr16/utilities';
-import { createStore, isFunction } from '@ngneat/elf';
+import { createStore } from '@ngneat/elf';
 import {
-    addEntities,
     selectEntities,
     selectEntity,
     UIEntitiesRef,
@@ -12,6 +11,7 @@ import {
 } from '@ngneat/elf-entities';
 import { Tool, ToolTag, ToolValue } from '../../components/types/ToolTypes';
 import toolsJson from '../../components/database/tools.json';
+import { persistStore } from '../Elf';
 type UIEnv = {
     id: string;
     toolTags: ToolTag[];
@@ -31,6 +31,7 @@ export const uiStore = createStore(
         initialValue: [],
     })
 );
+persistStore(uiStore);
 const defaultEntity: Omit<UIEnv, 'id'> = { toolTags: [], active: undefined };
 const uiId = 'uiId';
 export function setUIToolFilter<Key extends EnvKey>(
