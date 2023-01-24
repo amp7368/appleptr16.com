@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { BackendPage } from './components/backend/BackendPage';
+import { AboutYouPage } from './components/pages/about-you/AboutYouPage';
 import { EggPage } from './components/pages/egg/EggPage';
 
 import { OverviewPage } from './components/pages/overview/OverviewPage';
@@ -17,6 +18,7 @@ export function App() {
                 <Route path={urls.work} element={<WorkPage />} />
                 <Route path={urls.projects} element={<ProjectsPage />} />
                 <Route path={urls.tools} element={<ToolsPage />} />
+                <Route path={urls.you} element={<AboutYouPage />} />
                 <Route path={urls.backend} element={<BackendPage />} />
             </Routes>
         </BrowserRouter>

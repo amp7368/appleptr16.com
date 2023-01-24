@@ -3,6 +3,7 @@ export const urls = {
     egg: '/egg',
     projects: '/projects',
     tools: '/tools',
+    you: '/you',
     backend: '/backend',
     work: '/work',
 };

@@ -22,9 +22,9 @@ export const defaultThemeOptions: ThemeOptions = {
             secondary: '#649c3a',
         },
         divider: '#649c3a',
-        grey: { [500]: '#333333' },
     },
 };
+export const appBarColor = '#333333';
 export const defaultTheme = createTheme(defaultThemeOptions);
 
 const element = document.getElementById('root');
