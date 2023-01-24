@@ -22,7 +22,7 @@ export function ToolsPage() {
             title="Tools"
             filter={
                 <Stack
-                    border={2}
+                    border={1}
                     borderRadius="5px"
                     borderColor="secondary.main"
                     direction="row"

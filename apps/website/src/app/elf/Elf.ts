@@ -1,7 +1,7 @@
 import { getRegistry, Store } from '@ngneat/elf';
 import { localStorageStrategy, persistState } from '@ngneat/elf-persist-state';
 
-export function persistStore(store: Store) {
+export function persist(store: Store) {
     persistState(store, { storage: localStorageStrategy });
 }
 export function resetStores() {

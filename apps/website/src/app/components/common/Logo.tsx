@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Link } from '@mui/material';
 
 import img from '../../../assets/common/Logo.jpeg';
 import { urls } from '../../util/routes';
@@ -6,7 +6,7 @@ import { urls } from '../../util/routes';
 export function Logo() {
     return (
         <Box height="4rem" width="7.5rem">
-            <a href={urls.egg}>
+            <Link href={urls.egg} color="inherit">
                 <img
                     src={img}
                     alt="applept16 Logo"
@@ -22,7 +22,7 @@ export function Logo() {
                         borderColor: 'primary',
                     }}
                 />
-            </a>
+            </Link>
         </Box>
     );
 }

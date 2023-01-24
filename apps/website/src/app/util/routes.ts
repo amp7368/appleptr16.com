@@ -7,6 +7,6 @@ export const urls = {
     work: '/work',
 };
 export const nav = {};
-export function navPathTo(url: string) {
-    location.pathname = url;
+export function navTo(url: string) {
+    window.location.href = url;
 }

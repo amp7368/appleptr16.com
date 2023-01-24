@@ -40,12 +40,12 @@
         },
         "comments": [
             "I really grew as a programmer with this project more than any other to date.",
-            "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for tomorrow."
+            "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for the next project."
         ]
     },
     "BuildBot": {
         "ratingRaw": {
-            "impact": 3.0,
+            "impact": 5.0,
             "difficulty": 5.0,
             "size": 2.0
         },
@@ -60,7 +60,7 @@
         },
         "summary": [
             "Developed a tool to generate combinations of gear in Wynncraft that would satisfy constraints set by the user",
-            "There were ~31 sextillion combinations of gear (weapons and armor). To overcome this scale of data, I used a layered sieve to filter out large swaths of possibilites."
+            "There were ~31 sextillion combinations of gear. To overcome this scale of data, I used a layered sieve to filter out large swaths of possibilites."
         ],
         "tools": {
             "IntelliJ": {},
@@ -69,13 +69,15 @@
             "JDA": {},
             "Java": {}
         },
-        "comments": ["Exercised my math and logic skills."]
+        "comments": [
+            "This exercised my math and logic skills more than develop my programming style."
+        ]
     },
     "Excursion": {
         "ratingRaw": {
             "impact": 6.0,
             "difficulty": 4.0,
-            "size": 6.0
+            "size": 4.0
         },
         "title": "Excursion",
         "urls": {
@@ -87,8 +89,7 @@
             "endDate": "2021-01-01"
         },
         "summary": [
-            "Developed a Discord bot for players to submit evidence of them doing tasks from a task board to earn points",
-            "This was a large project for the time."
+            "Developed a Discord bot for players to submit evidence of them doing tasks from a task board to earn points"
         ],
         "tools": {
             "IntelliJ": {},
@@ -130,7 +131,10 @@
             "Firebase": {},
             "VSCode": {}
         },
-        "comments": ["Serves as good practice in typescript and react"]
+        "comments": [
+            "I'm learning to use Firebase.",
+            "It is serving as good practice in typescript and react"
+        ]
     },
     "AmbrosiaLoans": {
         "ratingRaw": {
@@ -148,7 +152,7 @@
             "endDate": "current"
         },
         "summary": [
-            "Developing a website to manage investments and loans of players for an in-game business in Wynncraft."
+            "Developing a website to manage investments and loans of players in an in-game business in Wynncraft."
         ],
         "tools": {
             "React": {},
@@ -181,8 +185,7 @@
             "endDate": "current"
         },
         "summary": [
-            "Developing a website for players to have storefronts for Wynncraft.",
-            "Utilizes TesseractJS to recognize Wynncraft font from images that users post to thier store."
+            "A large project to develop a website for players to have storefronts for Wynncraft"
         ],
         "tools": {
             "React": {},
@@ -194,7 +197,7 @@
             "TesseractJS": {}
         },
         "comments": [
-            "This is a very large project and there is a lot more to do."
+            "I'm learning how to train an AI to recognize Wynncraft font using TesseractJS."
         ]
     }
 }
