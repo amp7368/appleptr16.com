@@ -15,9 +15,10 @@ COPY ./tsconfig* ./
 COPY ./babel* ./
 
 RUN npx nx run-many --target=build --configuration=remote --all=true
-RUN npm prune --production 
+RUN npm prune --production
 
 FROM ${NGINX_VERSION} as servestage
 COPY --from=base /base/dist/apps/website /dist/apps/website
+
 RUN rm /etc/nginx/conf.d/default.conf
 COPY ./apps/website/*.template  /etc/nginx/templates/

@@ -1,27 +1,31 @@
 import { Button, Stack } from '@mui/material';
 import { Container } from '@mui/system';
+
 import { AppPaper } from '../base/AppPaper';
 import { AppTypography } from '../base/AppTypography';
 import { Page } from '../common/Page';
 import { SectionHeader } from '../pages/projects/common/SectionHeader';
+
 interface SubDomainProps {
     name: string;
-    path: string;
-    subdomain: string;
+    newSubdomain: string;
 }
-function getURL(subDomain: string, path: string) {
-    if (path) return `${subDomain}.appleptr16.com/${path}`;
-    return `${subDomain}.appleptr16.com`;
+function getURL(prefix: string) {
+    return `${prefix}.${location.hostname}`;
 }
-function SubDomain({ subdomain, path, ...props }: SubDomainProps) {
+function SubDomain(props: SubDomainProps) {
     return (
         <Button
             variant="outlined"
-            href={`https://${getURL(subdomain, path)}`}
+            onClick={() =>
+                (document.location.href = `https://${getURL(
+                    props.newSubdomain
+                )}`)
+            }
             color="secondary"
         >
             <AppTypography textTransform="none">
-                {getURL(subdomain, path)}
+                {getURL(props.newSubdomain)}
             </AppTypography>
         </Button>
     );
@@ -37,31 +41,20 @@ export function BackendPage() {
                     alignItems="center"
                 >
                     <AppTypography variant="h4">
-                        Currently, this page references mostly locked utilities.
-                        <br />
-                        Feel free to ignore this.
+                        This page links password-protected functions
                     </AppTypography>
                     <Container>
                         <SectionHeader>Stuff</SectionHeader>
                     </Container>
-                    <SubDomain name="docker" subdomain="docker" path="v2" />
-                    <SubDomain
-                        name="reposilite"
-                        subdomain="reposilite"
-                        path="#"
-                    />
-                    <SubDomain
-                        name="host"
-                        subdomain="host"
-                        path="webregistry"
-                    />
+                    <SubDomain name="docker" newSubdomain="docker" />
+                    <SubDomain name="reposilite" newSubdomain="reposilite" />
+                    <SubDomain name="host" newSubdomain="host" />
                     <SubDomain
                         name="ambrosia-loans"
-                        subdomain="ambrosia-loans"
-                        path=""
+                        newSubdomain="ambrosia-loans"
                     />
-                    <SubDomain name="ambrosia" subdomain="ambrosia" path="" />
-                    <SubDomain name="test" subdomain="test" path="" />
+                    <SubDomain name="ambrosia" newSubdomain="ambrosia" />
+                    <SubDomain name="test" newSubdomain="test" />
                 </Stack>
             </AppPaper>
         </Page>

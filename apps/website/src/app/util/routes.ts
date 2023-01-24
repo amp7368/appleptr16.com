@@ -3,10 +3,11 @@ export const urls = {
     egg: '/egg',
     projects: '/projects',
     tools: '/tools',
+    you: '/you',
     backend: '/backend',
     work: '/work',
 };
 export const nav = {};
-export function navPathTo(url: string) {
-    location.pathname = url;
+export function navTo(url: string) {
+    window.location.href = url;
 }

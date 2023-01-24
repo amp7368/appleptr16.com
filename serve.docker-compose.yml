@@ -1,3 +1,4 @@
+# MAKE SURE TO DELETE local (on remote) 'appleptr16/website' if you tag and push
 version: '3.8'
 services:
     website:

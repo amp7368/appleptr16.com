@@ -58,7 +58,7 @@ export function OverviewPage() {
                     title="Goal"
                     summary={
                         <AppTypography fontWeight={500}>
-                            I love to do cool things. Programming is a great
+                            I like to do cool things. Programming is a great
                             outlet for doing cool things.
                         </AppTypography>
                     }

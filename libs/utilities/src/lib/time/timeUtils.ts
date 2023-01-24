@@ -1,4 +1,3 @@
-import { SEE_OTHER } from 'http-status-codes';
 import { uppercaseFirst } from '../formatStrings/formatStrings';
 
 type SetFn = `set${string}`;
