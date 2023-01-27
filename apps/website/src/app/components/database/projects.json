@@ -1,4 +1,35 @@
 {
+    "appleptr16.com": {
+        "title": "appleptr16.com",
+        "ratingRaw": {
+            "impact": 2.5,
+            "difficulty": 2.5,
+            "size": 3.5
+        },
+        "urls": {
+            "Github": "https://github.com/amp7368/appleptr16.com",
+            "Site": "appleptr16.com"
+        },
+        "dates": {
+            "dateApproximation": "MONTH",
+            "startDate": "2022-06-26",
+            "endDate": "current"
+        },
+        "summary": ["Developing and maintaining website to showcase projects"],
+        "tools": {
+            "React": {},
+            "Typescript": {},
+            "@mui/material": {},
+            "@ngneat/elf": {},
+            "NX": {},
+            "VSCode": {},
+            "Cloudflare": {}
+        },
+        "comments": [
+            "This is a small, yet rewarding project because it explains my experiences in a more interesting way than a resume.",
+            "It's is essentially a work journal to keep records of notable projects."
+        ]
+    },
     "Voltskiya": {
         "title": "Voltskiya",
         "ratingRaw": {
@@ -182,7 +213,7 @@
         "dates": {
             "dateApproximation": "DAY",
             "startDate": "2022-03-13",
-            "endDate": "current"
+            "endDate": "2022-07-01"
         },
         "summary": [
             "A large project to develop a website for players to have storefronts for Wynncraft"

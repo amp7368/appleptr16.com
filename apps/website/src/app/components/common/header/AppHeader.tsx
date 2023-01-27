@@ -57,7 +57,6 @@ export function AppHeader() {
                         }
                     >
                         <AppHeaderLink route={urls.projects} title="Projects" />
-                        <AppHeaderLink route={urls.you} title="About-You" />
                         <AppHeaderLink route={urls.work} title="Work" />
                         <AppHeaderLink route={urls.tools} title="Tools" />
                         <AppHeaderLink route={urls.backend} title="Portal" />
