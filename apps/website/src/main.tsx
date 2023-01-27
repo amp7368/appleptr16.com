@@ -1,5 +1,3 @@
-import 'reflect-metadata';
-
 import { Box, CssBaseline, Stack, ThemeProvider } from '@mui/material';
 import { enableElfProdMode } from '@ngneat/elf';
 import { StrictMode } from 'react';

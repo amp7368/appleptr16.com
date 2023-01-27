@@ -1,3 +1,4 @@
+gzip on;
 server {
     listen ${NGINX_PORT} default_server;
     server_name _;

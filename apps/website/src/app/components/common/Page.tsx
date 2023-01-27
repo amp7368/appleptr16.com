@@ -7,12 +7,15 @@ export interface PageProps {
     title: string;
     filter?: ReactNode;
     children: ReactNode;
+    alignItems?: 'center' | 'flex-start';
 }
 export function Page(props: PageProps) {
     return (
         <Stack
             direction="column"
-            alignItems="center"
+            alignItems={props.alignItems ?? 'center'}
+            padding={5}
+            paddingTop={0}
             justifyContent="start"
             spacing={5}
         >

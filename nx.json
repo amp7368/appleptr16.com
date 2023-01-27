@@ -32,18 +32,19 @@
     "generators": {
         "@nrwl/react": {
             "application": {
-                "style": "@emotion/styled",
+                "style": "none",
                 "linter": "eslint",
+                "bundler": "webpack",
                 "babel": true
             },
             "component": {
-                "style": "@emotion/styled"
+                "style": "none"
             },
             "library": {
-                "style": "@emotion/styled",
+                "style": "none",
                 "linter": "eslint"
             }
         }
     },
-    "defaultProject": "nginx"
+    "defaultProject": "website"
 }

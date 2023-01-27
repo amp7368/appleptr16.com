@@ -2,6 +2,7 @@
     "root": "apps/website",
     "sourceRoot": "apps/website/src",
     "projectType": "application",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
     "targets": {
         "build": {
             "executor": "@nrwl/web:webpack",
@@ -43,8 +44,7 @@
                     "outputHashing": "all",
                     "sourceMap": false,
                     "namedChunks": true,
-                    "extractLicenses": true,
-                    "vendorChunk": true
+                    "extractLicenses": true
                 }
             }
         },
@@ -56,10 +56,6 @@
                     "buildTarget": "website:build:local",
                     "hmr": true,
                     "port": 4200
-                },
-                "remote": {
-                    "buildTarget": "website:build:remote",
-                    "hmr": false
                 }
             }
         },

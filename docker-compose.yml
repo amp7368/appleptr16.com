@@ -12,6 +12,8 @@ services:
                 - NODE_VERSION=${NODE_VERSION}
         environment:
             - NGINX_PORT=${NGINX_PORT}
+        ports:
+            - '${NGINX_PORT}:${NGINX_PORT}'
         networks:
             - 'appleptr16'
 networks:
