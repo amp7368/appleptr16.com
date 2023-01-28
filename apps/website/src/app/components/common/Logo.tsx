@@ -1,6 +1,6 @@
 import { Box, Link } from '@mui/material';
 
-import img from '../../../assets/common/Logo.jpeg';
+import img from '../../../assets/common/logo.jpeg';
 import { urls } from '../../util/routes';
 
 export function Logo() {

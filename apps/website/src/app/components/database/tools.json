@@ -52,7 +52,7 @@
         "tags": ["LIBRARY"]
     },
     "NX": {
-        "comments": [],
+        "comments": ["Used for all-around repo-structure management"],
         "tags": ["ENVIRONMENT"]
     },
     "Firebase": {
@@ -60,7 +60,7 @@
         "tags": ["ENVIRONMENT"]
     },
     "Docker": {
-        "comments": [""],
+        "comments": ["Used for making containerized apps"],
         "tags": ["ENVIRONMENT"]
     },
     "TesseractJS": {
@@ -68,7 +68,15 @@
         "tags": ["LIBRARY"]
     },
     "Java": {
-        "comments": [""],
+        "comments": ["An object-oriented high-level language"],
+        "tags": ["LANGUAGE"]
+    },
+    "Ebean ORM": {
+        "comments": ["A java ORM library for interactions with SQL"],
+        "tags": ["LIBRARY"]
+    },
+    "SQL": {
+        "comments": ["A database optimized for highly structured data"],
         "tags": ["LANGUAGE"]
     }
 }
