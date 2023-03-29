@@ -1,7 +1,6 @@
-import { Button, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
+import { ToolNotes } from '../../elf/types/ToolTypes';
 
-import { AppTypography } from '../base/AppTypography';
-import { ToolValue, ToolNotes, Tool } from '../types/ToolTypes';
 import { ToolDisplay } from './ToolDisplay';
 
 export interface ToolsDisplayListProps {

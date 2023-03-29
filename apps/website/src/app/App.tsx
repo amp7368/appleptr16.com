@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { OverviewPage } from './components/pages/overview/OverviewPage';
-import { ProjectsPage } from './components/pages/projects/ProjectsPage';
-import { ToolsPage } from './components/pages/tools/ToolsPage';
-import { WorkPage } from './components/pages/work/WorkPage';
+import { OverviewPage } from './pages/overview/OverviewPage';
+import { ProjectsPage } from './pages/projects/ProjectsPage';
+import { ToolsPage } from './pages/tools/ToolsPage';
+import { WorkPage } from './pages/work/WorkPage';
 import { urls } from './util/routes';
 
 export function App() {

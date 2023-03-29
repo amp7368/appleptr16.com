@@ -1,8 +1,7 @@
-import { useObservableMemo } from '@appleptr16/elemental';
-import { Optional } from '@appleptr16/utilities';
-import { createStore, isFunction } from '@ngneat/elf';
+import { useObservableMemo } from '@app/ui';
+import { Optional } from '@app/util';
+import { createStore } from '@ngneat/elf';
 import {
-    addEntities,
     selectEntities,
     selectEntity,
     UIEntitiesRef,
@@ -10,8 +9,10 @@ import {
     withEntities,
     withUIEntities,
 } from '@ngneat/elf-entities';
-import { Tool, ToolTag, ToolValue } from '../../components/types/ToolTypes';
-import toolsJson from '../../components/database/tools.json';
+
+import toolsJson from '../database/tools.json';
+import { Tool, ToolTag, ToolValue } from '../types/ToolTypes';
+
 type UIEnv = {
     id: string;
     toolTags: ToolTag[];

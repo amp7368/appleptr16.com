@@ -7,6 +7,7 @@ import { createRoot } from 'react-dom/client';
 import { App } from './app/App';
 import { BottomBar } from './app/components/common/BottomBar';
 import { AppHeader } from './app/components/common/header/AppHeader';
+import { CookieConsent } from './app/components/cookie/CookieConsent';
 import { defaultTheme } from './app/util/appTheme';
 import { environment } from './environments/environment';
 
@@ -20,6 +21,7 @@ createRoot(container).render(
                     <AppHeader />
                     <App />
                 </Box>
+                <CookieConsent />
                 <BottomBar />
             </Stack>
         </ThemeProvider>

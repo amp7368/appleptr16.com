@@ -1,8 +1,9 @@
-import { Optional } from '@appleptr16/utilities';
+import { Optional } from '@app/util';
 import { Button } from '@mui/material';
+import { Tool } from '../../elf/types/ToolTypes';
+
 import { setUIToolFilter, useTool } from '../../elf/ui/ToolUI.repository';
 import { AppTypography } from '../base/AppTypography';
-import { ToolValue, ToolNotes, ToolTag, Tool } from '../types/ToolTypes';
 
 type ToolID = {
     id: string;

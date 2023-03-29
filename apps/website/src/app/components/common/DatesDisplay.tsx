@@ -1,7 +1,7 @@
 import { Stack } from '@mui/material';
+import { DateRangePropsWithBreaks } from '../../elf/types/DateTypes';
 
 import { AppTypography } from '../base/AppTypography';
-import { DateRangePropsWithBreaks } from '../types/DateTypes';
 
 export type DatesDisplayProps = DateRangePropsWithBreaks & {
     duration: number;

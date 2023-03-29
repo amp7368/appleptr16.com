@@ -1,6 +1,6 @@
 import { Button, useTheme } from '@mui/material';
 import { Variant } from '@mui/material/styles/createTypography';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 import { AppTypography } from '../../base/AppTypography';
 
 export interface AppHeaderLinkProps {
