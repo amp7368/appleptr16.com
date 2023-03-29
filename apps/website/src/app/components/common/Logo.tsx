@@ -6,7 +6,7 @@ import { urls } from '../../util/routes';
 export function Logo() {
     return (
         <Box height="4rem" width="7.5rem">
-            <Link href={urls.egg} color="inherit">
+            <Link href={urls.home} color="inherit">
                 <img
                     src={img}
                     alt="applept16 Logo"
