@@ -3,10 +3,14 @@
         [
             "@nrwl/react/babel",
             {
-                "runtime": "automatic",
-                "importSource": "react"
+                "runtime": "automatic"
             }
         ]
     ],
-    "plugins": []
+    "plugins": [
+        [
+            "babel-plugin-direct-import",
+            { "modules": ["@mui/material", "@mui/icons-material"] }
+        ]
+    ]
 }

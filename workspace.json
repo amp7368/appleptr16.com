@@ -1,8 +1,0 @@
-{
-    "version": 2,
-    "projects": {
-        "@appleptr16/elemental": "libs/elemental",
-        "@appleptr16/utilities": "libs/utilities",
-        "website": "apps/website"
-    }
-}

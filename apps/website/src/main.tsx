@@ -1,7 +1,8 @@
-import { Box, CssBaseline, Stack, ThemeProvider } from '@mui/material';
+import { Box, CssBaseline, Stack } from '@mui/material';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import { enableElfProdMode } from '@ngneat/elf';
 import { StrictMode } from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { App } from './app/App';
 import { BottomBar } from './app/components/common/BottomBar';
@@ -9,7 +10,8 @@ import { AppHeader } from './app/components/common/header/AppHeader';
 import { defaultTheme } from './app/util/appTheme';
 import { environment } from './environments/environment';
 
-render(
+const container = document.getElementById('root') as HTMLElement;
+createRoot(container).render(
     <StrictMode>
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
@@ -21,8 +23,7 @@ render(
                 <BottomBar />
             </Stack>
         </ThemeProvider>
-    </StrictMode>,
-    document.getElementById('root')
+    </StrictMode>
 );
 if (environment.production) {
     enableElfProdMode();

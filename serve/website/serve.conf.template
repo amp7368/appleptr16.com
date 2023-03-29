@@ -1,9 +1,9 @@
-gzip on;
 server {
     listen ${NGINX_PORT} default_server;
     server_name _;
     root /dist/apps/website;
+    
     location / { 
-        try_files $uri /index.html ;
+        try_files $uri /index.html;
     }
 }

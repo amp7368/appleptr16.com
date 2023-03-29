@@ -7,7 +7,7 @@
             "size": 3.2
         },
         "urls": {
-            "Github": "https://github.com/amp7368/AmbrosiaADD"
+            "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" }
         },
         "dates": {
             "dateApproximation": "DAY",
@@ -37,8 +37,8 @@
             "size": 3.5
         },
         "urls": {
-            "Github": "https://github.com/amp7368/appleptr16.com",
-            "Site": "appleptr16.com"
+            "Github": { "link": "https://github.com/amp7368/appleptr16.com" },
+            "Site": { "link": "appleptr16.com" }
         },
         "dates": {
             "dateApproximation": "MONTH",
@@ -87,8 +87,20 @@
         },
         "dates": {
             "dateApproximation": "MONTH",
-            "startDate": "2021-03-01",
-            "endDate": "2021-11-12"
+            "startDate": "2020-04-03",
+            "endDate": "current",
+            "breakDates": [
+                {
+                    "dateApproximation": "MONTH",
+                    "startDate": "2020-09-08",
+                    "endDate": "2021-03-01"
+                },
+                {
+                    "dateApproximation": "MONTH",
+                    "startDate": "2021-11-13",
+                    "endDate": "2022-10-01"
+                }
+            ]
         },
         "summary": [
             "Developed Minecraft Plugins to create a custom survival experience"
@@ -175,10 +187,11 @@
         "urls": {
             "Github": { "link": "https://mallyene.web.app" }
         },
+        "status": "abandoned",
         "dates": {
             "dateApproximation": "DAY",
             "startDate": "2022-06-01",
-            "endDate": "current"
+            "endDate": "2022-08-01"
         },
         "summary": [
             "Developing an eCommerce website to sell skin care products",
@@ -232,8 +245,8 @@
     },
     "AmbrosiaMarketplace": {
         "ratingRaw": {
-            "impact": 9.2,
-            "difficulty": 8.0,
+            "impact": 4.2,
+            "difficulty": 4.0,
             "size": 9.0
         },
         "title": "Ambrosia Marketplace",

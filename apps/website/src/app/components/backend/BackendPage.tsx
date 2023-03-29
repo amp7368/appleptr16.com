@@ -1,5 +1,4 @@
-import { Button, Stack } from '@mui/material';
-import { Container } from '@mui/system';
+import { Button, Container, Stack } from '@mui/material';
 
 import { AppPaper } from '../base/AppPaper';
 import { AppTypography } from '../base/AppTypography';
