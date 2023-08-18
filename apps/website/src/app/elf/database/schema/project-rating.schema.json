@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "properties": {
+        "impact": { "type": "number" },
+        "difficulty": { "type": "number" },
+        "size": { "type": "number" }
+    }
+}

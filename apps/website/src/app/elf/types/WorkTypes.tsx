@@ -1,11 +1,11 @@
-import { DateRangePropsWithBreaks, DateRangeRawWithBreaks } from './DateTypes';
+import { FullDateRangeProps, FullDateRangeRaw } from './DateTypes';
 import { ToolNotes } from './ToolTypes';
 
 export interface WorkRawData {
     company: string;
     role: string;
     urls?: Record<string, WorkUrl>;
-    dates: DateRangeRawWithBreaks;
+    dates: FullDateRangeRaw;
     summary: string[];
     tools: Record<string, ToolNotes>;
     comments: string[];
@@ -20,7 +20,7 @@ export interface WorkProps {
     company: string;
     role: string;
     urls?: Record<string, WorkUrl>;
-    dates: DateRangePropsWithBreaks;
+    dates: FullDateRangeProps;
     duration: number;
     summary: string[];
     tools: Record<string, ToolNotes>;

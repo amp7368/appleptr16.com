@@ -1,15 +1,14 @@
 import { AddCircle } from '@mui/icons-material';
-import { Divider, Stack } from '@mui/material';
-import { ReactNode } from 'react';
+import { Box, Container, Divider, Stack } from '@mui/material';
 
 import { AppPaper } from '../../components/base/AppPaper';
-import { DatesDisplay } from '../../components/common/DatesDisplay';
-import { ProjectRating } from './base/ProjectRating';
 import { SummaryDisplay } from '../../components/common/ProjectSummary';
-import { ProjectTitle } from './base/ProjectTitle';
 import { ToolsDisplayList } from '../../components/common/ToolsDisplayList';
-import { ProjectUrlSection } from './base/ProjectUrlSection';
+import { DatesDisplay } from '../../components/common/dates/DatesDisplay';
 import { ProjectProps } from '../../elf/types/ProjectTypes';
+import { ProjectRating } from './base/ProjectRating';
+import { ProjectTitle } from './base/ProjectTitle';
+import { ProjectUrlSection } from './base/ProjectUrlSection';
 
 export function Project(props: ProjectProps) {
     return (
@@ -39,7 +38,7 @@ export function Project(props: ProjectProps) {
                     />
                     <ProjectUrlSection urls={props.urls} />
                 </Stack>
-                <Stack maxWidth="15rem" direction="column">
+                <Stack direction="column">
                     <ProjectRating
                         title="Impact"
                         icon={<AddCircle />}
@@ -59,12 +58,9 @@ export function Project(props: ProjectProps) {
                         title="Duration"
                         icon={<AddCircle />}
                         value={props.ratingRelative.duration}
-                    >
-                        <DatesDisplay
-                            {...props.dates}
-                            duration={props.duration}
-                        />
-                    </ProjectRating>
+                    />
+                    <br />
+                    <DatesDisplay {...props.dates} duration={props.duration} />
                 </Stack>
             </Stack>
         </AppPaper>

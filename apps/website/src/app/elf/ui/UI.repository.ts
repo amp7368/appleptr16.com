@@ -7,6 +7,7 @@ import {
     updateEntities,
     withUIEntities,
 } from '@ngneat/elf-entities';
+import { persist } from '../Elf';
 
 export type OrderBy =
     | 'date'
@@ -29,12 +30,14 @@ type UIEnv = {
     orderDirectionAsc: boolean;
 };
 type EnvKey = Exclude<keyof UIEnv, 'id'>;
-export const uiStore = createStore(
+const uiStore = createStore(
     { name: 'ui' },
     withUIEntities<UIEnv>({
         initialValue: [],
     })
 );
+persist(uiStore, []);
+
 const defaultEntity: Omit<UIEnv, 'id'> = {
     orderBy: 'impact',
     orderDirectionAsc: true,

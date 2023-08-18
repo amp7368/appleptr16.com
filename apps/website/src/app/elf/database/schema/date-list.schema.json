@@ -1,0 +1,9 @@
+{
+    "anyOf": [
+        {
+            "type": "array",
+            "items": { "$ref": "./date.schema.json" }
+        },
+        { "$ref": "./date.schema.json" }
+    ]
+}

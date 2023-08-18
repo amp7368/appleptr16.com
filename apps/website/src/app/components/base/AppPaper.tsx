@@ -22,7 +22,7 @@ export function AppPaper(props: PaperProps & { opacity?: Opaceness | number }) {
                     alpha(theme.palette.background.paper, opacity),
 
                 boxShadow: (theme: Theme) =>
-                    `0 0 12px 4px ${alpha(theme.palette.primary.main, 0.2)}`,
+                    `0 0 12px 4px ${alpha(theme.palette.primary.main, 0.55)}`,
             }}
         />
     );

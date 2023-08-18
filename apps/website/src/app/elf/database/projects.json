@@ -1,31 +1,60 @@
 {
+    "$schema": "./schema/list-project.schema.json",
     "AmbrosiaCasino": {
         "title": "Ambrosia Casino",
         "ratingRaw": {
-            "impact": 5.0,
+            "impact": 5.5,
             "difficulty": 5.0,
-            "size": 3.2
+            "size": 4.2
         },
+        "sections": [
+            {
+                "title": "BlackJack",
+                "description": "Developed a program to store profiles, game results, and every currency transaction. Used Wynncraft's in-game currency to convert to Casino credits.",
+                "summary": [],
+                "comments": [
+                    "I modified another person's code for the BlackJack game logic after asking permission to use thier code."
+                ],
+                "dates": {
+                    "dateApproximation": "DAY",
+                    "startDate": "2022-11-20",
+                    "endDate": "2022-12-20"
+                }
+            },
+            {
+                "title": "Roulette",
+                "description": "Created Roulette (with a SPINNING WHEEL) utilizing the profile system put in place from BlackJack",
+                "summary": [
+                    "Because Discord is a messaging app, I had to think of a clever solution to show a spinning wheel. I send unique GIFs of the spinning wheel landing on the number that is chosen",
+                    "I created a program to pregenerate GIFs for each number it could land on with 10 variations each number chaning the time or velocity",
+                    "The betting system is also complex because of the variations of bets are possible. We decided on a flow chart with buttons to navigate from high level decsions to more precise decisions about where you want to place your bet"
+                ],
+                "comments": [
+                    "I'm very proud of the spinning wheel with 370 different GIFs for the 37 numbers possible to land on"
+                ],
+                "dates": {
+                    "dateApproximation": "DAY",
+                    "startDate": "2023-7-16",
+                    "endDate": "2023-07-24"
+                }
+            }
+        ],
         "urls": {
             "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" }
         },
-        "dates": {
-            "dateApproximation": "DAY",
-            "startDate": "2022-11-20",
-            "endDate": "2022-12-20"
-        },
-        "summary": [
-            "Developed a Discord bot for players to play blackjack using the Wynncraft currency.",
-            "Development haulted when Wynncraft banned player-run casinos using their currency"
-        ],
+        "dates": [],
+        "summary": [],
+
         "tools": {
             "Java": {},
+            "JDA": {},
             "Ebean": {},
             "SQL": {},
             "IntelliJ": {},
             "Github": {}
         },
         "comments": [
+            "Development haulted when Wynncraft banned player-run casinos using their currency, however the bot is still used unoffically with a smaller audience",
             "It was a very enjoyable project. There was a heated debate on how to handle proving the fairness of the game. I was looking forward to utilizing crypographic keys to verify it before casinos were banned in-game."
         ]
     },
@@ -85,23 +114,24 @@
                 "comment": "Decay and regeneration of the map was big enough to be it's own repo"
             }
         },
-        "dates": {
-            "dateApproximation": "MONTH",
-            "startDate": "2020-04-03",
-            "endDate": "current",
-            "breakDates": [
-                {
-                    "dateApproximation": "MONTH",
-                    "startDate": "2020-09-08",
-                    "endDate": "2021-03-01"
-                },
-                {
-                    "dateApproximation": "MONTH",
-                    "startDate": "2021-11-13",
-                    "endDate": "2022-10-01"
-                }
-            ]
-        },
+        "sections": [],
+        "dates": [
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2020-05-11",
+                "endDate": "2020-09-08"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2021-03-01",
+                "endDate": "2021-10-30"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2022-07-08",
+                "endDate": "2023-07-01"
+            }
+        ],
         "summary": [
             "Developed Minecraft Plugins to create a custom survival experience"
         ],
@@ -114,7 +144,7 @@
         },
         "comments": [
             "I really grew as a programmer with this project more than any other to date.",
-            "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for the next project."
+            "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for the next project"
         ]
     },
     "BuildBot": {

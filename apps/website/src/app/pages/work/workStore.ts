@@ -32,7 +32,7 @@ export function useWork() {
                     duration: getDuration(dates),
                 };
             }),
-        rawData.flatMap((p) => [p.role, p.company, p.dates.startDate])
+        rawData
     );
 
     return work.sort(dateCompare);

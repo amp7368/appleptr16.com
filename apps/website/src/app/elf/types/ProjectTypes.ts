@@ -1,10 +1,10 @@
-import { DateRangePropsWithBreaks, DateRangeRawWithBreaks } from './DateTypes';
+import { FullDateRangeProps, FullDateRangeRaw } from './DateTypes';
 import { ToolNotes } from './ToolTypes';
 
 export interface ProjectRawData {
     title: string;
+    dates: FullDateRangeRaw;
     urls?: Record<string, ProjectUrl>;
-    dates: DateRangeRawWithBreaks;
     ratingRaw: {
         impact: number;
         difficulty: number;
@@ -13,8 +13,17 @@ export interface ProjectRawData {
     summary: string[];
     tools: Record<string, ToolNotes>;
     comments: string[];
+    sections?: ProjectRawSection[];
 }
-
+export interface ProjectRawSection {
+    title: string;
+    description: string;
+    dates: FullDateRangeRaw;
+    urls?: Record<string, ProjectUrl>;
+    summary: string[];
+    tools?: Record<string, ToolNotes>;
+    comments: string[];
+}
 export type ProjectUrl = {
     link: string;
     comment?: string;
@@ -23,7 +32,7 @@ export type ProjectUrl = {
 export interface ProjectProps {
     title: string;
     urls?: Record<string, ProjectUrl>;
-    dates: DateRangePropsWithBreaks;
+    dates: FullDateRangeProps;
     duration: number;
     ratingRaw: {
         duration: number;
@@ -40,4 +49,5 @@ export interface ProjectProps {
     tools: Record<string, ToolNotes>;
     summary: string[];
     comments: string[];
+    sections?: ProjectRawSection[];
 }

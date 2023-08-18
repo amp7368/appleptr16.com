@@ -1,66 +1,73 @@
 import { useObservableMemo } from '@app/ui';
 import { Optional } from '@app/util';
-import { createStore } from '@ngneat/elf';
+import { createStore, propsArrayFactory, withProps } from '@ngneat/elf';
 import {
     selectEntities,
     selectEntity,
-    UIEntitiesRef,
-    updateEntities,
+    setEntities,
     withEntities,
-    withUIEntities,
 } from '@ngneat/elf-entities';
+import { ToolTag } from './../types/ToolTypes';
 
+import { persist } from '../Elf';
 import toolsJson from '../database/tools.json';
-import { Tool, ToolTag, ToolValue } from '../types/ToolTypes';
+import { Tool, ToolValue } from '../types/ToolTypes';
+import { map } from 'rxjs';
 
 type UIEnv = {
-    id: string;
     toolTags: ToolTag[];
     active: Optional<Tool>;
 };
-type EnvKey = Exclude<keyof UIEnv, 'id'>;
+type EnvKey = Exclude<keyof UIEnv, 'ToolTags'>;
 
-function getTools() {
+function getToolData() {
     return Object.entries<ToolValue>(toolsJson as any)
         .sort(([a], [b]) => a.localeCompare(b))
         .map(([id, tool]) => ({ id, ...tool }));
 }
-export const uiStore = createStore(
-    { name: 'ui' },
-    withEntities<Tool>({ initialValue: getTools() }),
-    withUIEntities<UIEnv>({
-        initialValue: [],
-    })
+
+const {
+    withToolTags,
+    selectToolTags,
+    setToolTags: setStoreToolTags,
+} = propsArrayFactory('toolTags', { initialValue: [] as ToolTag[] });
+const uiStore = createStore(
+    { name: 'tool' },
+    withEntities<Tool>({ initialValue: [] }),
+    withProps<UIEnv>({ toolTags: [], active: undefined }),
+    withToolTags()
 );
-const defaultEntity: Omit<UIEnv, 'id'> = { toolTags: [], active: undefined };
-const uiId = 'uiId';
+persist(uiStore, getToolData());
+
+export function setToolTags(
+    toolTags: ToolTag[] | ((tags: ToolTag[]) => ToolTag[])
+) {
+    setToolTags(toolTags);
+}
 export function setUIToolFilter<Key extends EnvKey>(
     key: Key,
     prop: UIEnv[Key] | ((key: UIEnv[Key]) => UIEnv[Key])
 ) {
     const updateProp = (state: UIEnv) => {
-        if (typeof prop === 'function')
-            return prop((state ?? defaultEntity)[key]);
+        if (typeof prop === 'function') return prop(state[key]);
         else return prop;
     };
-    const stateUpdate: (state: UIEnv) => UIEnv = (state: UIEnv): UIEnv => ({
-        ...defaultEntity,
+    uiStore.update((state) => ({
         ...state,
-        id: uiId,
-        [key]: updateProp(state),
-    });
-    uiStore.update(updateEntities(uiId, stateUpdate, { ref: UIEntitiesRef }));
+        [key]: updateProp,
+    }));
 }
-export function useUIToolFilter(): UIEnv {
-    const out = useObservableMemo(
-        () => uiStore.pipe(selectEntity(uiId, { ref: UIEntitiesRef })),
-        [uiId, uiStore],
-        null
+export function useToolUI<Key extends EnvKey>(key: Key): UIEnv[Key] {
+    return useObservableMemo(
+        () => uiStore.pipe(map((state) => state[key])),
+        [],
+        uiStore.getValue()[key]
     );
-    if (out === undefined || out === null)
-        return { ...defaultEntity, id: uiId };
-    return out;
 }
+export function useUIToolFilter(): string[] {
+    return useObservableMemo(() => uiStore.pipe(selectToolTags()), [], []);
+}
+
 export function useTools(): Tool[] {
     const tools = useObservableMemo(
         () => uiStore.pipe(selectEntities()),

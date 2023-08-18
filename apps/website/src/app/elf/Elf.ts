@@ -1,8 +1,13 @@
 import { getRegistry, Store } from '@ngneat/elf';
-import { localStorageStrategy, persistState } from '@ngneat/elf-persist-state';
+import { setEntities } from '@ngneat/elf-entities';
+import {
+    persistState,
+    sessionStorageStrategy,
+} from '@ngneat/elf-persist-state';
 
-export function persist(store: Store) {
-    persistState(store, { storage: localStorageStrategy });
+export function persist(store: Store, storeEntities: any[]) {
+    persistState(store, { storage: sessionStorageStrategy });
+    store.update(setEntities(storeEntities));
 }
 export function resetStores() {
     getRegistry().forEach((store) => store.reset());

@@ -1,10 +1,10 @@
 {
     "IntelliJ": {
-        "comments": ["I use for Java development"],
+        "comments": ["I use this for Java development"],
         "tags": ["IDE"]
     },
     "VSCode": {
-        "comments": ["I use for development in languages besides Java"],
+        "comments": ["I use this for development in languages besides Java"],
         "tags": ["IDE"]
     },
     "Github": {
@@ -78,5 +78,11 @@
     "SQL": {
         "comments": ["A database optimized for highly structured data"],
         "tags": ["LANGUAGE"]
+    },
+    "AWS": {
+        "comments": [
+            "A cloud hosting provider with an extensive selection of software"
+        ],
+        "tags": ["OTHER"]
     }
 }

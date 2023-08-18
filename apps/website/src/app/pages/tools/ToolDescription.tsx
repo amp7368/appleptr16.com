@@ -21,13 +21,17 @@ export function ToolDescription({ activeTool }: ToolDescriptionProps) {
                 alignItems="center"
                 color="primary.contrastText"
             >
-                <ToolDisplay tool={activeTool} />
-                <AppTypography color="text.primary" variant="h6">
+                <ToolDisplay color="info" tool={activeTool} />
+                <AppTypography color="secondary.main" variant="h6">
                     {activeTool.tags.join(', ')}
                 </AppTypography>
-                <AppTypography variant="body1">
-                    {activeTool.comments}
-                </AppTypography>
+                <Stack>
+                    {(activeTool.comments ?? []).map((comment) => (
+                        <AppTypography variant="body1" key={comment}>
+                            {comment}
+                        </AppTypography>
+                    ))}
+                </Stack>
                 <AppTypography variant="body1">
                     {activeTool.extra}
                 </AppTypography>

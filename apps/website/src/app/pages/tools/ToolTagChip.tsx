@@ -1,7 +1,7 @@
 import { Chip } from '@mui/material';
 
 import { ToolTag } from '../../elf/types/ToolTypes';
-import { setUIToolFilter } from '../../elf/ui/ToolUI.repository';
+import { setToolTags, setUIToolFilter } from '../../elf/ui/ToolUI.repository';
 import { AppTypography } from '../../components/base/AppTypography';
 
 export interface ToolTagChipProps {
@@ -10,9 +10,7 @@ export interface ToolTagChipProps {
 }
 export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
     const onDelete: () => void = () =>
-        setUIToolFilter('toolTags', (tags) =>
-            [...tags].filter((tag) => toolTag !== tag)
-        );
+        setToolTags(([...tags]) => tags.filter((tag) => toolTag !== tag));
     return (
         <Chip
             label={
@@ -24,7 +22,7 @@ export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
                     {toolTag}
                 </AppTypography>
             }
-            onClick={() => setUIToolFilter('toolTags', (tags) => [toolTag])}
+            onClick={() => setToolTags([toolTag])}
             onDelete={active ? onDelete : undefined}
             color={active ? 'secondary' : 'default'}
         />

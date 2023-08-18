@@ -18,6 +18,7 @@ export const defaultThemeOptions: ThemeOptions = {
             secondary: '#649c3a',
         },
         divider: '#649c3a',
+        info: { main: '#cc174a' },
     },
 };
 export const appBarColor = '#333333';

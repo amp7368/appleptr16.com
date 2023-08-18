@@ -1,0 +1,20 @@
+{
+    "title": "Project-Section",
+    "type": "object",
+    "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "dates": { "$ref": "./date-list.schema.json" },
+        "urls": { "$ref": "./project-urls.schema.json" },
+        "summary": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "tools": { "$ref": "./project-tools.schema.json" },
+        "comments": {
+            "type": "array",
+            "items": { "type": "string" }
+        }
+    },
+    "required": ["title", "description", "dates", "summary", "comments"]
+}

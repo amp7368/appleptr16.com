@@ -1,20 +1,24 @@
 import { Stack } from '@mui/material';
-import { useMemo } from 'react';
 
 import { Page } from '../../components/common/Page';
 import { Tool, ToolTag, toolTagValues } from '../../elf/types/ToolTypes';
+import {
+    useToolUI,
+    useTools,
+    useUIToolFilter,
+} from '../../elf/ui/ToolUI.repository';
 import { ToolDescription } from './ToolDescription';
 import { ToolListingPaper } from './ToolListingPaper';
 import { ToolTagChip } from './ToolTagChip';
-import { useUIToolFilter, useTools } from '../../elf/ui/ToolUI.repository';
 
 export function ToolsPage() {
-    const toolUI = useUIToolFilter();
+    const activeTool = useToolUI('active');
+    const toolTags = useUIToolFilter();
     let tools: Tool[] = useTools();
-    if (toolUI.toolTags.length !== 0)
+    if (toolTags.length !== 0)
         tools = tools.filter((tool) => {
             for (const tag of tool.tags)
-                if (toolUI.toolTags.includes(tag)) return true;
+                if (toolTags.includes(tag)) return true;
             return false;
         });
     return (
@@ -35,7 +39,7 @@ export function ToolsPage() {
                         <ToolTagChip
                             key={tag}
                             toolTag={tag}
-                            active={toolUI.toolTags.includes(tag)}
+                            active={toolTags.includes(tag)}
                         />
                     ))}
                 </Stack>
@@ -43,7 +47,7 @@ export function ToolsPage() {
         >
             <Stack direction="row" spacing={3}>
                 <ToolListingPaper tools={tools} />
-                <ToolDescription activeTool={toolUI.active} />
+                <ToolDescription activeTool={activeTool} />
             </Stack>
         </Page>
     );

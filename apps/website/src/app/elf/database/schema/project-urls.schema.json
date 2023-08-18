@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "patternProperties": {
+        ".*": {
+            "type": "object",
+            "properties": {
+                "link": { "type": "string" },
+                "comment": { "type": "string" }
+            },
+            "required": ["link"]
+        }
+    }
+}

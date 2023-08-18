@@ -16,7 +16,7 @@ export function ProjectRating(props: ProjectRatingProps) {
             <Stack direction="column" alignItems="center">
                 <Rating
                     readOnly
-                    defaultValue={props.value}
+                    value={props.value}
                     precision={0.1}
                     icon={props.icon}
                     emptyIcon={props.icon}

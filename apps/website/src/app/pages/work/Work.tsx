@@ -1,7 +1,7 @@
 import { Divider, Stack } from '@mui/material';
 
 import { AppPaper } from '../../components/base/AppPaper';
-import { DatesDisplay } from '../../components/common/DatesDisplay';
+import { DatesDisplay } from '../../components/common/dates/DatesDisplay';
 import { SummaryDisplay } from '../../components/common/ProjectSummary';
 import { ToolsDisplayList } from '../../components/common/ToolsDisplayList';
 import { WorkProps } from '../../elf/types/WorkTypes';

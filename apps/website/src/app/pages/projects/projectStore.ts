@@ -7,7 +7,8 @@ import { ProjectProps, ProjectRawData } from '../../elf/types/ProjectTypes';
 
 const rawData: ProjectRawData[] = Object.values<ProjectRawData>(
     projectsRaw as any
-);
+).filter((o) => typeof o === 'object');
+
 function sortFromExtract<P, T>(extractFn: (p: P) => T) {
     return (a: P, b: P) => {
         const aN: T = extractFn(a);
