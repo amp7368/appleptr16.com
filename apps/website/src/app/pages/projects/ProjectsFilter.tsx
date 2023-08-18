@@ -31,9 +31,9 @@ export function ProjectsFilter({ uiId }: { uiId: string }) {
         );
     return (
         <Stack
-            border={2}
+            border={1}
             borderRadius={'5px'}
-            borderColor="secondary.main"
+            borderColor="divider"
             direction="row"
             justifyContent="flex-end"
             alignItems="center"

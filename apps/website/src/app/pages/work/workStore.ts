@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import worksRaw from '../../elf/database/work.json';
-import { fixDates, getDuration } from '../../elf/types/fixDates';
+import { fixDates, getDuration } from '../../elf/read/fixDates';
 import { WorkProps, WorkRawData } from '../../elf/types/WorkTypes';
 
 const rawData: WorkRawData[] = Object.values<WorkRawData>(worksRaw as any);

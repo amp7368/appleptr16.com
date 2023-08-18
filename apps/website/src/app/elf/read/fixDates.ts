@@ -8,7 +8,7 @@ import {
     FullDateRangeRaw,
     dateApproximationOrder,
     dateApproximationOrderMap,
-} from './DateTypes';
+} from '../types/DateTypes';
 
 export function fixDates(datesRaw: FullDateRangeRaw): FullDateRangeProps {
     if (!Array.isArray(datesRaw)) {

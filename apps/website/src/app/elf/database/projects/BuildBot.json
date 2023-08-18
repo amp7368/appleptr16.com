@@ -1,0 +1,31 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "ratingRaw": {
+        "impact": 5.0,
+        "difficulty": 5.0,
+        "size": 2.0
+    },
+    "title": "BuildBot",
+    "urls": {
+        "Github": { "link": "https://github.com/amp7368/BuildBot" }
+    },
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2020-11-08",
+        "endDate": "2020-12-14"
+    },
+    "summary": [
+        "Developed a tool to generate combinations of gear in Wynncraft that would satisfy constraints set by the user",
+        "There were ~31 sextillion combinations of gear. To overcome this scale of data, I used a layered sieve to filter out large swaths of possibilites."
+    ],
+    "tools": {
+        "IntelliJ": {},
+        "Github": {},
+        "PaperMC": {},
+        "JDA": {},
+        "Java": {}
+    },
+    "comments": [
+        "This exercised my math and logic skills more than develop my programming style."
+    ]
+}

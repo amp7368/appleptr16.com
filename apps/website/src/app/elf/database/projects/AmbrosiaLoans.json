@@ -1,0 +1,33 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "ratingRaw": {
+        "impact": 7.0,
+        "difficulty": 5.0,
+        "size": 6.0
+    },
+    "title": "Ambrosia Loans",
+    "urls": {
+        "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" }
+    },
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2022-05-08",
+        "endDate": "current"
+    },
+    "summary": [
+        "Developing a website to manage investments and loans of players in an in-game business in Wynncraft."
+    ],
+    "tools": {
+        "React": {},
+        "Typescript": {},
+        "@mui/material": {},
+        "@ngneat/elf": {},
+        "SQL": {},
+        "NX": {},
+        "Docker": {},
+        "VSCode": {}
+    },
+    "comments": [
+        "This is a very experimental project to experiment with different styles that compliment the libraries being used"
+    ]
+}

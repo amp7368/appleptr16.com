@@ -1,16 +1,13 @@
 import { Optional } from '@app/util';
 
-import {
-    FullDateRangeProps,
-    FullDateRangeRaw,
-} from '../../elf/types/DateTypes';
+import { FullDateRangeProps, FullDateRangeRaw } from '../types/DateTypes';
 import {
     ProjectProps,
     ProjectRawData,
     ProjectUrl,
-} from '../../elf/types/ProjectTypes';
-import { ToolNotes } from '../../elf/types/ToolTypes';
-import { fixDates, getDuration } from '../../elf/types/fixDates';
+} from '../types/ProjectTypes';
+import { ToolNotes } from '../types/ToolTypes';
+import { fixDates, getDuration } from './fixDates';
 
 export function fixData(raw: ProjectRawData): ProjectProps {
     if (!Array.isArray(raw.dates)) raw.dates = [raw.dates];

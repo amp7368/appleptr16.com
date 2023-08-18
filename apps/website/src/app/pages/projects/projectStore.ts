@@ -1,13 +1,14 @@
 import { useMemo } from 'react';
 
-import { useUIOrderBy, useUIOrderDirection } from '../../elf/ui/UI.repository';
-import { fixData, relativeRating } from './projectFixData';
-import projectsRaw from '../../elf/database/projects.json';
+import {
+    getRawProjects,
+    getRawProjectsIndex,
+} from '../../elf/read/getRawProjects';
+import { fixData, relativeRating } from '../../elf/read/projectFixData';
 import { ProjectProps, ProjectRawData } from '../../elf/types/ProjectTypes';
+import { useUIOrderBy, useUIOrderDirection } from '../../elf/ui/UI.repository';
 
-const rawData: ProjectRawData[] = Object.values<ProjectRawData>(
-    projectsRaw as any
-).filter((o) => typeof o === 'object');
+const rawData: ProjectRawData[] = getRawProjects();
 
 function sortFromExtract<P, T>(extractFn: (p: P) => T) {
     return (a: P, b: P) => {
@@ -27,8 +28,8 @@ function dateCompare(a: ProjectProps, b: ProjectProps): number {
 }
 export function useProjects(uiId: string) {
     const projectsNoRel: ProjectProps[] = useMemo(
-        () => rawData.map((p) => fixData(p)),
-        rawData.map((p) => p.title)
+        () => getRawProjects().map((p) => fixData(p)),
+        getRawProjectsIndex()
     );
     const projects: ProjectProps[] = useMemo(
         () => relativeRating(projectsNoRel),
