@@ -5,7 +5,7 @@ import { useObservable } from './useObservable';
 export function useObservableMemo<T>(
     factory: () => Observable<T>,
     deps: unknown[],
-    initialState: T
+    initialState: T | (() => T)
 ) {
     const observable: Observable<T> = useMemo(factory, deps);
     return useObservable(observable, initialState);

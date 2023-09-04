@@ -11,7 +11,10 @@ import { CookieConsent } from './app/components/cookie/CookieConsent';
 import { defaultTheme } from './app/util/appTheme';
 import { environment } from './environments/environment';
 
+if (environment.production) enableElfProdMode();
+
 const container = document.getElementById('root') as HTMLElement;
+
 createRoot(container).render(
     <StrictMode>
         <ThemeProvider theme={defaultTheme}>
@@ -27,6 +30,3 @@ createRoot(container).render(
         </ThemeProvider>
     </StrictMode>
 );
-if (environment.production) {
-    enableElfProdMode();
-}

@@ -1,6 +1,7 @@
 import { Optional } from '@app/util';
 
 import { FullDateRangeProps, FullDateRangeRaw } from '../types/DateTypes';
+import { ProjectSectionProps } from '../types/ProjectSectionTypes';
 import {
     ProjectProps,
     ProjectRawData,
@@ -8,6 +9,11 @@ import {
 } from '../types/ProjectTypes';
 import { ToolNotes } from '../types/ToolTypes';
 import { fixDates, getDuration } from './fixDates';
+import {
+    endWithPeriods,
+    toolEndWithPeriods,
+    urlEndWithPeriods,
+} from './fixEndWithPeriod';
 
 export function fixData(raw: ProjectRawData): ProjectProps {
     if (!Array.isArray(raw.dates)) raw.dates = [raw.dates];
@@ -15,6 +21,7 @@ export function fixData(raw: ProjectRawData): ProjectProps {
     const tools: Record<string, ToolNotes> = { ...raw.tools };
     const urls: Record<string, ProjectUrl> = { ...raw.urls };
     const datesRaw: FullDateRangeRaw = [...raw.dates];
+    const sections: ProjectSectionProps[] = [];
     for (const section of raw.sections ?? []) {
         summary.push(section.description);
         for (const [name, tool] of Object.entries(section.tools ?? {})) {
@@ -26,14 +33,26 @@ export function fixData(raw: ProjectRawData): ProjectProps {
 
         if (Array.isArray(section.dates)) datesRaw.push(...section.dates);
         else datesRaw.push(section.dates);
+        const fixedDates = fixDates(section.dates);
+
+        sections.push({
+            title: section.title,
+            description: section.description,
+            urls: urlEndWithPeriods(section.urls),
+            dates: fixedDates,
+            comments: endWithPeriods(section.comments),
+            summary: endWithPeriods(section.summary),
+            tools: toolEndWithPeriods(section.tools),
+            duration: getDuration(fixedDates),
+        });
     }
     const dates: FullDateRangeProps = fixDates(datesRaw);
     const duration: number = getDuration(dates);
 
     return {
         title: raw.title,
-        comments: raw.comments,
-        summary,
+        comments: endWithPeriods(raw.comments),
+        summary: endWithPeriods(summary),
         tools,
         urls,
         dates,
@@ -48,8 +67,10 @@ export function fixData(raw: ProjectRawData): ProjectProps {
             difficulty: 0,
             size: 0,
         },
+        sections,
     };
 }
+
 export function relativeRating(projects: ProjectProps[]): ProjectProps[] {
     for (const ratingKey of Object.keys(projects[0].ratingRaw)) {
         const ratingKeyCasted = ratingKey as keyof ProjectProps['ratingRaw'];

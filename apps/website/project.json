@@ -71,6 +71,7 @@
             },
             "configurations": {
                 "development": {
+                    "host": "0.0.0.0",
                     "buildTarget": "website:build:development"
                 },
                 "production": {

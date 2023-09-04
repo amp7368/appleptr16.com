@@ -1,9 +1,8 @@
-import { Button, ImageList, ImageListItem } from '@mui/material';
-import { ReactNode } from 'react';
+import { Grid, ImageList, ImageListItem } from '@mui/material';
 
-import { AppTypography } from '../../../components/base/AppTypography';
-import { SectionHeader } from '../common/SectionHeader';
 import { ProjectUrl } from '../../../elf/types/ProjectTypes';
+import { SectionHeader } from '../common/SectionHeader';
+import { ProjectUrlButton } from './ProjectUrlButton';
 
 export interface ProjectUrlsProps {
     urls?: Record<string, ProjectUrl>;
@@ -13,27 +12,11 @@ export function ProjectUrlSection({ urls }: ProjectUrlsProps) {
     return (
         <>
             <SectionHeader>Links</SectionHeader>
-            <ImageList variant="standard">
+            <Grid container gap={1} justifyContent="center">
                 {Object.entries(urls).map(([title, url]) => (
-                    <ImageListItem key={title}>
-                        <Button
-                            variant="outlined"
-                            size="small"
-                            color="secondary"
-                            href={url.link}
-                            LinkComponent={'a'}
-                        >
-                            <AppTypography
-                                noWrap
-                                variant="body1"
-                                textTransform="none"
-                            >
-                                {title}
-                            </AppTypography>
-                        </Button>
-                    </ImageListItem>
+                    <ProjectUrlButton key={title} title={title} url={url} />
                 ))}
-            </ImageList>
+            </Grid>
         </>
     );
 }

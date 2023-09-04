@@ -15,7 +15,7 @@ import {
     orderByValues,
     setUIOrderBy,
     useUIOrderDirection,
-} from '../../elf/ui/UI.repository';
+} from '../../elf/repo/order/UI.repository';
 import { AppTypography } from '../../components/base/AppTypography';
 
 export function ProjectsFilter({ uiId }: { uiId: string }) {
@@ -50,10 +50,9 @@ export function ProjectsFilter({ uiId }: { uiId: string }) {
                 labelId="projectsFilterLabel"
                 defaultValue="impact"
                 sx={{ width: '10rem' }}
-                onChange={({ target }: SelectChangeEvent<OrderBy>) => {
-                    const val: OrderBy = target.value as OrderBy;
-                    setUIOrderBy(uiId, val);
-                }}
+                onChange={({ target }: SelectChangeEvent<OrderBy>) =>
+                    setUIOrderBy(uiId, target.value as OrderBy)
+                }
             >
                 {orderByValues.map((orderBy) => (
                     <MenuItem dense value={orderBy} key={orderBy}>

@@ -1,6 +1,8 @@
 import { AddCircle } from '@mui/icons-material';
-import { Box, Container, Divider, Stack } from '@mui/material';
+import { Divider, Stack } from '@mui/material';
 
+import { useToggle } from '@app/ui';
+import React, { ReactNode, Suspense } from 'react';
 import { AppPaper } from '../../components/base/AppPaper';
 import { SummaryDisplay } from '../../components/common/ProjectSummary';
 import { ToolsDisplayList } from '../../components/common/ToolsDisplayList';
@@ -8,9 +10,9 @@ import { DatesDisplay } from '../../components/common/dates/DatesDisplay';
 import { ProjectProps } from '../../elf/types/ProjectTypes';
 import { ProjectRating } from './base/ProjectRating';
 import { ProjectTitle } from './base/ProjectTitle';
-import { ProjectUrlSection } from './base/ProjectUrlSection';
+import { ProjectExpanded } from './expanded/ProjectExpanded';
 
-export function Project(props: ProjectProps) {
+function ProjectContainer(props: { children: ReactNode }) {
     return (
         <AppPaper>
             <Stack
@@ -20,49 +22,73 @@ export function Project(props: ProjectProps) {
                 direction="row"
                 justifyContent="space-between"
                 divider={
-                    <Divider orientation="vertical" flexItem variant="middle" />
+                    <Divider flexItem orientation="vertical" variant="middle" />
                 }
             >
-                <Stack
-                    justifyContent="space-between"
-                    alignItems="center"
-                    direction="column"
-                >
-                    <ProjectTitle title={props.title} />
-                    <ToolsDisplayList toolIds={props.tools} />
-                </Stack>
-                <Stack maxWidth="35rem" direction="column">
-                    <SummaryDisplay
-                        summary={props.summary}
-                        comments={props.comments}
-                    />
-                    <ProjectUrlSection urls={props.urls} />
-                </Stack>
-                <Stack direction="column">
-                    <ProjectRating
-                        title="Impact"
-                        icon={<AddCircle />}
-                        value={props.ratingRelative.impact}
-                    />
-                    <ProjectRating
-                        title="Difficulty"
-                        icon={<AddCircle />}
-                        value={props.ratingRelative.difficulty}
-                    />
-                    <ProjectRating
-                        title="Size"
-                        icon={<AddCircle />}
-                        value={props.ratingRelative.size}
-                    />
-                    <ProjectRating
-                        title="Duration"
-                        icon={<AddCircle />}
-                        value={props.ratingRelative.duration}
-                    />
-                    <br />
-                    <DatesDisplay {...props.dates} duration={props.duration} />
-                </Stack>
+                {props.children}
             </Stack>
         </AppPaper>
+    );
+}
+
+type ProjectComponentProps = ProjectProps;
+
+export function Project(project: ProjectComponentProps) {
+    return (
+        <Suspense fallback={null}>
+            <LazyProject {...project} />
+        </Suspense>
+    );
+}
+const LazyProject = React.lazy(async () => ({ default: ProjectComponent }));
+function ProjectComponent(project: ProjectComponentProps) {
+    const [isExpanded, toggleExpanded] = useToggle(false);
+    if (isExpanded)
+        return <ProjectExpanded {...project} toggleExpanded={toggleExpanded} />;
+    return (
+        <ProjectContainer>
+            <Stack
+                justifyContent="space-between"
+                alignItems="center"
+                direction="column"
+            >
+                <ProjectTitle
+                    isExpanded={isExpanded}
+                    toggleExpanded={toggleExpanded}
+                    disableExpand={project.sections.length === 0}
+                    title={project.title}
+                />
+                <ToolsDisplayList toolIds={project.tools} />
+            </Stack>
+            <SummaryDisplay
+                summary={project.summary}
+                comments={project.comments}
+                urls={project.urls}
+            />
+            <Stack direction="column">
+                <ProjectRating
+                    title="Impact"
+                    icon={<AddCircle />}
+                    value={project.ratingRelative.impact}
+                />
+                <ProjectRating
+                    title="Difficulty"
+                    icon={<AddCircle />}
+                    value={project.ratingRelative.difficulty}
+                />
+                <ProjectRating
+                    title="Size"
+                    icon={<AddCircle />}
+                    value={project.ratingRelative.size}
+                />
+                <ProjectRating
+                    title="Duration"
+                    icon={<AddCircle />}
+                    value={project.ratingRelative.duration}
+                />
+                <br />
+                <DatesDisplay {...project.dates} duration={project.duration} />
+            </Stack>
+        </ProjectContainer>
     );
 }

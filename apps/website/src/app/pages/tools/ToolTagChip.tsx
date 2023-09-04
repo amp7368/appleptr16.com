@@ -1,16 +1,20 @@
 import { Chip } from '@mui/material';
 
-import { ToolTag } from '../../elf/types/ToolTypes';
-import { setToolTags, setUIToolFilter } from '../../elf/ui/ToolUI.repository';
 import { AppTypography } from '../../components/base/AppTypography';
+import { setToolUI } from '../../elf/repo/tool';
+import { ToolTag } from '../../elf/types/ToolTypes';
+import { lightShadows } from '../../util/lightShadow';
 
 export interface ToolTagChipProps {
     toolTag: ToolTag;
     active: boolean;
 }
 export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
-    const onDelete: () => void = () =>
-        setToolTags(([...tags]) => tags.filter((tag) => toolTag !== tag));
+    function onDelete(): void {
+        setToolUI('toolTags', ([...tags]) =>
+            tags.filter((tag) => toolTag !== tag)
+        );
+    }
     return (
         <Chip
             label={
@@ -22,9 +26,10 @@ export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
                     {toolTag}
                 </AppTypography>
             }
-            onClick={() => setToolTags([toolTag])}
+            onClick={active ? onDelete : () => setToolUI('toolTags', [toolTag])}
             onDelete={active ? onDelete : undefined}
             color={active ? 'secondary' : 'default'}
+            sx={{ boxShadow: lightShadows[2] }}
         />
     );
 }

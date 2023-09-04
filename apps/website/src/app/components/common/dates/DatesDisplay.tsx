@@ -12,14 +12,16 @@ export type DatesDisplayProps = FullDateRangeProps & {
 export function DatesDisplay(props: DatesDisplayProps) {
     const totalMonths = props.duration / MILLIS_PER_MONTH;
     const [isExpanded, setExpanded] = useToggle(false);
-
     return (
         <DatesDisplayContainer
             isExpanded={isExpanded}
             setExpanded={setExpanded}
         >
             {!isExpanded && (
-                <DatePartDurationList isExpanded={isExpanded} dates={[props]} />
+                <DatePartDurationList
+                    isExpanded={!isExpanded}
+                    dates={[props]}
+                />
             )}
             {isExpanded && (
                 <DatePartDurationList

@@ -1,4 +1,8 @@
 import { FullDateRangeProps, FullDateRangeRaw } from './DateTypes';
+import {
+    ProjectRawSectionData,
+    ProjectSectionProps,
+} from './ProjectSectionTypes';
 import { ToolNotes } from './ToolTypes';
 
 export interface ProjectRawData {
@@ -13,17 +17,9 @@ export interface ProjectRawData {
     summary: string[];
     tools: Record<string, ToolNotes>;
     comments: string[];
-    sections?: ProjectRawSection[];
+    sections?: ProjectRawSectionData[];
 }
-export interface ProjectRawSection {
-    title: string;
-    description: string;
-    dates: FullDateRangeRaw;
-    urls?: Record<string, ProjectUrl>;
-    summary: string[];
-    tools?: Record<string, ToolNotes>;
-    comments: string[];
-}
+
 export type ProjectUrl = {
     link: string;
     comment?: string;
@@ -49,5 +45,5 @@ export interface ProjectProps {
     tools: Record<string, ToolNotes>;
     summary: string[];
     comments: string[];
-    sections?: ProjectRawSection[];
+    sections: ProjectSectionProps[];
 }

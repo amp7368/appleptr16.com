@@ -6,9 +6,10 @@ import {
 } from '../../elf/read/getRawProjects';
 import { fixData, relativeRating } from '../../elf/read/projectFixData';
 import { ProjectProps, ProjectRawData } from '../../elf/types/ProjectTypes';
-import { useUIOrderBy, useUIOrderDirection } from '../../elf/ui/UI.repository';
-
-const rawData: ProjectRawData[] = getRawProjects();
+import {
+    useUIOrderBy,
+    useUIOrderDirection,
+} from '../../elf/repo/order/UI.repository';
 
 function sortFromExtract<P, T>(extractFn: (p: P) => T) {
     return (a: P, b: P) => {

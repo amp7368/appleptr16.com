@@ -8,7 +8,7 @@ export type ToolValue = {
 };
 export type Tool = ToolValue & { id: string };
 
-export const toolTagValues: ToolTag[] = [
+export const allToolTags: ToolTag[] = [
     'LANGUAGE',
     'LIBRARY',
     'ENVIRONMENT',
