@@ -43,7 +43,9 @@
         "@ngneat/elf-entities": "^4.4.4",
         "@ngneat/elf-persist-state": "^1.1.6",
         "dateformat": "^5.0.3",
+        "is-mobile": "^4.0.0",
         "react": "^18.2.0",
+        "react-cookie": "^4.1.1",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.9.0",
         "rxjs": "^7.8.0"

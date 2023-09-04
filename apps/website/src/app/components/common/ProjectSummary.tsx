@@ -1,16 +1,21 @@
 import { Stack } from '@mui/material';
-import { ReactNode } from 'react';
-
-import { Bulletpoint } from '../pages/projects/common/BulletPoint';
-import { SectionHeader } from '../pages/projects/common/SectionHeader';
+import { ProjectUrl } from '../../elf/types/ProjectTypes';
+import { ProjectUrlSection } from '../../pages/projects/base/ProjectUrlSection';
+import { Bulletpoint } from '../../pages/projects/common/BulletPoint';
+import { SectionHeader } from '../../pages/projects/common/SectionHeader';
 
 export interface SummaryDisplayProps {
     summary: string[];
     comments: string[];
+    urls?: Record<string, ProjectUrl>;
 }
-export function SummaryDisplay({ summary, comments }: SummaryDisplayProps) {
+export function SummaryDisplay({
+    summary,
+    comments,
+    urls,
+}: SummaryDisplayProps) {
     return (
-        <Stack direction="column" paddingBottom={1}>
+        <Stack maxWidth="35rem" direction="column" paddingBottom={1}>
             <SectionHeader>Summary</SectionHeader>
             <Stack direction="column">
                 {summary.map((text, i) => (
@@ -23,6 +28,7 @@ export function SummaryDisplay({ summary, comments }: SummaryDisplayProps) {
                     <Bulletpoint key={i}>{text}</Bulletpoint>
                 ))}
             </Stack>
+            <ProjectUrlSection urls={urls} />
         </Stack>
     );
 }

@@ -1,15 +1,19 @@
-import { Button, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
+import { ToolNotes } from '../../elf/types/ToolTypes';
 
-import { AppTypography } from '../base/AppTypography';
-import { ToolValue, ToolNotes, Tool } from '../types/ToolTypes';
 import { ToolDisplay } from './ToolDisplay';
 
 export interface ToolsDisplayListProps {
     toolIds: Record<string, ToolNotes>;
+    row?: boolean;
 }
-export function ToolsDisplayList({ toolIds }: ToolsDisplayListProps) {
+export function ToolsDisplayList({ toolIds, row }: ToolsDisplayListProps) {
     return (
-        <Stack direction="column" spacing={1} justifyContent="flex-end">
+        <Stack
+            direction={row ? 'row' : 'column'}
+            spacing={1}
+            justifyContent={row ? 'center' : 'flex-end'}
+        >
             {Object.entries(toolIds).map(([id, tool]) => (
                 <ToolDisplay key={id} id={id} extra={tool.extra} />
             ))}

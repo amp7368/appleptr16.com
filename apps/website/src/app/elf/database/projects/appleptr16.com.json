@@ -1,0 +1,32 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "title": "appleptr16.com",
+    "ratingRaw": {
+        "impact": 2.5,
+        "difficulty": 2.5,
+        "size": 3.5
+    },
+    "urls": {
+        "Github": { "link": "https://github.com/amp7368/appleptr16.com" },
+        "Site": { "link": "appleptr16.com" }
+    },
+    "dates": {
+        "dateApproximation": "MONTH",
+        "startDate": "2022-06-26",
+        "endDate": "current"
+    },
+    "summary": ["Developing and maintaining website to showcase projects"],
+    "tools": {
+        "React": {},
+        "Typescript": {},
+        "@mui/material": {},
+        "@ngneat/elf": {},
+        "NX": {},
+        "VSCode": {},
+        "Cloudflare": {}
+    },
+    "comments": [
+        "This is a small, yet rewarding project because it explains my experiences in a more interesting way than a resume.",
+        "It's is essentially a work journal to keep records of notable projects."
+    ]
+}

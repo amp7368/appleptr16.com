@@ -23,8 +23,8 @@
         "noErrorTruncation": true,
         "baseUrl": ".",
         "paths": {
-            "@appleptr16/elemental": ["libs/elemental/src/index.ts"],
-            "@appleptr16/utilities": ["libs/utilities/src/index.ts"]
+            "@app/ui": ["libs/elemental/src/index.ts"],
+            "@app/util": ["libs/utilities/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

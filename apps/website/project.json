@@ -38,12 +38,13 @@
                             "with": "apps/website/src/environments/environment.dev.ts"
                         }
                     ],
-                    "statsJson": true,
                     "outputHashing": "all",
                     "extractLicenses": false,
                     "optimization": false,
                     "sourceMap": true,
-                    "vendorChunk": true
+                    "vendorChunk": true,
+                    "isolatedConfig": true,
+                    "webpackConfig": "apps/website/webpack.config.js"
                 },
                 "production": {
                     "fileReplacements": [
@@ -70,6 +71,7 @@
             },
             "configurations": {
                 "development": {
+                    "host": "0.0.0.0",
                     "buildTarget": "website:build:development"
                 },
                 "production": {

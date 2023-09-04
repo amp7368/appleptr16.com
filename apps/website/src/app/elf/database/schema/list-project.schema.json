@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "patternProperties": {
+        ".*": {
+            "anyOf": [{ "type": "string" }, { "$ref": "./project.schema.json" }]
+        }
+    }
+}

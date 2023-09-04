@@ -1,0 +1,31 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "ratingRaw": {
+        "impact": 6.0,
+        "difficulty": 4.0,
+        "size": 4.0
+    },
+    "title": "Excursion",
+    "urls": {
+        "Github": { "link": "https://github.com/amp7368/Excursion" }
+    },
+    "dates": {
+        "dateApproximation": "MONTH",
+        "startDate": "2020-06-01",
+        "endDate": "2021-01-01"
+    },
+    "summary": [
+        "Developed a Discord bot for players to submit evidence of them doing tasks from a task board to earn points"
+    ],
+    "tools": {
+        "IntelliJ": {},
+        "Github": {},
+        "PaperMC": {},
+        "JDA": {},
+        "Java": {},
+        "Java Google Sheets API": {}
+    },
+    "comments": [
+        "I learned to use JDA, SQLite database, and a google sheets library."
+    ]
+}

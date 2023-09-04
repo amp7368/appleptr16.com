@@ -6,5 +6,11 @@ export const urls = {
 };
 export const nav = {};
 export function navTo(url: string) {
-    window.location.href = url;
+    location.href = url;
+}
+export function isPathname(path: string) {
+    let loc = location.pathname;
+    if (!path.endsWith('/')) path += '/';
+    if (!loc.endsWith('/')) loc += '/';
+    return path === loc;
 }

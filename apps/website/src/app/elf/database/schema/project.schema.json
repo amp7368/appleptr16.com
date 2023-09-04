@@ -1,0 +1,24 @@
+{
+    "title": "Project",
+    "type": "object",
+    "properties": {
+        "title": { "type": "string" },
+        "dates": { "$ref": "./date-list.schema.json" },
+        "urls": { "$ref": "./project-urls.schema.json" },
+        "ratingRaw": { "$ref": "./project-rating.schema.json" },
+        "summary": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "tools": { "$ref": "./project-tools.schema.json" },
+        "comments": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "sections": {
+            "type": "array",
+            "items": { "$ref": "./project-section.schema.json" }
+        }
+    },
+    "required": ["title", "dates", "ratingRaw", "summary", "tools", "comments"]
+}

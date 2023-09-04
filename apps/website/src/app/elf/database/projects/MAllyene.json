@@ -1,0 +1,35 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "ratingRaw": {
+        "impact": 6.0,
+        "difficulty": 6.0,
+        "size": 5.0
+    },
+    "title": "MAllyene",
+    "urls": {
+        "Github": { "link": "https://mallyene.web.app" }
+    },
+    "status": "abandoned",
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2022-06-01",
+        "endDate": "2022-08-01"
+    },
+    "summary": [
+        "Developing an eCommerce website to sell skin care products",
+        "Utilizing Firebase to host and handle integrations with 3rd party tools such as Stripe, ShipEngine, and SendGrid"
+    ],
+    "tools": {
+        "React": {},
+        "Typescript": {},
+        "@mui/material": {},
+        "@ngneat/elf": {},
+        "NX": {},
+        "Firebase": {},
+        "VSCode": {}
+    },
+    "comments": [
+        "I'm learning to use Firebase.",
+        "It is serving as good practice in typescript and react"
+    ]
+}

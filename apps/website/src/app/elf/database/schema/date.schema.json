@@ -1,0 +1,8 @@
+{
+    "type": "object",
+    "properties": {
+        "dateApproximation": { "enum": ["DAY", "MONTH", "YEAR"] },
+        "startDate": { "type": "string" },
+        "endDate": { "type": "string" }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "title": "Voltskiya",
+    "ratingRaw": {
+        "impact": 8.0,
+        "difficulty": 7.5,
+        "size": 9.0
+    },
+    "urls": {
+        "Git-CustomMobs": {
+            "link": "https://github.com/amp7368/VoltskiyaCustomMobs",
+            "comment": "Repo for all added custom mobs"
+        },
+        "Git-Utilities": {
+            "link": "https://github.com/amp7368/VoltskiyaUtilities",
+            "comment": "Repo for common utilities specific to Voltskiya"
+        },
+        "Git-Decay": {
+            "link": "https://github.com/amp7368/VoltskiyaDecay",
+            "comment": "Decay and regeneration of the map was big enough to be it's own repo"
+        }
+    },
+    "sections": [
+        {
+            "title": "Learning",
+            "description": "Developed Minecraft Plugins to create a unique experience in a survival server.",
+            "summary": [
+                "Made very basic plugins such as preventing mobs from equiping armor on the ground or slowing players natural health regeneration"
+            ],
+            "comments": ["I started learning how to use Github at this time"],
+            "tools": { "Java": {}, "Github": {}, "IntelliJ": {} },
+            "dates": {
+                "dateApproximation": "MONTH",
+                "startDate": "2020-03-01",
+                "endDate": "2020-09-08"
+            },
+            "urls": {
+                "Git-Initial": {
+                    "link": "https://github.com/amp7368/Voltskiya",
+                    "comment": "The first repository. Meant to encompass all features"
+                }
+            }
+        },
+        {
+            "title": "Expansion",
+            "description": "Immensely expanded the code base by adding mob abilities, game mechanics, and a mob system.",
+            "summary": [
+                "Added an extensive library of mob abilities so a 'GameMaster' could mix and match abilities to create new mobs. This also included 'leaps' so certain mobs could jump higher and at various speeds on a cooldown",
+                "Added a series of game features such as Temperature, Thirst, Stamina, and skill points",
+                "Created MobSystem_v1 by pre-scanning the world to find spawnable places according to a series of spawning rules"
+            ],
+            "comments": [
+                "Was learning SQL at this time. I think it was good experience to not use an ORM to learn how to write the queries"
+            ],
+            "tools": { "Java": {}, "Github": {}, "IntelliJ": {}, "SQL": {} },
+            "dates": {
+                "dateApproximation": "MONTH",
+                "startDate": "2021-03-01",
+                "endDate": "2021-10-30"
+            },
+            "urls": {
+                "Git-GameMechanics": {
+                    "link": "https://github.com/amp7368/VoltskiyaGameMechanics",
+                    "comment": "Repo for all major game mechanics"
+                },
+                "Git-CustomMobs": {},
+                "Git-Utilities": {},
+                "Git-Decay": {}
+            }
+        }
+    ],
+    "dates": [
+        {
+            "dateApproximation": "MONTH",
+            "startDate": "2022-07-08",
+            "endDate": "2023-07-01"
+        }
+    ],
+    "summary": [],
+    "tools": {
+        "IntelliJ": {},
+        "Github": {},
+        "SQL": {},
+        "PaperMC": {},
+        "Java": {}
+    },
+    "comments": [
+        "I really grew as a programmer with this project more than any other to date.",
+        "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for the next project"
+    ]
+}
