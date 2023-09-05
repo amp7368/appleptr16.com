@@ -27,8 +27,9 @@ function getToolData(): Record<string, Tool> {
 }
 export const toolStore = createStore(
     { name: 'tool' },
-    withEntities<Tool>({ initialValue: [] }),
+    withEntities<Tool>(),
     withProps<ToolUIEnv>({ toolTags: [], active: undefined }),
     withToolTags()
 );
-persist(toolStore, { entities: getToolData() });
+
+persist(toolStore, { getEntities: () => getToolData() });
