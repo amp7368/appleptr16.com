@@ -1,13 +1,15 @@
 import { getRegistry, Store, StoreValue } from '@ngneat/elf';
+import { setEntitiesMap } from '@ngneat/elf-entities';
 import {
     persistState,
     sessionStorageStrategy,
     StateStorage,
 } from '@ngneat/elf-persist-state';
 import { Observable } from 'rxjs';
+import { isNewVersion } from '../init/appVersion';
 
 interface PersistProps {
-    entities?: Record<string, unknown>;
+    getEntities?: () => Record<string, unknown>;
 }
 interface Options<S extends Store> {
     storage: StateStorage;
@@ -17,13 +19,15 @@ interface Options<S extends Store> {
     runGuard?(): boolean;
 }
 
-export function persist(store: Store, { entities }: PersistProps) {
+export function persist(store: Store, { getEntities }: PersistProps) {
     const config: Options<Store> = { storage: sessionStorageStrategy };
-
-    if (entities !== undefined)
-        config.preStoreInit = (store: Store) => ({ ...store, entities });
-
-    persistState(store, config);
+    const { initialized$ } = persistState(store, config);
+    store.update();
+    if (!!getEntities) {
+        initialized$.subscribe(() =>
+            store.update(setEntitiesMap(getEntities()))
+        );
+    }
 }
 export function resetStores() {
     getRegistry().forEach((store) => store.reset());

@@ -2,6 +2,7 @@ import { Button, Tooltip } from '@mui/material';
 import { AppTypography } from '../../../components/base/AppTypography';
 import { ProjectUrl } from '../../../elf/types/ProjectTypes';
 import { lightShadows } from '../../../util/lightShadow';
+import { ToolTipTypography } from '../../../components/base/ToolTipTypography';
 
 export interface ProjectUrlButtonProps {
     title: string;
@@ -11,7 +12,11 @@ export function ProjectUrlButton(props: ProjectUrlButtonProps) {
     return (
         <Tooltip
             disableInteractive
-            title={props.url.comment ?? 'No description'}
+            title={
+                <ToolTipTypography>
+                    {props.url.comment ?? 'No description'}
+                </ToolTipTypography>
+            }
         >
             <Button
                 variant="outlined"

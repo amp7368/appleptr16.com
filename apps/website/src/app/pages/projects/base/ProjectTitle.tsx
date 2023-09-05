@@ -18,9 +18,17 @@ export function ProjectTitle(props: ProjectTitleProps) {
     };
 
     let color: string;
-    if (props.isExpanded) color = palette.secondary.main;
-    else if (props.disableExpand) color = palette.error.main;
-    else color = palette.primary.main;
+    let tooltip: string;
+    if (props.isExpanded) {
+        color = palette.secondary.main;
+        tooltip = 'Collapse project sections';
+    } else if (props.disableExpand) {
+        color = palette.error.main;
+        tooltip = 'No sections for project';
+    } else {
+        color = palette.primary.main;
+        tooltip = 'Expand project to show sections';
+    }
 
     if (props.isExpanded) {
         return (
@@ -29,6 +37,7 @@ export function ProjectTitle(props: ProjectTitleProps) {
                     color={color}
                     onClick={props.toggleExpanded}
                     icon={<ExpandLess {...iconProps} />}
+                    tooltip={tooltip}
                 />
                 <AppTypography
                     color="text.primary"
@@ -47,6 +56,7 @@ export function ProjectTitle(props: ProjectTitleProps) {
                 onClick={props.toggleExpanded}
                 disabled={props.disableExpand}
                 icon={<ChevronRight {...iconProps} />}
+                tooltip={tooltip}
             />
             <AppTypography color="text.primary" variant="h5" fontWeight={500}>
                 {props.title}

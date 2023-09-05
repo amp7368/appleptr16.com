@@ -1,18 +1,16 @@
-import { Box, Stack, Tooltip, emphasize, useTheme } from '@mui/material';
+import { Box, Stack, Tooltip, emphasize, lighten } from '@mui/material';
 import { common } from '@mui/material/colors';
 import { ReactNode } from 'react';
+import { ToolTipTypography } from '../../../components/base/ToolTipTypography';
 
 export interface ExpandIconProps {
     color: string;
     disabled?: boolean;
     icon: ReactNode;
+    tooltip: ReactNode | ReactNode[];
     onClick: () => void;
 }
 export function ExpandIcon(props: ExpandIconProps) {
-    const title = props.disabled
-        ? 'No sections for project'
-        : 'Expand project to show sections';
-
     return (
         <Stack
             padding={1.5}
@@ -20,7 +18,21 @@ export function ExpandIcon(props: ExpandIconProps) {
             justifyContent="center"
             alignItems="center"
         >
-            <Tooltip disableInteractive title={title}>
+            <Tooltip
+                disableInteractive
+                describeChild
+                componentsProps={{
+                    tooltip: {
+                        sx: {
+                            bgcolor: props.color,
+                            borderWidth: '1px',
+                            borderStyle: 'solid',
+                            borderColor: emphasize(props.color, 0.3),
+                        },
+                    },
+                }}
+                title={<ToolTipTypography>{props.tooltip}</ToolTipTypography>}
+            >
                 <Box
                     onClick={props.onClick}
                     display="flex"

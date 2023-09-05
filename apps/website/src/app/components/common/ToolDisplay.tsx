@@ -2,9 +2,10 @@ import { Optional } from '@app/util';
 import { Button, ButtonProps, Stack, Tooltip } from '@mui/material';
 import { setToolUI, useTool } from '../../elf/repo/tool';
 import { Tool } from '../../elf/types/ToolTypes';
+import { lightShadows } from '../../util/lightShadow';
 import { isPathname, navTo, urls } from '../../util/routes';
 import { AppTypography } from '../base/AppTypography';
-import { lightShadows } from '../../util/lightShadow';
+import { ToolTipTypography } from '../base/ToolTipTypography';
 
 type ToolID = {
     id: string;
@@ -25,9 +26,11 @@ export function ToolDisplay(props: ToolDisplayProps) {
         <Tooltip
             disableInteractive
             title={
-                <Stack divider={<br />}>
+                <ToolTipTypography
+                    Wrapper={(props) => <Stack divider={<br />} {...props} />}
+                >
                     {tool.comments ?? 'No description'}
-                </Stack>
+                </ToolTipTypography>
             }
         >
             <Button

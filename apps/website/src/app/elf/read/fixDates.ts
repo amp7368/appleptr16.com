@@ -44,24 +44,29 @@ function fixOneDate(date: DateRangeRaw): DateRangeProps {
         dateApproximation: date.dateApproximation,
         startFormatted: formatDate(date.startDate, date.dateApproximation),
         endFormatted: formatDate(date.endDate, date.dateApproximation),
-        startDate: new Date(date.startDate),
-        endDate:
-            date.endDate === 'current' ? new Date() : new Date(date.endDate),
+        startDate: parseDate(date.startDate),
+        endDate: parseDate(date.endDate),
     };
 }
-const formatting: Record<DateApproximation, string> = {
-    DAY: 'mmmm yyyy',
-    MONTH: 'mmmm yyyy',
-    YEAR: 'yyyy',
-};
-function formatDate(date: string, approximation: DateApproximation) {
-    if (date === 'current') return 'Current';
-    return dateFormat(date, formatting[approximation]);
-}
+
 export function getDuration(
     dates: FullDateRangeProps | DateRangeProps
 ): number {
     if ('dates' in dates)
         return dates.dates.map(getDuration).reduce((a, b) => a + b);
     return dates.endDate.getTime() - dates.startDate.getTime();
+}
+
+const formatting: Record<DateApproximation, string> = {
+    DAY: 'mmmm yyyy',
+    MONTH: 'mmmm yyyy',
+    YEAR: 'yyyy',
+};
+
+function formatDate(date: string, approximation: DateApproximation) {
+    if (date === 'current') return 'Current';
+    return dateFormat(parseDate(date), formatting[approximation]);
+}
+function parseDate(date: string): Date {
+    return date === 'current' ? new Date() : new Date(date.replace(/-/g, '/'));
 }
