@@ -10,11 +10,13 @@ import { AppHeader } from './app/components/common/header/AppHeader';
 import { CookieConsent } from './app/components/cookie/CookieConsent';
 import { defaultTheme } from './app/util/appTheme';
 import { environment } from './environments/environment';
+import { verifyAppVersion } from './app/util/appVersion';
 
 if (environment.production) enableElfProdMode();
 
-const container = document.getElementById('root') as HTMLElement;
+verifyAppVersion();
 
+const container = document.getElementById('root') as HTMLElement;
 createRoot(container).render(
     <StrictMode>
         <ThemeProvider theme={defaultTheme}>

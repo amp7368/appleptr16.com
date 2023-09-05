@@ -21,8 +21,11 @@ export function persist(store: Store, { entities }: PersistProps) {
     const config: Options<Store> = { storage: sessionStorageStrategy };
 
     if (entities !== undefined)
-        config.preStoreInit = (store: Store) => ({ ...store, entities });
-
+        config.preStoreInit = (store: Store) => ({
+            ...store,
+            entities,
+            ids: Object.keys(entities),
+        });
     persistState(store, config);
 }
 export function resetStores() {

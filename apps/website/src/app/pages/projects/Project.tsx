@@ -34,13 +34,8 @@ function ProjectContainer(props: { children: ReactNode }) {
 type ProjectComponentProps = ProjectProps;
 
 export function Project(project: ProjectComponentProps) {
-    return (
-        <Suspense fallback={null}>
-            <LazyProject {...project} />
-        </Suspense>
-    );
+    return <ProjectComponent {...project} />;
 }
-const LazyProject = React.lazy(async () => ({ default: ProjectComponent }));
 function ProjectComponent(project: ProjectComponentProps) {
     const [isExpanded, toggleExpanded] = useToggle(false);
     if (isExpanded)

@@ -6,6 +6,7 @@ import {
     Select,
     SelectChangeEvent,
     Stack,
+    useTheme,
 } from '@mui/material';
 import { ReactNode } from 'react';
 
@@ -17,6 +18,7 @@ import {
     useUIOrderDirection,
 } from '../../elf/repo/order/UI.repository';
 import { AppTypography } from '../../components/base/AppTypography';
+import { ExpandIcon } from './base/ExpandIcon';
 
 export function ProjectsFilter({ uiId }: { uiId: string }) {
     const orderAsc = useUIOrderDirection(uiId);
@@ -42,9 +44,12 @@ export function ProjectsFilter({ uiId }: { uiId: string }) {
             <AppTypography noWrap variant="h6">
                 Order by
             </AppTypography>
-            <Button onClick={() => flipUIOrderDirection(uiId)}>
-                {orderElement}
-            </Button>
+            <ExpandIcon
+                onClick={() => flipUIOrderDirection(uiId)}
+                color={useTheme().palette.primary.main}
+                icon={orderElement}
+                tooltip="Reverse Sort"
+            />
             <Select<OrderBy>
                 variant="outlined"
                 labelId="projectsFilterLabel"

@@ -6,10 +6,6 @@ import { ToolTag } from '../../types/ToolTypes';
 import { persist } from '../../Elf';
 import toolsJson from '../../database/tools.json';
 import { Tool, ToolValue } from '../../types/ToolTypes';
-import {
-    persistState,
-    sessionStorageStrategy,
-} from '@ngneat/elf-persist-state';
 
 export type ToolUIEnv = {
     toolTags: ToolTag[];
