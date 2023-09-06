@@ -1,8 +1,5 @@
 import { FullDateRangeProps, FullDateRangeRaw } from './DateTypes';
-import {
-    ProjectRawSectionData,
-    ProjectSectionProps,
-} from './ProjectSectionTypes';
+import { ProjectRawSectionData, ProjectSectionProps } from './ProjectSectionTypes';
 import { ToolNotes } from './ToolTypes';
 
 export interface ProjectRawData {

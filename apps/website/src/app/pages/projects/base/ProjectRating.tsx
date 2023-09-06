@@ -1,5 +1,6 @@
-import { Rating, Stack } from '@mui/material';
 import { ReactNode } from 'react';
+
+import { Rating, Stack } from '@mui/material';
 
 import { SectionHeader } from '../common/SectionHeader';
 

@@ -1,4 +1,5 @@
 import { Stack } from '@mui/material';
+
 import { AppTypography } from '../../../components/base/AppTypography';
 
 export interface WorkTitleProps {

@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material';
-import { ToolNotes } from '../../elf/types/ToolTypes';
 
+import { ToolNotes } from '../../elf/types/ToolTypes';
 import { ToolDisplay } from './ToolDisplay';
 
 export interface ToolsDisplayListProps {

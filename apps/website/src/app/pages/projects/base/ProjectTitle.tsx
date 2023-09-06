@@ -1,5 +1,6 @@
 import { ChevronRight, ExpandLess } from '@mui/icons-material';
 import { Stack, SvgIconProps, useTheme } from '@mui/material';
+
 import { AppTypography } from '../../../components/base/AppTypography';
 import { ExpandIcon } from './ExpandIcon';
 

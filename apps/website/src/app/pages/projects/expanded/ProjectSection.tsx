@@ -1,7 +1,8 @@
 import { Box, Divider, Stack, useTheme } from '@mui/material';
+
 import { AppTypography } from '../../../components/base/AppTypography';
-import { ToolsDisplayList } from '../../../components/common/ToolsDisplayList';
 import { SectionDatesDisplay } from '../../../components/common/dates/SectionDatesDisplay';
+import { ToolsDisplayList } from '../../../components/common/ToolsDisplayList';
 import { ProjectSectionProps } from '../../../elf/types/ProjectSectionTypes';
 import { ProjectUrlSection } from '../base/ProjectUrlSection';
 import { Bulletpoint } from '../common/BulletPoint';

@@ -1,6 +1,8 @@
 import {
     Palette as MPalette,
     PaletteOptions as MPaletteOptions,
+    Theme as MTheme,
+    ThemeOptions as MThemeOptions,
     TypeBackground as MTypeBackground,
 } from '@mui/material/styles';
 
@@ -8,7 +10,7 @@ declare module '@mui/material/styles' {
     interface Palette extends MPalette {
         background: MPalette['background'] & { card: string };
     }
-    interface Theme {
+    interface Theme extends MTheme {
         palette: Palette;
     }
 
@@ -19,8 +21,8 @@ declare module '@mui/material/styles' {
         background?: TypeBackground;
     }
     // allow configuration using `createTheme`
-    interface ThemeOptions {
+    interface ThemeOptions extends MThemeOptions {
         palette?: PaletteOptions;
     }
 }
-export { Theme, ThemeOptions, PaletteOptions, TypeBackground };
+export { PaletteOptions, Theme, ThemeOptions, TypeBackground };

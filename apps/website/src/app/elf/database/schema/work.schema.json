@@ -1,0 +1,19 @@
+{
+    "title": "Work",
+    "type": "object",
+    "properties": {
+        "company": { "type": "string" },
+        "role": { "type": "string" },
+        "dates": { "$ref": "./date-list.schema.json" },
+        "summary": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "comments": {
+            "type": "array",
+            "items": { "type": "string" }
+        },
+        "tools": { "$ref": "./tools-list.schema.json" }
+    },
+    "required": ["company", "role", "dates", "summary", "comments", "tools"]
+}

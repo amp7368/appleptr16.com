@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
+
 import { Email, GitHub, LinkedIn, Web } from '@mui/icons-material';
 import { AppBar, Box, Divider, Link, Stack } from '@mui/material';
-import { ReactNode } from 'react';
 
 import { AppTypography } from '../base/AppTypography';
 

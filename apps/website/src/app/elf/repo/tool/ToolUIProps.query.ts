@@ -1,8 +1,9 @@
+import { map } from 'rxjs';
+
 import { useObservableMemo } from '@app/ui';
 
-import { map } from 'rxjs';
 import { ToolTag } from '../../types/ToolTypes';
-import { ToolUIEnv, toolStore, toolTagsArrayFactory } from './ToolUI.store';
+import { toolStore, toolTagsArrayFactory, ToolUIEnv } from './ToolUI.store';
 
 const {
     getToolTags,
@@ -39,19 +40,16 @@ export function setToolUI<Key extends keyof ToolUIEnv>(
     }));
 }
 
-export function useUIToolFilter(): ToolTag[] {
+export function useToolUIFilter(): ToolTag[] {
     return useObservableMemo(
         () => toolStore.pipe(selectToolTags()),
         [toolStore],
         () => toolStore.query(getToolTags)
     );
 }
-export function useToolUI<Key extends keyof ToolUIEnv>(
+export function useToolUI<Key extends Exclude<keyof ToolUIEnv, 'toolTags'>>(
     key: Key
 ): ToolUIEnv[Key] {
-    if (key === 'toolTags') {
-        return useUIToolFilter() as ToolUIEnv[Key];
-    }
     return useObservableMemo(
         () => toolStore.pipe(map((state) => state[key])),
         [toolStore, key],

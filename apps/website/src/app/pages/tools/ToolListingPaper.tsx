@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
-import { AppPaper } from '../../components/base/AppPaper';
 
+import { AppPaper } from '../../components/base/AppPaper';
 import { ToolDisplay } from '../../components/common/ToolDisplay';
 import { useActiveTools } from '../../elf/repo/tool';
 import { Tool } from '../../elf/types/ToolTypes';

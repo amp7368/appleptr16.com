@@ -5,6 +5,7 @@ import { ProjectProps } from '../../elf/types/ProjectTypes';
 import { Project } from './Project';
 import { ProjectsFilter } from './ProjectsFilter';
 import { useProjects } from './projectStore';
+
 export function ProjectsPage() {
     const uiId = 'projectsUi';
     const projectsSorted: ProjectProps[] = useProjects(uiId);

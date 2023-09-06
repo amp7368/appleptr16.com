@@ -13,13 +13,18 @@ export const allToolTags: ToolTag[] = [
     'LIBRARY',
     'ENVIRONMENT',
     'UTILITY',
-    'OTHER',
     'IDE',
+    'SERVICE',
+    'FRAMEWORK',
+    'OTHER',
 ];
+allToolTags.sort();
 export type ToolTag =
     | 'LANGUAGE'
     | 'LIBRARY'
     | 'ENVIRONMENT'
     | 'UTILITY'
     | 'OTHER'
-    | 'IDE';
+    | 'IDE'
+    | 'SERVICE'
+    | 'FRAMEWORK';

@@ -1,5 +1,7 @@
-import { Box, Divider, TypographyProps } from '@mui/material';
 import { ReactNode } from 'react';
+
+import { Box, Divider, TypographyProps } from '@mui/material';
+
 import { AppTypography } from '../../../components/base/AppTypography';
 
 export interface SectionHeaderProps {

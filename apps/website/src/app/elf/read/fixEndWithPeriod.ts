@@ -1,11 +1,17 @@
 import { ProjectUrl } from '../types/ProjectTypes';
 import { ToolNotes } from '../types/ToolTypes';
 
-export function endWithPeriod(s: string, isEndPeriod: boolean = true): string {
-    return s.endsWith('.') ? s : s + '.';
+function endWithPeriod(s: string, isEndPeriod: boolean = true): string {
+    if (s.endsWith('.')) return isEndPeriod ? s : s.slice(0, s.length - 1);
+    else return isEndPeriod ? s + '.' : s;
 }
-export function endWithPeriods(msgs: string[]): string[] {
-    return msgs.map((s) => endWithPeriod(s));
+
+export function endWithPeriods<T extends string[] | string>(
+    msgs: T,
+    isEndPeriod: boolean = true
+): T {
+    if (typeof msgs === 'string') return endWithPeriod(msgs, isEndPeriod) as T;
+    else return msgs.map((s: string) => endWithPeriod(s, isEndPeriod)) as T;
 }
 
 export function toolEndWithPeriods(
@@ -28,7 +34,7 @@ export function urlEndWithPeriods(
             if (!url.comment) return [title, url];
             const fixedUrl: ProjectUrl = {
                 link: url.link,
-                comment: endWithPeriod(url.comment, false),
+                comment: endWithPeriods(url.comment, false),
             };
             return [title, fixedUrl];
         })

@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+
 import { useObservableMemo } from '@app/ui';
 import { Optional } from '@app/util';
 import {
@@ -9,13 +11,13 @@ import {
     selectEntity,
 } from '@ngneat/elf-entities';
 
-import { useCallback } from 'react';
+import { environment } from '../../../../environments/environment';
 import { Tool, ToolTag } from '../../types/ToolTypes';
 import { toolStore } from './ToolUI.store';
-import { useUIToolFilter } from './ToolUIProps.query';
+import { useToolUIFilter } from './ToolUIProps.query';
 
 export function useActiveTools(): Tool[] {
-    const toolFilter: ToolTag[] = useUIToolFilter();
+    const toolFilter: ToolTag[] = useToolUIFilter();
 
     const filterEntity = useCallback(
         (tool: Tool): boolean => {

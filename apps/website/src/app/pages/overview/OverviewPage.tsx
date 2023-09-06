@@ -1,11 +1,13 @@
-import { Page } from '../../components/common/Page';
-import { IncompletePage } from '../../components/common/IncompletePage';
+import { ReactNode } from 'react';
+
+import { FormatQuote } from '@mui/icons-material';
+import { Box, Stack } from '@mui/material';
+
 import { AppPaper } from '../../components/base/AppPaper';
 import { AppTypography } from '../../components/base/AppTypography';
-import { Box, Stack } from '@mui/material';
+import { IncompletePage } from '../../components/common/IncompletePage';
+import { Page } from '../../components/common/Page';
 import { SectionHeader } from '../projects/common/SectionHeader';
-import { ReactNode } from 'react';
-import { FormatQuote } from '@mui/icons-material';
 
 interface OverviewSectionProps {
     title: string;
