@@ -1,6 +1,8 @@
-import { Box, Stack, Tooltip, emphasize, lighten } from '@mui/material';
-import { common } from '@mui/material/colors';
 import { ReactNode } from 'react';
+
+import { Box, emphasize, lighten, Stack, Tooltip } from '@mui/material';
+import { common } from '@mui/material/colors';
+
 import { ToolTipTypography } from '../../../components/base/ToolTipTypography';
 
 export interface ExpandIconProps {

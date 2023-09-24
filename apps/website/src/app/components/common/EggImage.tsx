@@ -1,4 +1,5 @@
 import img from '../../../assets/ineffable.png';
+
 export function EggImage() {
     return (
         <img

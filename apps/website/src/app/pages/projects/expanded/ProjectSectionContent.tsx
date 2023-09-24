@@ -1,10 +1,11 @@
 import { Box, Stack } from '@mui/material';
+
 import { AppTypography } from '../../../components/base/AppTypography';
+import { SectionDatesDisplay } from '../../../components/common/dates/SectionDatesDisplay';
 import { SummaryDisplay } from '../../../components/common/ProjectSummary';
 import { ProjectSectionProps } from '../../../elf/types/ProjectSectionTypes';
-import { SectionDatesDisplay } from '../../../components/common/dates/SectionDatesDisplay';
-import { SectionHeader } from '../common/SectionHeader';
 import { ProjectUrlSection } from '../base/ProjectUrlSection';
+import { SectionHeader } from '../common/SectionHeader';
 
 export function ProjectSectionContent(props: ProjectSectionProps) {
     return (

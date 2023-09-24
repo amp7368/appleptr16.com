@@ -1,11 +1,11 @@
-import { FullDateRangeProps } from '../../../elf/types/DateTypes';
-
 import { useToggle } from '@app/ui';
+
+import { MILLIS_PER_MONTH } from '../../../elf/read/fixDates';
+import { FullDateRangeProps } from '../../../elf/types/DateTypes';
 import { AppTypography } from '../../base/AppTypography';
 import { DatePartDurationList } from './DatePartDurationList';
 import { DatesDisplayContainer } from './DatesDisplayContainer';
 
-const MILLIS_PER_MONTH = 1000 * 60 * 60 * 24 * 30.437;
 export type DatesDisplayProps = FullDateRangeProps & {
     duration: number;
 };

@@ -32,7 +32,10 @@
         "tags": ["LIBRARY"]
     },
     "React": {
-        "comments": ["It's not a language, but practically it is"],
+        "comments": [
+            "More feature rich HTML I guess",
+            "It's not a language, but practically it is"
+        ],
         "tags": ["LANGUAGE"]
     },
     "Typescript": {
@@ -72,7 +75,37 @@
         "comments": ["An object-oriented high-level language"],
         "tags": ["LANGUAGE"]
     },
-    "Ebean ORM": {
+    "Java Google Sheets API": {
+        "comments": ["A library to interact with Google Sheets"],
+        "tags": ["LIBRARY"],
+        "hidden": true
+    },
+    "Postman": {
+        "comments": ["Craft and save  HTTP requests through a GUI"],
+        "tags": ["UTILITY"]
+    },
+    "Harvest": {
+        "comments": ["Time tracking for work hours"],
+        "tags": ["OTHER"]
+    },
+    "Django": {
+        "comments": [
+            "Python library for quickly creating/managing database & API"
+        ],
+        "tags": ["FRAMEWORK"]
+    },
+    "Python": {
+        "comments": [
+            "An easy to learn language",
+            "I hate that it's not statically typed"
+        ],
+        "tags": ["LANGUAGE"]
+    },
+    "Cloudflare": {
+        "comments": ["I used it for SSL certs, proxying traffic, and as a CDN"],
+        "tags": ["SERVICE"]
+    },
+    "Ebean": {
         "comments": ["A java ORM library for interactions with SQL"],
         "tags": ["LIBRARY"]
     },
@@ -84,6 +117,10 @@
         "comments": [
             "A cloud hosting provider with an extensive selection of software"
         ],
+        "tags": ["OTHER"]
+    },
+    "MS-Teams": {
+        "comments": [],
         "tags": ["OTHER"]
     }
 }

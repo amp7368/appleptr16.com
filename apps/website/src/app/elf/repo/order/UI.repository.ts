@@ -1,15 +1,12 @@
+import { SetStateAction } from 'react';
+
 import { useObservableMemo } from '@app/ui';
 import { Optional } from '@app/util';
 import { createStore } from '@ngneat/elf';
 import {
-    getEntity,
-    selectEntity,
-    UIEntitiesRef,
-    upsertEntities,
-    upsertEntitiesById,
-    withUIEntities,
+    getEntity, selectEntity, UIEntitiesRef, upsertEntities, upsertEntitiesById, withUIEntities
 } from '@ngneat/elf-entities';
-import { SetStateAction } from 'react';
+
 import { persist } from '../../Elf';
 
 export type OrderBy =

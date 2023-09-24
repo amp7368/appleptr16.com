@@ -1,12 +1,13 @@
+import React, { ReactNode, Suspense } from 'react';
+
+import { useToggle } from '@app/ui';
 import { AddCircle } from '@mui/icons-material';
 import { Divider, Stack } from '@mui/material';
 
-import { useToggle } from '@app/ui';
-import React, { ReactNode, Suspense } from 'react';
 import { AppPaper } from '../../components/base/AppPaper';
+import { DatesDisplay } from '../../components/common/dates/DatesDisplay';
 import { SummaryDisplay } from '../../components/common/ProjectSummary';
 import { ToolsDisplayList } from '../../components/common/ToolsDisplayList';
-import { DatesDisplay } from '../../components/common/dates/DatesDisplay';
 import { ProjectProps } from '../../elf/types/ProjectTypes';
 import { ProjectRating } from './base/ProjectRating';
 import { ProjectTitle } from './base/ProjectTitle';

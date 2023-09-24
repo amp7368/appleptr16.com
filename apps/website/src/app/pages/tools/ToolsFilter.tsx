@@ -1,21 +1,13 @@
-import { Stack } from '@mui/material';
-import { ToolTag, allToolTags } from '../../elf/types/ToolTypes';
-import { useToolUI } from '../../elf/repo/tool';
+import { Box, Grid, ImageList, Stack } from '@mui/material';
+
+import { useToolUIFilter } from '../../elf/repo/tool';
+import { allToolTags, ToolTag } from '../../elf/types/ToolTypes';
 import { ToolTagChip } from './ToolTagChip';
 
 export function ToolsFilter() {
-    const toolFilter = useToolUI('toolTags');
+    const toolFilter = useToolUIFilter();
     return (
-        <Stack
-            border={1}
-            borderRadius="5px"
-            borderColor="secondary.main"
-            direction="row"
-            justifyContent="flex-end"
-            alignItems="center"
-            padding={1}
-            spacing={1}
-        >
+        <Box maxWidth="40rem">
             {allToolTags.map((tag: ToolTag) => (
                 <ToolTagChip
                     key={tag}
@@ -23,6 +15,6 @@ export function ToolsFilter() {
                     active={toolFilter.includes(tag)}
                 />
             ))}
-        </Stack>
+        </Box>
     );
 }

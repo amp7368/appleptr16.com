@@ -9,11 +9,18 @@
     "urls": {
         "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" }
     },
-    "dates": {
-        "dateApproximation": "DAY",
-        "startDate": "2022-05-08",
-        "endDate": "current"
-    },
+    "dates": [
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2022-05-08",
+            "endDate": "2022-12-27"
+        },
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2023-08-27",
+            "endDate": "current"
+        }
+    ],
     "summary": [
         "Developing a website to manage investments and loans of players in an in-game business in Wynncraft."
     ],

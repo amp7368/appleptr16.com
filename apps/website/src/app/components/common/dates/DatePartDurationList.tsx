@@ -1,6 +1,7 @@
 import { Stack } from '@mui/material';
-import { DatePartDuration } from './DatesPartDuration';
+
 import { DateRangeProps } from '../../../elf/types/DateTypes';
+import { DatePartDuration } from './DatesPartDuration';
 
 export interface DatePartDurationListProps {
     dates: DateRangeProps[];

@@ -1,5 +1,6 @@
 import { Optional } from '@app/util';
 import { Button, ButtonProps, Stack, Tooltip } from '@mui/material';
+
 import { setToolUI, useTool } from '../../elf/repo/tool';
 import { Tool } from '../../elf/types/ToolTypes';
 import { lightShadows } from '../../util/lightShadow';
@@ -16,11 +17,9 @@ export type ToolDisplayProps = (ToolID | { tool: Tool }) & {
 };
 
 export function ToolDisplay(props: ToolDisplayProps) {
-    let tool: Optional<Tool> = undefined;
-    if ('id' in props) {
-        tool = useTool(props.id);
-        if (tool) tool.extra = props.extra;
-    } else tool = props.tool;
+    let toolId = 'id' in props ? props.id : props.tool.id;
+
+    const tool: Optional<Tool> = useTool(toolId);
     if (!tool) return null;
     return (
         <Tooltip

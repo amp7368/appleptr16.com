@@ -1,5 +1,7 @@
-import { Stack, TypographyProps } from '@mui/material';
 import { ReactNode } from 'react';
+
+import { Stack, TypographyProps } from '@mui/material';
+
 import { AppTypography } from './AppTypography';
 
 interface WrapperProps {

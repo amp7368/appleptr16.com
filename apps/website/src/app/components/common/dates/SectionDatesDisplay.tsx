@@ -1,9 +1,10 @@
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
+
+import { MILLIS_PER_MONTH } from '../../../elf/read/fixDates';
 import { AppTypography } from '../../base/AppTypography';
 import { DatePartDurationList } from './DatePartDurationList';
 import { DatesDisplayProps } from './DatesDisplay';
 
-const MILLIS_PER_MONTH = 1000 * 60 * 60 * 24 * 30.437;
 export function SectionDatesDisplay(props: DatesDisplayProps) {
     const totalMonths = props.duration / MILLIS_PER_MONTH;
     return (

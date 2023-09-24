@@ -1,4 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
+
 export const defaultThemeOptions: ThemeOptions = {
     components: {
         MuiCard: {

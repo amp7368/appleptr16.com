@@ -1,6 +1,8 @@
+import { useState } from 'react';
+
 import { Button, useTheme } from '@mui/material';
 import { Variant } from '@mui/material/styles/createTypography';
-import { useState } from 'react';
+
 import { AppTypography } from '../../base/AppTypography';
 
 export interface AppHeaderLinkProps {
@@ -11,7 +13,7 @@ export interface AppHeaderLinkProps {
 export function AppHeaderLink(props: AppHeaderLinkProps) {
     const palette = useTheme().palette;
     const textColor =
-        location.pathname === props.route
+        window.location.pathname === props.route
             ? palette.secondary.main
             : palette.grey[300];
     const textSize: Variant = props.small ? 'body1' : 'h4';

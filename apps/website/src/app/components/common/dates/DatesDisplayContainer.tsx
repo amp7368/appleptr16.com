@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
+
 import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { Box, Stack, SvgIconProps } from '@mui/material';
-import { ReactNode } from 'react';
 
 const expandIconProps: SvgIconProps = {
     fontSize: 'large',

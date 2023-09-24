@@ -1,4 +1,5 @@
 import { Divider, Stack, useTheme } from '@mui/material';
+
 import { AppPaper } from '../../../components/base/AppPaper';
 import { ProjectProps } from '../../../elf/types/ProjectTypes';
 import { ProjectTitle } from '../base/ProjectTitle';

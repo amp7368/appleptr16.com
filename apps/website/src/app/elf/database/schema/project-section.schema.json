@@ -10,7 +10,7 @@
             "type": "array",
             "items": { "type": "string" }
         },
-        "tools": { "$ref": "./project-tools.schema.json" },
+        "tools": { "$ref": "./tools-list.schema.json" },
         "comments": {
             "type": "array",
             "items": { "type": "string" }

@@ -1,0 +1,28 @@
+{
+    "$schema": "../schema/work.schema.json",
+    "company": "Envative",
+    "role": "Software Engineer",
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2022-01-10",
+        "endDate": "2022-03-05"
+    },
+    "summary": [
+        "Started my learning experience of Typescript and React, and many TS libraries by creating sample projects",
+        "Created React components using storybook to build an administrative app to view statistics about production lines"
+    ],
+    "comments": [
+        "Learned how to use Docker, SourceTree, Postman, NX, Teams, and Harvest"
+    ],
+    "tools": {
+        "Docker": {},
+        "SourceTree": {},
+        "Postman": {},
+        "NX": {},
+        "MS-Teams": {},
+        "Harvest": {},
+        "@mui/material": {},
+        "React": {},
+        "Typescript": {}
+    }
+}

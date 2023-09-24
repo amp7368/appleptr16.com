@@ -8,13 +8,35 @@
     },
     "urls": {
         "Github": { "link": "https://github.com/amp7368/appleptr16.com" },
-        "Site": { "link": "appleptr16.com" }
+        "Site": { "link": "https://appleptr16.com" }
     },
-    "dates": {
-        "dateApproximation": "MONTH",
-        "startDate": "2022-06-26",
-        "endDate": "current"
-    },
+    "dates": [
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2022-06-20",
+            "endDate": "2022-07-01"
+        },
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2022-08-20",
+            "endDate": "2022-08-23"
+        },
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2023-01-20",
+            "endDate": "2023-02-01"
+        },
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2023-03-26",
+            "endDate": "2023-03-30"
+        },
+        {
+            "dateApproximation": "DAY",
+            "startDate": "2023-08-10",
+            "endDate": "current"
+        }
+    ],
     "summary": ["Developing and maintaining website to showcase projects"],
     "tools": {
         "React": {},

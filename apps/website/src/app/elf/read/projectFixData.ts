@@ -14,8 +14,12 @@ import {
     toolEndWithPeriods,
     urlEndWithPeriods,
 } from './fixEndWithPeriod';
+import { assertToolsExist, toolStore } from '../repo/tool';
+import { getEntity } from '@ngneat/elf-entities/src/lib/entity.query';
+import { hasEntity } from '@ngneat/elf-entities';
+import { assert } from 'console';
 
-export function fixData(raw: ProjectRawData): ProjectProps {
+export function fixProjectData(raw: ProjectRawData): ProjectProps {
     if (!Array.isArray(raw.dates)) raw.dates = [raw.dates];
     const summary: string[] = [...raw.summary];
     const tools: Record<string, ToolNotes> = { ...raw.tools };
@@ -48,7 +52,8 @@ export function fixData(raw: ProjectRawData): ProjectProps {
     }
     const dates: FullDateRangeProps = fixDates(datesRaw);
     const duration: number = getDuration(dates);
-
+    assertToolsExist(Object.keys(tools));
+    sections.forEach(({ tools }) => assertToolsExist(Object.keys(tools ?? {})));
     return {
         title: raw.title,
         comments: endWithPeriods(raw.comments),

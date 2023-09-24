@@ -29,7 +29,7 @@ export function ToolTagChip({ toolTag, active }: ToolTagChipProps) {
             onClick={active ? onDelete : () => setToolUI('toolTags', [toolTag])}
             onDelete={active ? onDelete : undefined}
             color={active ? 'secondary' : 'default'}
-            sx={{ boxShadow: lightShadows[10] }}
+            sx={{ boxShadow: lightShadows[10], margin: 1 }}
         />
     );
 }

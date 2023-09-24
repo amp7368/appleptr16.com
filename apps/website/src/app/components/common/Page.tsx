@@ -1,5 +1,7 @@
-import { Box, Container, Stack, Typography } from '@mui/material';
 import { ReactNode } from 'react';
+
+import { Box, Container, Stack, Typography } from '@mui/material';
+
 import { AppPaper } from '../base/AppPaper';
 import { AppTypography } from '../base/AppTypography';
 

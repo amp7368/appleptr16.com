@@ -1,0 +1,30 @@
+{
+    "$schema": "../schema/work.schema.json",
+    "company": "Bongo LLC",
+    "role": "Developer",
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2023-04-01",
+        "endDate": "current"
+    },
+    "summary": [
+        "Gave feedback and advice about what technical challenges may lay in the way of specific tasks and offered other improvements.",
+        "Provided proof of concept applications for demonstrations."
+    ],
+    "comments": [
+        "Learned about Django by finding issues within the codebase.",
+        "Learned about AWS by setting up a database and other containers."
+    ],
+    "tools": {
+        "Django": {},
+        "Python": {},
+        "@mui/material": {},
+        "React": {},
+        "Typescript": {},
+        "SQL": {},
+        "NX": {},
+        "SourceTree": {},
+        "Docker": {},
+        "VSCode": {}
+    }
+}
