@@ -1,10 +1,10 @@
 import { Stack } from '@mui/material';
 import { AppTypography } from '../../../components/base/AppTypography';
 import { DatePartDuration } from '../../../components/common/dates/DatesPartDuration';
-import { ResumeProjectProps } from '../../../elf/types/ResumeProjectTypes';
+import { ResumeWorkProps } from '../../../elf/types/ResumeWorkTypes';
 import { Bulletpoint } from '../../projects/common/BulletPoint';
 
-export function ResumeProject(project: ResumeProjectProps) {
+export function ResumeWork(project: ResumeWorkProps) {
     return (
         <Stack>
             <AppTypography
@@ -12,9 +12,9 @@ export function ResumeProject(project: ResumeProjectProps) {
                 color="text.primary"
                 variant="h3"
             >
-                {project.title}
+                {project.company} ({project.role})
             </AppTypography>
-            <AppTypography>{project.description}</AppTypography>
+            {/* <AppTypography>{project.description}</AppTypography> */}
             <Stack direction="row" marginTop={2} spacing={2}>
                 <Stack direction="column" spacing={1}>
                     {project.summary.map((text, i) => (

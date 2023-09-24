@@ -1,8 +1,9 @@
 import { Box, Stack, ThemeProvider } from '@mui/material';
 import { resumeTheme } from '../../util/pdfTheme';
-import { ResumeProjectDivision } from './ResumeProjectDivision';
 import { ResumeContact } from './header/ResumeContact';
 import { ResumeTitle } from './header/ResumeTitle';
+import { ResumeProjectDivision } from './project/ResumeProjectDivision';
+import { ResumeWorkDivision } from './work/ResumeWorkDivision';
 
 function printToPDF() {
     const content = document.getElementById('resume_page');
@@ -26,6 +27,7 @@ export function ResumeBasePage() {
                 <ResumeContact />
             </Stack>
             <ResumeProjectDivision />
+            <ResumeWorkDivision />
         </Stack>
     );
 }
