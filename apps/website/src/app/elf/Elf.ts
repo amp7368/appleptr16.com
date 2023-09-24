@@ -2,9 +2,11 @@ import { Observable } from 'rxjs';
 
 import { getRegistry, Store, StoreValue } from '@ngneat/elf';
 import { setEntitiesMap } from '@ngneat/elf-entities';
-import { persistState, sessionStorageStrategy, StateStorage } from '@ngneat/elf-persist-state';
-
-import { isNewVersion } from '../init/appVersion';
+import {
+    persistState,
+    sessionStorageStrategy,
+    StateStorage,
+} from '@ngneat/elf-persist-state';
 
 interface PersistProps {
     getEntities?: () => Record<string, unknown>;

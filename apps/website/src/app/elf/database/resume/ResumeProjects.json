@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Voltskiya",
+        "dates": [
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2020-03-01",
+                "endDate": "2020-09-08"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2021-03-01",
+                "endDate": "2021-10-30"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2022-07-08",
+                "endDate": "2023-07-01"
+            }
+        ],
+        "description": "Developed Minecraft plugins to create a unique experience in a survival server.",
+        "summary": [
+            "Developed an extensive library of mob abilities so 'GameMasters' (staff) can mix and match to create new mobs.",
+            "Developed a series of game features such as Temperature, Thirst, Stamina, and skill points.",
+            "Developed a MobSystem with customizable spawning contexts that pregenerates 50k mobs to fill the map."
+        ],
+        "comments": [
+            "Working to develop for an ever-changing environment taught me the importance of writing code that leaves room for expansion"
+        ]
+    }
+]

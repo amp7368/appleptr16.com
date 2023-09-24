@@ -5,9 +5,9 @@ import { Box, Stack } from '@mui/material';
 
 import { AppPaper } from '../../components/base/AppPaper';
 import { AppTypography } from '../../components/base/AppTypography';
-import { IncompletePage } from '../../components/common/IncompletePage';
 import { Page } from '../../components/common/Page';
 import { SectionHeader } from '../projects/common/SectionHeader';
+import { OverviewHintToNavigate } from './OverviewHintToNavigate';
 
 interface OverviewSectionProps {
     title: string;
@@ -54,7 +54,7 @@ function Quote(props: QuoteProps) {
 }
 export function OverviewPage() {
     return (
-        <Page title="Overview">
+        <Page title="Overview" filter={<OverviewHintToNavigate />}>
             <Stack direction="row" spacing={3}>
                 <OverviewSection
                     title="Coolness unit"

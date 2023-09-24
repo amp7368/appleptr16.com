@@ -1,4 +1,4 @@
-import React, { ReactNode, Suspense } from 'react';
+import { ReactNode } from 'react';
 
 import { useToggle } from '@app/ui';
 import { AddCircle } from '@mui/icons-material';
