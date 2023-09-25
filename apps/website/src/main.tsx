@@ -13,22 +13,29 @@ import { AppHeader } from './app/components/common/header/AppHeader';
 import { CookieConsent } from './app/components/cookie/CookieConsent';
 import { defaultTheme } from './app/util/appTheme';
 import { environment } from './environments/environment';
+import { isPathname } from './app/util/routes';
 
 if (environment.production) enableElfProdMode();
 
+function WebPage() {
+    if (isPathname('/resume')) return <App />;
+    return (
+        <Stack justifyContent="space-between" minHeight="100vh">
+            <Box>
+                <AppHeader />
+                <App />
+            </Box>
+            <CookieConsent />
+            <BottomBar />
+        </Stack>
+    );
+}
 const container = document.getElementById('root') as HTMLElement;
 createRoot(container).render(
     <StrictMode>
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <Stack justifyContent="space-between" minHeight="100vh">
-                <Box>
-                    <AppHeader />
-                    <App />
-                </Box>
-                <CookieConsent />
-                <BottomBar />
-            </Stack>
+            <WebPage />
         </ThemeProvider>
     </StrictMode>
 );

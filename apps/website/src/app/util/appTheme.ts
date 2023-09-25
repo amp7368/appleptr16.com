@@ -1,4 +1,5 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { isPathname, urls } from './routes';
 
 export const defaultThemeOptions: ThemeOptions = {
     components: {
@@ -13,6 +14,7 @@ export const defaultThemeOptions: ThemeOptions = {
         },
     },
     typography: {
+        fontFamily: 'Roboto',
         body1: {
             color: '#fff',
         },
@@ -42,6 +44,9 @@ export const defaultThemeOptions: ThemeOptions = {
 export const appBarColor = '#333333';
 export const defaultTheme = createTheme(defaultThemeOptions);
 
+let color;
+if (isPathname(urls.resume)) color = '#eee';
+else color = defaultTheme.palette.background.default;
+
 const element = document.getElementById('root');
-const color = defaultTheme.palette.background.default;
-if (element != null) element.style.backgroundColor = color;
+if (element) element.style.backgroundColor = color;

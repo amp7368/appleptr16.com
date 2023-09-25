@@ -18,10 +18,7 @@ export function DatesDisplay(props: DatesDisplayProps) {
             setExpanded={setExpanded}
         >
             {!isExpanded && (
-                <DatePartDurationList
-                    isExpanded={!isExpanded}
-                    dates={[props]}
-                />
+                <DatePartDurationList isExpanded={isExpanded} dates={[props]} />
             )}
             {isExpanded && (
                 <DatePartDurationList

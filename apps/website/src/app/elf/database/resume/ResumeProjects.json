@@ -1,0 +1,59 @@
+[
+    {
+        "title": "Voltskiya",
+        "dates": [
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2020-03-01",
+                "endDate": "2020-09-08"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2021-03-01",
+                "endDate": "2021-10-30"
+            },
+            {
+                "dateApproximation": "MONTH",
+                "startDate": "2022-07-08",
+                "endDate": "2023-07-01"
+            }
+        ],
+        "description": "Developed Minecraft plugins to create a unique experience in a survival server.",
+        "summary": [
+            "Developed an extensive library of mob abilities so 'GameMasters' can mix and match to create new mobs.",
+            "Developed a series of game features such as Temperature, Thirst, Stamina, and skill points.",
+            "Developed a MobSystem with customizable spawning contexts that pregenerates 50k mobs to fill the map."
+        ],
+        "comments": [
+            "Working to develop for an ever-changing environment taught me the importance of writing code that leaves room for expansion"
+        ]
+    },
+    {
+        "title": "Ambrosia Casino",
+        "dates": [
+            {
+                "dateApproximation": "DAY",
+                "startDate": "2022-11-20",
+                "endDate": "2022-12-20"
+            },
+            {
+                "dateApproximation": "DAY",
+                "startDate": "2023-7-16",
+                "endDate": "2023-07-24"
+            }
+        ],
+        "summary": [
+            "Created a Discord bot for a Casino using Wynncraft's in-game currency.",
+            "Developed logic and a database to store profiles, game results, and every currency transaction.",
+            "Developed GUIs and game logic for BlackJack along with Roulette with 370 spinning wheel GIFs."
+        ],
+        "tools": {
+            "Java": {},
+            "JDA": {},
+            "Ebean": {},
+            "SQL": {},
+            "IntelliJ": {},
+            "Github": {}
+        }
+    }
+]

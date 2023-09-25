@@ -3,6 +3,7 @@ export const urls = {
     projects: '/projects',
     tools: '/tools',
     work: '/work',
+    resume: '/resume',
 };
 export const nav = {};
 export function navTo(url: string) {
