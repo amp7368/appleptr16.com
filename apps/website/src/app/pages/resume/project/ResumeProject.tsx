@@ -7,11 +7,7 @@ import { Bulletpoint } from '../../projects/common/BulletPoint';
 export function ResumeProject(project: ResumeProjectProps) {
     return (
         <Stack>
-            <AppTypography
-                sx={{ textDecoration: 'underline' }}
-                color="text.primary"
-                variant="h3"
-            >
+            <AppTypography sx={{ textDecoration: 'underline' }} variant="h3">
                 {project.title}
             </AppTypography>
             <AppTypography>{project.description}</AppTypography>
@@ -26,6 +22,7 @@ export function ResumeProject(project: ResumeProjectProps) {
                     <AppTypography
                         fontWeight={500}
                         sx={{ textDecoration: 'underline' }}
+                        marginBottom="0.25rem"
                     >
                         Dates
                     </AppTypography>

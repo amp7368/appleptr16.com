@@ -2,9 +2,9 @@
     "$schema": "../schema/project.schema.json",
     "title": "appleptr16.com",
     "ratingRaw": {
-        "impact": 2.5,
-        "difficulty": 2.5,
-        "size": 3.5
+        "impact": 5.5,
+        "difficulty": 3.5,
+        "size": 4.5
     },
     "urls": {
         "Github": { "link": "https://github.com/amp7368/appleptr16.com" },

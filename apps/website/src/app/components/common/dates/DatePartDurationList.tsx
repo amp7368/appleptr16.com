@@ -9,7 +9,7 @@ export interface DatePartDurationListProps {
 }
 export function DatePartDurationList(props: DatePartDurationListProps) {
     return (
-        <Stack position={props.isExpanded ? undefined : 'absolute'}>
+        <Stack>
             {props.dates.map((date) => (
                 <DatePartDuration
                     key={date.startFormatted}

@@ -2,9 +2,9 @@
     "$schema": "../schema/project.schema.json",
     "title": "Ambrosia Casino",
     "ratingRaw": {
-        "impact": 5.5,
-        "difficulty": 5.0,
-        "size": 4.2
+        "impact": 6.5,
+        "difficulty": 5.5,
+        "size": 5.0
     },
     "sections": [
         {

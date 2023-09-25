@@ -26,6 +26,7 @@ export function ResumeWork(project: ResumeWorkProps) {
                     <AppTypography
                         fontWeight={500}
                         sx={{ textDecoration: 'underline' }}
+                        marginBottom="0.25rem"
                     >
                         Dates
                     </AppTypography>

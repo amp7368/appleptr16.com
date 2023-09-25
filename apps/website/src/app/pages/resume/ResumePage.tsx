@@ -1,8 +1,11 @@
 import { Box, Stack, ThemeProvider } from '@mui/material';
 import { resumeTheme } from '../../util/pdfTheme';
+import { ResumeEducation } from './ResumeEducation';
+import { ResumeObjective } from './ResumeObjective';
 import { ResumeContact } from './header/ResumeContact';
 import { ResumeTitle } from './header/ResumeTitle';
 import { ResumeProjectDivision } from './project/ResumeProjectDivision';
+import { ResumeSkillsDivision } from './skills/ResumeSkillsDivision';
 import { ResumeWorkDivision } from './work/ResumeWorkDivision';
 
 function printToPDF() {
@@ -19,35 +22,47 @@ function printToPDF() {
     pdf.print();
     // pdf.close();
 }
-export function ResumeBasePage() {
+function ResumeBasePage() {
     return (
-        <Stack spacing={1}>
-            <Stack direction="row" justifyContent="space-between">
+        <Stack>
+            <Stack
+                marginBottom={1}
+                direction="row"
+                justifyContent="space-between"
+            >
                 <ResumeTitle />
                 <ResumeContact />
             </Stack>
+            <ResumeSkillsDivision />
+            <ResumeObjective />
             <ResumeProjectDivision />
             <ResumeWorkDivision />
+            <ResumeEducation />
         </Stack>
     );
 }
 
 export function ResumePage() {
     return (
-        <Box id="resume_page">
-            <ThemeProvider theme={resumeTheme}>
-                <Stack alignItems="center" width="100vw">
-                    <Box
-                        height="29.7cm"
-                        width="21cm"
-                        color="text.primary"
-                        bgcolor="background.default"
-                        padding="0.75in"
-                    >
-                        <ResumeBasePage />
-                    </Box>
-                </Stack>
-            </ThemeProvider>
-        </Box>
+        <ThemeProvider theme={resumeTheme}>
+            <Stack
+                id="resume_page"
+                alignItems="center"
+                maxWidth="100vw"
+                width="100%"
+            >
+                <Box
+                    height="11in"
+                    maxHeight="11in"
+                    width="8.5in"
+                    maxWidth="8.5in"
+                    color="text.primary"
+                    bgcolor="background.default"
+                    padding="0.5in"
+                >
+                    <ResumeBasePage />
+                </Box>
+            </Stack>
+        </ThemeProvider>
     );
 }
