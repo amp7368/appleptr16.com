@@ -1,25 +1,30 @@
-import { Box, Stack } from '@mui/material';
+import { Stack } from '@mui/material';
 
-import { AppTypography } from '../../../components/base/AppTypography';
-import { SectionDatesDisplay } from '../../../components/common/dates/SectionDatesDisplay';
-import { SummaryDisplay } from '../../../components/common/ProjectSummary';
 import { ProjectSectionProps } from '../../../elf/types/ProjectSectionTypes';
 import { ProjectUrlSection } from '../base/ProjectUrlSection';
+import { Bulletpoint } from '../common/BulletPoint';
 import { SectionHeader } from '../common/SectionHeader';
 
 export function ProjectSectionContent(props: ProjectSectionProps) {
     return (
-        <Stack direction="row" justifyContent="space-between">
-            <Stack>
-                <Stack direction="row" justifyContent="flex-end">
-                    <SectionDatesDisplay
-                        duration={props.duration}
-                        {...props.dates}
-                    />
+        <Stack padding={2} justifyContent="space-between">
+            <Stack display="flex" direction="row" maxWidth="65rem" spacing={4}>
+                <Stack maxWidth={`${100 / 3}%`} flexGrow={0}>
+                    <SectionHeader>Summary</SectionHeader>
+                    {props.summary.map((text, i) => (
+                        <Bulletpoint key={i}>{text}</Bulletpoint>
+                    ))}
                 </Stack>
-                <ProjectUrlSection urls={props.urls} />
+                <Stack maxWidth={`${100 / 3}%`} flexGrow={0}>
+                    <SectionHeader>Comments</SectionHeader>
+                    {props.comments.map((text, i) => (
+                        <Bulletpoint key={i}>{text}</Bulletpoint>
+                    ))}
+                </Stack>
+                <Stack width={`${100 / 3}%`} flexGrow={1}>
+                    <ProjectUrlSection urls={props.urls} />
+                </Stack>
             </Stack>
-            <SummaryDisplay summary={props.summary} comments={props.comments} />
         </Stack>
     );
 }

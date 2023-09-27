@@ -41,6 +41,7 @@ function ProjectComponent(project: ProjectComponentProps) {
     const [isExpanded, toggleExpanded] = useToggle(false);
     if (isExpanded)
         return <ProjectExpanded {...project} toggleExpanded={toggleExpanded} />;
+    const disableExpand = project.sections.length === 0;
     return (
         <ProjectContainer>
             <Stack
@@ -50,8 +51,8 @@ function ProjectComponent(project: ProjectComponentProps) {
             >
                 <ProjectTitle
                     isExpanded={isExpanded}
-                    toggleExpanded={toggleExpanded}
-                    disableExpand={project.sections.length === 0}
+                    toggleExpanded={disableExpand ? undefined : toggleExpanded}
+                    disableExpand={disableExpand}
                     title={project.title}
                 />
                 <ToolsDisplayList toolIds={project.tools} />

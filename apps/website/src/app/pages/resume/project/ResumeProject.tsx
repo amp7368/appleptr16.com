@@ -7,8 +7,8 @@ import { Bulletpoint } from '../../projects/common/BulletPoint';
 export function ResumeProject(project: ResumeProjectProps) {
     return (
         <Stack>
-            <AppTypography sx={{ textDecoration: 'underline' }} variant="h3">
-                {project.title}
+            <AppTypography variant="h3">
+                <u>{project.title}</u> - Personal
             </AppTypography>
             <AppTypography>{project.description}</AppTypography>
             <Stack direction="row" marginTop={2} spacing={2}>

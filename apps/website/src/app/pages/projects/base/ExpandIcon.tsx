@@ -10,7 +10,7 @@ export interface ExpandIconProps {
     disabled?: boolean;
     icon: ReactNode;
     tooltip: ReactNode | ReactNode[];
-    onClick: () => void;
+    onClick?: () => void;
 }
 export function ExpandIcon(props: ExpandIconProps) {
     return (

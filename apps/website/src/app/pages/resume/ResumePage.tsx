@@ -8,20 +8,6 @@ import { ResumeProjectDivision } from './project/ResumeProjectDivision';
 import { ResumeSkillsDivision } from './skills/ResumeSkillsDivision';
 import { ResumeWorkDivision } from './work/ResumeWorkDivision';
 
-function printToPDF() {
-    const content = document.getElementById('resume_page');
-    const pdf = window.open(
-        '',
-        '',
-        'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0'
-    );
-    if (!pdf || !content) throw 'PDF is null'; //todo
-    pdf.document.write(content.innerHTML);
-    pdf.document.close();
-    pdf.focus();
-    pdf.print();
-    // pdf.close();
-}
 function ResumeBasePage() {
     return (
         <Stack>
