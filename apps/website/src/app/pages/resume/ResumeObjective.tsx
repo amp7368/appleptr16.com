@@ -1,5 +1,4 @@
-import { Box, Stack } from '@mui/material';
-import { ResumeSectionHeader } from './common/ResumeSectionHeader';
+import { Stack } from '@mui/material';
 import { AppTypography } from '../../components/base/AppTypography';
 
 export function ResumeObjective() {
@@ -13,10 +12,11 @@ export function ResumeObjective() {
                 Objective
             </AppTypography>
             <AppTypography variant="body1">
-                Fourth-year student at Rochester Institute of Technology.
-                <br />
-                Looking to continue applying creativive thinking to build
+                Looking to continue applying creative thinking to build
                 interesting solutions to problems.
+                <br />
+                Seeking a co-op for the Spring or Fall of 2024 and a full-time
+                position starting the Summer of 2025.
             </AppTypography>
         </Stack>
     );

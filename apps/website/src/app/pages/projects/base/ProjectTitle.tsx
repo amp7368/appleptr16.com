@@ -8,7 +8,7 @@ export interface ProjectTitleProps {
     title: string;
     isExpanded: boolean;
     disableExpand?: boolean;
-    toggleExpanded: () => void;
+    toggleExpanded?: () => void;
 }
 export function ProjectTitle(props: ProjectTitleProps) {
     const { palette } = useTheme();
@@ -42,7 +42,7 @@ export function ProjectTitle(props: ProjectTitleProps) {
                 />
                 <AppTypography
                     color="text.primary"
-                    variant="h2"
+                    variant="h3"
                     fontWeight={500}
                 >
                     {props.title}

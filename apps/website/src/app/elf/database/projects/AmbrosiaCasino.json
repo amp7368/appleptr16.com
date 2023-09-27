@@ -10,10 +10,21 @@
         {
             "title": "BlackJack",
             "description": "Developed a program to store profiles, game results, and every currency transaction. Used Wynncraft's in-game currency to convert to Casino credits.",
-            "summary": [],
+            "summary": [
+                "Modified another implementation of BlackJack to award/deduct credits from players after games"
+            ],
+            "tools": {
+                "Java": {},
+                "JDA": {},
+                "Ebean": {},
+                "SQL": {},
+                "IntelliJ": {},
+                "Github": {}
+            },
             "comments": [
                 "I modified another person's code for the BlackJack game logic after asking permission to use thier code."
             ],
+            "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" },
             "dates": {
                 "dateApproximation": "DAY",
                 "startDate": "2022-11-20",
@@ -28,6 +39,15 @@
                 "I created a program to pregenerate GIFs for each number it could land on with 10 variations each number chaning the time or velocity",
                 "The betting system is also complex because of the variations of bets are possible. We decided on a flow chart with buttons to navigate from high level decsions to more precise decisions about where you want to place your bet"
             ],
+            "tools": {
+                "Java": {},
+                "JDA": {},
+                "Ebean": {},
+                "SQL": {},
+                "IntelliJ": {},
+                "Github": {}
+            },
+            "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" },
             "comments": [
                 "I'm very proud of the spinning wheel with 370 different GIFs for the 37 numbers possible to land on"
             ],

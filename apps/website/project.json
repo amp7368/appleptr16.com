@@ -23,10 +23,7 @@
                 "baseHref": "/",
                 "main": "apps/website/src/main.tsx",
                 "tsConfig": "apps/website/tsconfig.app.json",
-                "assets": [
-                    "apps/website/src/favicon.ico",
-                    "apps/website/src/assets"
-                ],
+                "assets": ["apps/website/src/favicon.ico"],
                 "styles": [],
                 "scripts": []
             },
