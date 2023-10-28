@@ -53,9 +53,9 @@
                     "statsJson": true,
                     "optimization": true,
                     "outputHashing": "all",
-                    "sourceMap": false,
-                    "namedChunks": false,
+                    "sourceMap": true,
                     "extractLicenses": true,
+                    "namedChunks": false,
                     "vendorChunk": false
                 }
             }

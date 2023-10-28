@@ -1,6 +1,7 @@
 import { Box, Stack } from '@mui/material';
 import { AppTypography } from '../../../components/base/AppTypography';
 import { LogoImg } from '../../../components/common/Logo';
+import { AppLink } from '../../../components/base/AppLink';
 
 export function ResumeTitle() {
     return (
@@ -15,11 +16,11 @@ export function ResumeTitle() {
                 <AppTypography variant="h1" fontWeight={500}>
                     Aaron Peterham
                 </AppTypography>
-                <Box component="a" href="https://appleptr16.com">
+                <AppLink to="https://appleptr16.com" underline>
                     <AppTypography color="text.primary" variant="subtitle1">
                         appleptr16.com
                     </AppTypography>
-                </Box>
+                </AppLink>
             </Stack>
         </Stack>
     );

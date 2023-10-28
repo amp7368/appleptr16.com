@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 export const urls = {
     home: '/',
     projects: '/projects',
@@ -9,8 +11,8 @@ export const nav = {};
 export function navTo(url: string) {
     window.location.href = url;
 }
-export function isPathname(path: string) {
-    let loc = window.location.pathname;
+export function useIsPathname(path: string) {
+    let loc = useLocation().pathname;
     if (!path.endsWith('/')) path += '/';
     if (!loc.endsWith('/')) loc += '/';
     return path === loc;

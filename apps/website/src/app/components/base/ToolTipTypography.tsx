@@ -20,8 +20,10 @@ export function ToolTipTypography({
     if (Wrapper && isChildrenArray)
         return (
             <Wrapper>
-                {children.map((c: ReactNode) => (
-                    <BaseCase {...props}>{c}</BaseCase>
+                {children.map((c: ReactNode, i) => (
+                    <BaseCase key={i} {...props}>
+                        {c}
+                    </BaseCase>
                 ))}
             </Wrapper>
         );

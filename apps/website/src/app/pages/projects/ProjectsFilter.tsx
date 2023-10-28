@@ -2,11 +2,21 @@ import { ReactNode } from 'react';
 
 import ArrowDownward from '@mui/icons-material/ArrowDownward';
 import ArrowUpward from '@mui/icons-material/ArrowUpward';
-import { Button, MenuItem, Select, SelectChangeEvent, Stack, useTheme } from '@mui/material';
+import {
+    MenuItem,
+    Select,
+    SelectChangeEvent,
+    Stack,
+    useTheme,
+} from '@mui/material';
 
 import { AppTypography } from '../../components/base/AppTypography';
 import {
-    flipUIOrderDirection, OrderBy, orderByValues, setUIOrderBy, useUIOrderDirection
+    flipUIOrderDirection,
+    OrderBy,
+    orderByValues,
+    setUIOrderBy,
+    useUIOrderDirection,
 } from '../../elf/repo/order/UI.repository';
 import { ExpandIcon } from './base/ExpandIcon';
 
@@ -31,7 +41,7 @@ export function ProjectsFilter({ uiId }: { uiId: string }) {
             alignItems="center"
             padding={1}
         >
-            <AppTypography noWrap variant="h6">
+            <AppTypography id="projectsFilterLabel" noWrap variant="h6">
                 Order by
             </AppTypography>
             <ExpandIcon

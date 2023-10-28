@@ -1,4 +1,5 @@
-import { Box, Button, Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
+import { AppLink } from '../../components/base/AppLink';
 import { AppTypography } from '../../components/base/AppTypography';
 import { urls } from '../../util/routes';
 
@@ -19,7 +20,11 @@ export function OverviewHintToNavigate() {
                     <br />
                     Head over to{' '}
                 </AppTypography>
-                <Box component="a" color="primary.main" href={urls.projects}>
+                <Box
+                    component={AppLink}
+                    color="primary.main"
+                    to={urls.projects}
+                >
                     <AppTypography variant="h6">/projects</AppTypography>
                 </Box>
             </Stack>

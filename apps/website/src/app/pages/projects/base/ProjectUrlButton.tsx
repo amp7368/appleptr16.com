@@ -1,5 +1,6 @@
-import { Button, Tooltip } from '@mui/material';
+import { Box, Button, Tooltip } from '@mui/material';
 
+import { AppLink } from '../../../components/base/AppLink';
 import { AppTypography } from '../../../components/base/AppTypography';
 import { ToolTipTypography } from '../../../components/base/ToolTipTypography';
 import { ProjectUrl } from '../../../elf/types/ProjectTypes';
@@ -19,18 +20,24 @@ export function ProjectUrlButton(props: ProjectUrlButtonProps) {
                 </ToolTipTypography>
             }
         >
-            <Button
-                variant="outlined"
-                size="small"
-                href={props.url.link}
-                LinkComponent={'a'}
-                color="secondary"
-                sx={{ boxShadow: lightShadows[5] }}
-            >
-                <AppTypography noWrap variant="body1" textTransform="none">
-                    {props.title}
-                </AppTypography>
-            </Button>
+            <Box>
+                <AppLink to={props.url.link}>
+                    <Button
+                        variant="outlined"
+                        size="small"
+                        color="secondary"
+                        sx={{ boxShadow: lightShadows[5] }}
+                    >
+                        <AppTypography
+                            noWrap
+                            variant="body1"
+                            textTransform="none"
+                        >
+                            {props.title}
+                        </AppTypography>
+                    </Button>
+                </AppLink>
+            </Box>
         </Tooltip>
     );
 }

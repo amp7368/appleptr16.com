@@ -2,10 +2,10 @@ import { Optional } from '@app/util';
 import { createStore, propsArrayFactory, withProps } from '@ngneat/elf';
 import { hasEntity, withEntities } from '@ngneat/elf-entities';
 
-import toolsJson from '../../database/tools.json';
-import { persist } from '../../Elf';
-import { Tool, ToolTag, ToolValue, allToolTags } from '../../types/ToolTypes';
 import { environment } from '../../../../environments/environment';
+import { persist } from '../../Elf';
+import toolsJson from '../../database/tools.json';
+import { Tool, ToolTag, ToolValue, allToolTags } from '../../types/ToolTypes';
 
 export type ToolUIEnv = {
     toolTags: ToolTag[];

@@ -1,5 +1,6 @@
 import { Optional } from '@app/util';
 
+import { assertToolsExist } from '../repo/tool';
 import { FullDateRangeProps, FullDateRangeRaw } from '../types/DateTypes';
 import { ProjectSectionProps } from '../types/ProjectSectionTypes';
 import {
@@ -14,10 +15,6 @@ import {
     toolEndWithPeriods,
     urlEndWithPeriods,
 } from './fixEndWithPeriod';
-import { assertToolsExist, toolStore } from '../repo/tool';
-import { getEntity } from '@ngneat/elf-entities/src/lib/entity.query';
-import { hasEntity } from '@ngneat/elf-entities';
-import { assert } from 'console';
 
 export function fixProjectData(raw: ProjectRawData): ProjectProps {
     if (!Array.isArray(raw.dates)) raw.dates = [raw.dates];
