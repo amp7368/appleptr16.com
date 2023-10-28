@@ -3,8 +3,8 @@ import { useMemo } from 'react';
 import worksRaw from '../../elf/database/work';
 import { fixDates, getDuration } from '../../elf/read/fixDates';
 import { endWithPeriods } from '../../elf/read/fixEndWithPeriod';
-import { WorkProps, WorkRawData } from '../../elf/types/WorkTypes';
 import { assertToolsExist } from '../../elf/repo/tool';
+import { WorkProps, WorkRawData } from '../../elf/types/WorkTypes';
 
 const rawData: WorkRawData[] = Object.values<WorkRawData>(worksRaw);
 function dateCompare(a: WorkProps, b: WorkProps): number {

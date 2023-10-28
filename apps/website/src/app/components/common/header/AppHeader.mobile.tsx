@@ -34,6 +34,7 @@ export function AppHeaderMobile() {
                         <AppHeaderLink route={urls.projects} title="Projects" />
                         <AppHeaderLink route={urls.work} title="Work" />
                         <AppHeaderLink route={urls.tools} title="Tools" />
+                        <AppHeaderLink route={urls.resume} title="Resumè" />
                     </Stack>
                 </Stack>
             </AppBar>

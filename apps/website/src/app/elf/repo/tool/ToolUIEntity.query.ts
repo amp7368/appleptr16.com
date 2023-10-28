@@ -11,7 +11,6 @@ import {
     selectEntity,
 } from '@ngneat/elf-entities';
 
-import { environment } from '../../../../environments/environment';
 import { Tool, ToolTag } from '../../types/ToolTypes';
 import { toolStore } from './ToolUI.store';
 import { useToolUIFilter } from './ToolUIProps.query';

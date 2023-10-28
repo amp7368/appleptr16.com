@@ -1,18 +1,25 @@
-import { Box, Link } from '@mui/material';
+import { Box } from '@mui/material';
 
 import img from '../../../assets/logo.jpeg';
 import { urls } from '../../util/routes';
+import { AppLink } from '../base/AppLink';
 
 interface LogoProps {
     size?: string;
-    color?: string;
 }
 export function Logo(props: LogoProps) {
     return (
         <Box height={props.size ?? '4rem'} width={props.size ?? '7.5rem'}>
-            <Link href={urls.home} color={props.color ?? 'text.primary'}>
-                <LogoImg {...props} />
-            </Link>
+            <AppLink to={urls.home}>
+                <Box
+                    sx={{
+                        color: 'text.primary',
+                        ':hover': { color: 'secondary.main' },
+                    }}
+                >
+                    <LogoImg {...props} />
+                </Box>
+            </AppLink>
         </Box>
     );
 }

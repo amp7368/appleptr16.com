@@ -1,4 +1,4 @@
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 import { AppTypography } from '../../../components/base/AppTypography';
 
 export interface ResumeSkillProps {

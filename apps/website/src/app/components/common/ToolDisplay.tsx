@@ -1,10 +1,12 @@
 import { Optional } from '@app/util';
-import { Button, ButtonProps, Stack, Tooltip } from '@mui/material';
+import { Box, Button, ButtonProps, Stack, Tooltip } from '@mui/material';
 
+import { useCallback } from 'react';
 import { setToolUI, useTool } from '../../elf/repo/tool';
 import { Tool } from '../../elf/types/ToolTypes';
 import { lightShadows } from '../../util/lightShadow';
-import { isPathname, navTo, urls } from '../../util/routes';
+import { urls, useIsPathname } from '../../util/routes';
+import { AppLink } from '../base/AppLink';
 import { AppTypography } from '../base/AppTypography';
 import { ToolTipTypography } from '../base/ToolTipTypography';
 
@@ -21,6 +23,11 @@ export function ToolDisplay(props: ToolDisplayProps) {
 
     const tool: Optional<Tool> = useTool(toolId);
     if (!tool) return null;
+    const isToolsPath = useIsPathname(urls.tools);
+    const onToolClick = useCallback(
+        () => setToolUI('active', tool),
+        [tool, isToolsPath]
+    );
     return (
         <Tooltip
             disableInteractive
@@ -32,20 +39,20 @@ export function ToolDisplay(props: ToolDisplayProps) {
                 </ToolTipTypography>
             }
         >
-            <Button
-                variant="outlined"
-                color={props.color ?? 'secondary'}
-                size="small"
-                onClick={() => {
-                    setToolUI('active', tool);
-                    if (!isPathname(urls.tools)) navTo(urls.tools);
-                }}
-                sx={{ boxShadow: lightShadows[5] }}
-            >
-                <AppTypography variant="body1" textTransform="none">
-                    {tool.id}
-                </AppTypography>
-            </Button>
+            <Box>
+                <AppLink to={urls.tools} onClick={onToolClick}>
+                    <Button
+                        variant="outlined"
+                        color={props.color ?? 'secondary'}
+                        size="small"
+                        sx={{ boxShadow: lightShadows[5] }}
+                    >
+                        <AppTypography variant="body1" textTransform="none">
+                            {tool.id}
+                        </AppTypography>
+                    </Button>
+                </AppLink>
+            </Box>
         </Tooltip>
     );
 }

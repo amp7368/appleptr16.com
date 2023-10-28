@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Box, emphasize, lighten, Stack, Tooltip } from '@mui/material';
+import { Box, emphasize, Stack, Tooltip } from '@mui/material';
 import { common } from '@mui/material/colors';
 
 import { ToolTipTypography } from '../../../components/base/ToolTipTypography';

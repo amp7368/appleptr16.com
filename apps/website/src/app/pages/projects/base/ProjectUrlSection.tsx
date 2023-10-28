@@ -1,4 +1,4 @@
-import { Grid, ImageList, ImageListItem } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import { ProjectUrl } from '../../../elf/types/ProjectTypes';
 import { SectionHeader } from '../common/SectionHeader';

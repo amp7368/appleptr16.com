@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 
 import { Email, GitHub, LinkedIn, Web } from '@mui/icons-material';
-import { AppBar, Box, Divider, Link, Stack } from '@mui/material';
+import { AppBar, Box, Divider, Stack } from '@mui/material';
 
+import { AppLink } from '../base/AppLink';
 import { AppTypography } from '../base/AppTypography';
 
 interface ContactInfoProps {
@@ -10,6 +11,7 @@ interface ContactInfoProps {
     href: string;
     value: string;
     icon: ReactNode;
+    sameTab?: boolean;
 }
 function ContactInfo(props: ContactInfoProps) {
     return (
@@ -21,9 +23,11 @@ function ContactInfo(props: ContactInfoProps) {
                 alignItems="center"
             >
                 {props.icon}
-                <Link color="secondary" variant="h6" href={props.href}>
-                    {props.value}
-                </Link>
+                <AppLink to={props.href} newTab={!props.sameTab}>
+                    <AppTypography color="secondary" variant="h6">
+                        {props.value}
+                    </AppTypography>
+                </AppLink>
             </Stack>
         </Box>
     );
@@ -38,7 +42,7 @@ export function BottomBar() {
                 marginTop: 5,
                 position: 'static',
                 bgcolor: appBarColor,
-                zIndex: (theme) => theme.zIndex.appBar,
+                zIndex: ({ zIndex }) => zIndex.appBar,
             }}
         >
             <Stack alignItems="center">
@@ -75,6 +79,7 @@ export function BottomBar() {
                         title="Website"
                         href="https://appleptr16.com"
                         value="appleptr16.com"
+                        sameTab
                     />
                 </Stack>
             </Stack>

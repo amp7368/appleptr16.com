@@ -5,6 +5,7 @@ import { AppTypography } from '../../../components/base/AppTypography';
 import { Email, GitHub, LinkedIn, Web } from '@mui/icons-material';
 import { AppBar, Box, Divider } from '@mui/material';
 import { ResumeSectionHeader } from '../common/ResumeSectionHeader';
+import { AppLink } from '../../../components/base/AppLink';
 
 export function ResumeContact() {
     return (
@@ -39,6 +40,7 @@ interface ContactInfoProps {
     value: string;
     href: string;
     icon: ReactNode;
+    sameTab?: boolean;
 }
 function ContactInfo(props: ContactInfoProps) {
     return (
@@ -49,8 +51,15 @@ function ContactInfo(props: ContactInfoProps) {
             alignItems="center"
             color="secondary.main"
         >
-            <Box component="a" color="text.primary" href={props.href}>
-                <AppTypography variant="body1">{props.value}</AppTypography>
+            <Box
+                color="secondary.main"
+                sx={{ textDecorationLine: 'underline' }}
+            >
+                <AppLink to={props.href} newTab={!props.sameTab}>
+                    <AppTypography color="text.primary" variant="body1">
+                        {props.value}
+                    </AppTypography>
+                </AppLink>
             </Box>
             {props.icon}
         </Stack>
@@ -101,6 +110,7 @@ function BottomBar() {
                     <ContactInfo
                         icon={<Web />}
                         title="Website"
+                        sameTab={true}
                         href="https://appleptr16.com"
                         value="appleptr16.com"
                     />

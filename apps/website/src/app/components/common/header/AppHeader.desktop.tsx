@@ -14,7 +14,7 @@ export function AppHeaderDesktop() {
                 sx={{
                     height: '4rem',
                     bgcolor: appBarColor,
-                    zIndex: (theme) => theme.zIndex.appBar,
+                    zIndex: ({ zIndex }) => zIndex.appBar,
                 }}
             >
                 <Stack direction="row">
@@ -34,7 +34,11 @@ export function AppHeaderDesktop() {
                         <AppHeaderLink route={urls.projects} title="Projects" />
                         <AppHeaderLink route={urls.work} title="Work" />
                         <AppHeaderLink route={urls.tools} title="Tools" />
-                        <AppHeaderLink route={urls.resume} title="Resumè" />
+                        <AppHeaderLink
+                            newTab
+                            route={urls.resume}
+                            title="Resumè"
+                        />
                     </Stack>
                 </Stack>
             </AppBar>
