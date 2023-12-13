@@ -1,6 +1,7 @@
 {
     "$schema": "../schema/project.schema.json",
     "title": "Ambrosia Casino",
+    "state": "success/current",
     "ratingRaw": {
         "impact": 6.5,
         "difficulty": 5.5,
@@ -9,9 +10,9 @@
     "sections": [
         {
             "title": "BlackJack",
-            "description": "Developed a program to store profiles, game results, and every currency transaction. Used Wynncraft's in-game currency to convert to Casino credits.",
+            "description": "Developed a program to store profiles, game results, and every currency transaction.",
             "summary": [
-                "Modified another implementation of BlackJack to award/deduct credits from players after games"
+                "Created a database to store profiles, game results, and currency transactions."
             ],
             "tools": {
                 "Java": {},
@@ -22,7 +23,8 @@
                 "Github": {}
             },
             "comments": [
-                "I modified another person's code for the BlackJack game logic after asking permission to use thier code."
+                "Used Wynncraft's in-game currency to convert to Casino credits.",
+                "I modified an implementation of BlackJack logic found on GitHub after asking permission to use it."
             ],
             "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" },
             "dates": {
@@ -33,7 +35,7 @@
         },
         {
             "title": "Roulette",
-            "description": "Created Roulette (with a SPINNING WHEEL) utilizing the profile system put in place from BlackJack",
+            "description": "Created Roulette (with a SPINNING WHEEL) utilizing the profile system",
             "summary": [
                 "Because Discord is a messaging app, I had to think of a clever solution to show a spinning wheel. I send unique GIFs of the spinning wheel landing on the number that is chosen",
                 "I created a program to pregenerate GIFs for each number it could land on with 10 variations each number chaning the time or velocity",
@@ -62,8 +64,9 @@
         "Github": { "link": "https://github.com/amp7368/AmbrosiaADD" }
     },
     "dates": [],
-    "summary": [],
-
+    "summary": [
+        "Developed a program to store profiles, game results, and every currency transaction. Used Wynncraft's in-game currency to convert to Casino credits."
+    ],
     "tools": {
         "Java": {},
         "JDA": {},

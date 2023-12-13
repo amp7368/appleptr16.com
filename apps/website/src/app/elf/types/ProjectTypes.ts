@@ -6,6 +6,7 @@ export interface ProjectRawData {
     title: string;
     dates: FullDateRangeRaw;
     urls?: Record<string, ProjectUrl>;
+    state:string;
     ratingRaw: {
         impact: number;
         difficulty: number;
@@ -25,6 +26,7 @@ export type ProjectUrl = {
 export interface ProjectProps {
     title: string;
     urls?: Record<string, ProjectUrl>;
+    state:string;
     dates: FullDateRangeProps;
     duration: number;
     ratingRaw: {

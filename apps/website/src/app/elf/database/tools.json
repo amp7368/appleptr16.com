@@ -1,10 +1,12 @@
 {
     "IntelliJ": {
-        "comments": ["I use this for Java development"],
+        "comments": ["I use this IDE for Java development"],
         "tags": ["IDE"]
     },
     "VSCode": {
-        "comments": ["I use this for development in languages besides Java"],
+        "comments": [
+            "I use this IDE for development in languages besides Java and C#"
+        ],
         "tags": ["IDE"]
     },
     "Github": {
@@ -33,7 +35,7 @@
     },
     "React": {
         "comments": [
-            "More feature rich HTML I guess",
+            "In a way, React is a more feature rich HTML",
             "It's not a language, but practically it is"
         ],
         "tags": ["LANGUAGE"]
@@ -75,6 +77,10 @@
         "comments": ["An object-oriented high-level language"],
         "tags": ["LANGUAGE"]
     },
+    "RESTful API": {
+        "comments": ["Technically a stateless HTTP API."],
+        "tags": ["OTHER"]
+    },
     "Java Google Sheets API": {
         "comments": ["A library to interact with Google Sheets"],
         "tags": ["LIBRARY"],
@@ -107,6 +113,10 @@
     },
     "Ebean": {
         "comments": ["A java ORM library for interactions with SQL"],
+        "tags": ["LIBRARY"]
+    },
+    "Javalin": {
+        "comments": ["A lightweight web framework for Java"],
         "tags": ["LIBRARY"]
     },
     "SQL": {

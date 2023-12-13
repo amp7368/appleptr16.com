@@ -6,6 +6,7 @@ import { ExpandIcon } from './ExpandIcon';
 
 export interface ProjectTitleProps {
     title: string;
+    subtitle:string;
     isExpanded: boolean;
     disableExpand?: boolean;
     toggleExpanded?: () => void;
@@ -33,7 +34,7 @@ export function ProjectTitle(props: ProjectTitleProps) {
 
     if (props.isExpanded) {
         return (
-            <Stack alignItems="center" direction="row">
+            <Stack alignItems="center" direction="row" spacing={1}>
                 <ExpandIcon
                     color={color}
                     onClick={props.toggleExpanded}
@@ -45,13 +46,16 @@ export function ProjectTitle(props: ProjectTitleProps) {
                     variant="h3"
                     fontWeight={500}
                 >
-                    {props.title}
+                    {props.title} -
+                </AppTypography>
+                <AppTypography color="text.primary" variant='h4' >
+                    ({props.subtitle})
                 </AppTypography>
             </Stack>
         );
     }
     return (
-        <Stack>
+        <Stack alignItems="center">
             <ExpandIcon
                 color={color}
                 onClick={props.toggleExpanded}
@@ -61,6 +65,9 @@ export function ProjectTitle(props: ProjectTitleProps) {
             />
             <AppTypography color="text.primary" variant="h5" fontWeight={500}>
                 {props.title}
+            </AppTypography>
+            <AppTypography color="text.primary" variant="body1" fontWeight={500}>
+                {props.subtitle}
             </AppTypography>
         </Stack>
     );

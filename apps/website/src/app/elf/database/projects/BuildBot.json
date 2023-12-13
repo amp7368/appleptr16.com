@@ -6,6 +6,7 @@
         "size": 2.0
     },
     "title": "BuildBot",
+    "state": "success/retired",
     "urls": {
         "Github": { "link": "https://github.com/amp7368/BuildBot" }
     },
@@ -25,7 +26,5 @@
         "JDA": {},
         "Java": {}
     },
-    "comments": [
-        "This exercised my math and logic skills more than develop my programming style."
-    ]
+    "comments": ["Exercised my math and logic skills."]
 }

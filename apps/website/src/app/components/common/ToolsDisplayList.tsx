@@ -13,6 +13,7 @@ export function ToolsDisplayList({ toolIds, row }: ToolsDisplayListProps) {
             direction={row ? 'row' : 'column'}
             spacing={1}
             justifyContent={row ? 'center' : 'flex-end'}
+            alignItems="center"
         >
             {Object.entries(toolIds).map(([id, tool]) => (
                 <ToolDisplay key={id} id={id} extra={tool.extra} />

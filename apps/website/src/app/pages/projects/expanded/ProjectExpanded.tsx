@@ -9,7 +9,9 @@ export type ProjectExpandableProps = ProjectProps & {
     toggleExpanded: () => void;
 };
 export function ProjectExpanded(props: ProjectExpandableProps) {
-    const shadowColor = useTheme().palette.secondary.main;
+    const { palette, typography } = useTheme();
+    const shadowColor = palette.secondary.main;
+    const h4FontSize = typography.h4.fontSize;
     return (
         <AppPaper shadowColor={shadowColor}>
             <Stack padding={3} spacing={2} color="primary.contrastText">
@@ -17,8 +19,9 @@ export function ProjectExpanded(props: ProjectExpandableProps) {
                     isExpanded
                     toggleExpanded={props.toggleExpanded}
                     title={props.title}
+                    subtitle={props.state}
                 />
-                <Stack marginTop={3} spacing="-1px">
+                <Stack marginTop={3} spacing={`calc(${h4FontSize} * 1.5)`}>
                     {props.sections.map((section) => (
                         <ProjectSection key={section.title} {...section} />
                     ))}

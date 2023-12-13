@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { Email, GitHub, LinkedIn, Web } from '@mui/icons-material';
 import { AppBar, Box, Divider, Stack } from '@mui/material';
 
+import { useIsPathnameResume } from '../../util/routes';
 import { AppLink } from '../base/AppLink';
 import { AppTypography } from '../base/AppTypography';
 
@@ -34,6 +35,7 @@ function ContactInfo(props: ContactInfoProps) {
 }
 
 export function BottomBar() {
+    if (useIsPathnameResume()) return null;
     const appBarColor = '#333333';
     return (
         <AppBar

@@ -48,12 +48,14 @@ function ProjectComponent(project: ProjectComponentProps) {
                 justifyContent="space-between"
                 alignItems="center"
                 direction="column"
+                spacing={1}
             >
                 <ProjectTitle
                     isExpanded={isExpanded}
                     toggleExpanded={disableExpand ? undefined : toggleExpanded}
                     disableExpand={disableExpand}
                     title={project.title}
+                    subtitle={project.state}
                 />
                 <ToolsDisplayList toolIds={project.tools} />
             </Stack>

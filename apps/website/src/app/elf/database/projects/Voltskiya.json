@@ -1,6 +1,7 @@
 {
     "$schema": "../schema/project.schema.json",
     "title": "Voltskiya",
+    "state": "success/expanding",
     "ratingRaw": {
         "impact": 8.0,
         "difficulty": 7.5,
@@ -15,7 +16,12 @@
                 "Made very basic plugins such as preventing mobs from equiping armor on the ground or slowing players natural health regeneration"
             ],
             "comments": ["I started learning how to use Github at this time"],
-            "tools": { "Java": {}, "Github": {}, "IntelliJ": {} },
+            "tools": {
+                "Java": {},
+                "Github": {},
+                "IntelliJ": {},
+                "PaperMC": {}
+            },
             "dates": {
                 "dateApproximation": "MONTH",
                 "startDate": "2020-03-01",
@@ -29,7 +35,7 @@
             }
         },
         {
-            "title": "Expansion",
+            "title": "Mob Abilities & Game Mechanics",
             "description": "Immensely expanded the code base by adding mob abilities, game mechanics, and a mob system.",
             "summary": [
                 "Added an extensive library of mob abilities so a 'GameMaster' (a person) could mix and match abilities to create new mobs. This also included 'leaps' so certain mobs could jump higher and at various speeds on a cooldown",
@@ -37,9 +43,15 @@
                 "Created MobSystem_v1 by pre-scanning the world to find spawnable places according to a series of spawning rules"
             ],
             "comments": [
-                "Was learning SQL at this time. I think it was good experience to not use an ORM to learn how to write the queries"
+                "Was learning SQL at this time. I think it was good experience to not use an ORM initially to learn how to write the queries"
             ],
-            "tools": { "Java": {}, "Github": {}, "IntelliJ": {}, "SQL": {} },
+            "tools": {
+                "Java": {},
+                "Github": {},
+                "IntelliJ": {},
+                "SQL": {},
+                "PaperMC": {}
+            },
             "dates": {
                 "dateApproximation": "MONTH",
                 "startDate": "2021-03-01",
@@ -63,23 +75,72 @@
                     "comment": "Decay and regeneration of the map was big enough to be it's own repo"
                 }
             }
-        }
-    ],
-    "dates": [
+        },
         {
-            "dateApproximation": "MONTH",
-            "startDate": "2022-07-08",
-            "endDate": "2023-07-01"
+            "title": "Mob System & Game Mechanics",
+            "description": "Developed MobSystem_v2 by choosing random locations and using probabilities to determine whether to spawn a mob there.",
+            "summary": [
+                "Utilized a SQL database to pregenerate 50k mobs to fill the map",
+                "Allows for flexible spawning rules customization",
+                "Uses the concept of inheritance applied to JSON objects. For example most all biomes allow mobs to spawn in caves. So those biomes 'inherit' from CaveMobs. CaveMobs 'inherit' from  LowCaves, StandardCaves, and HighCaves for varying depths."
+            ],
+            "comments": [
+                "Usually, inheritance should work where more specific objects inherit from more general objects, but I believe this is an appropriate exception."
+            ],
+            "dates": {
+                "dateApproximation": "MONTH",
+                "startDate": "2022-07-08",
+                "endDate": "2023-06-02"
+            },
+            "tools": {
+                "IntelliJ": {},
+                "Github": {},
+                "SQL": {},
+                "Ebean": {},
+                "PaperMC": {},
+                "Java": {}
+            },
+            "urls": {
+                "Git-MobSystem": {
+                    "link": "https://github.com/amp7368/VoltskiyaMobSystem",
+                    "comment": "Repo for MobSystem."
+                }
+            }
+        },
+        {
+            "title": "Game Mechanics",
+            "description": "Added game mechanics such as Temperature, Stamina, and Thirst",
+            "summary": [
+                "Add Stamina mechanic so that players cannot run infinitely.",
+                "Add Thirst mechanic so that players need to drink water after some time to avoid debuffs. Add containers such as SimpleBottle, Canteen, and FilteredCanteen.",
+                "Add Temperature mechanic making players become hot/cold depending on the environment & clothing. Gives debuffs according to how hot/cold the player is."
+            ],
+            "comments": [
+                "I also added an indicator icon at the top of the screen by adding an SVG of a thermometer that I created to the private-use section of unicode in the TTF format"
+            ],
+            "dates": {
+                "dateApproximation": "MONTH",
+                "startDate": "2023-06-03",
+                "endDate": "current"
+            },
+            "tools": {
+                "IntelliJ": {},
+                "Github": {},
+                "SQL": {},
+                "PaperMC": {},
+                "Java": {}
+            },
+            "urls": {
+                "Git-Mechanics": {
+                    "link": "https://github.com/Voltskiya-com/VoltskiyaMechanics",
+                    "comment": "Repo for Temperature and other Game Mechanics"
+                }
+            }
         }
     ],
+    "dates": [],
     "summary": [],
-    "tools": {
-        "IntelliJ": {},
-        "Github": {},
-        "SQL": {},
-        "PaperMC": {},
-        "Java": {}
-    },
+    "tools": {},
     "comments": [
         "I really grew as a programmer with this project more than any other to date.",
         "Working to develop for an ever-changing environment taught me the importance of writing code that didn't just get the job done for today, but also for the next project"

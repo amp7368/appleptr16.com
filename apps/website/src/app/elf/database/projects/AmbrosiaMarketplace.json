@@ -1,5 +1,6 @@
 {
     "$schema": "../schema/project.schema.json",
+    "state": "abandoned",
     "ratingRaw": {
         "impact": 4.2,
         "difficulty": 4.0,
@@ -17,7 +18,8 @@
         "endDate": "2022-07-01"
     },
     "summary": [
-        "A large project to develop a website for players to have storefronts for Wynncraft"
+        "A large project to develop a website for players to have storefronts for Wynncraft",
+        "Unfortunately, motivation fell for this project, and did not get very far"
     ],
     "tools": {
         "React": {},

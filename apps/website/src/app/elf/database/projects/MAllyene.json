@@ -1,8 +1,9 @@
 {
     "$schema": "../schema/project.schema.json",
+    "state": "abandoned",
     "ratingRaw": {
-        "impact": 6.0,
-        "difficulty": 6.0,
+        "impact": 3.0,
+        "difficulty": 2.0,
         "size": 5.0
     },
     "title": "MAllyene",

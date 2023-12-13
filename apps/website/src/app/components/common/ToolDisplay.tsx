@@ -21,7 +21,7 @@ export type ToolDisplayProps = (ToolID | { tool: Tool }) & {
 export function ToolDisplay(props: ToolDisplayProps) {
     let toolId = 'id' in props ? props.id : props.tool.id;
 
-    const tool: Optional<Tool> = useTool(toolId);
+    const tool: Tool | undefined = useTool(toolId);
     if (!tool) return null;
     const isToolsPath = useIsPathname(urls.tools);
     const onToolClick = useCallback(

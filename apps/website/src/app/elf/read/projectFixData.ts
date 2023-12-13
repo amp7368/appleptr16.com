@@ -19,7 +19,9 @@ import {
 export function fixProjectData(raw: ProjectRawData): ProjectProps {
     if (!Array.isArray(raw.dates)) raw.dates = [raw.dates];
     const summary: string[] = [...raw.summary];
-    const tools: Record<string, ToolNotes> = { ...raw.tools };
+    const tools: Record<string, ToolNotes> = Object.fromEntries(
+        Object.entries(raw.tools).sort(([a], [b]) => a.localeCompare(b))
+    );
     const urls: Record<string, ProjectUrl> = { ...raw.urls };
     const datesRaw: FullDateRangeRaw = [...raw.dates];
     const sections: ProjectSectionProps[] = [];
@@ -55,6 +57,7 @@ export function fixProjectData(raw: ProjectRawData): ProjectProps {
         title: raw.title,
         comments: endWithPeriods(raw.comments),
         summary: endWithPeriods(summary),
+        state:raw.state,
         tools,
         urls,
         dates,

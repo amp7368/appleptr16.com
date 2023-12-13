@@ -17,3 +17,6 @@ export function useIsPathname(path: string) {
     if (!loc.endsWith('/')) loc += '/';
     return path === loc;
 }
+export function useIsPathnameResume() {
+    return useIsPathname(urls.resume);
+}

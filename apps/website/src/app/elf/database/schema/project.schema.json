@@ -3,6 +3,16 @@
     "type": "object",
     "properties": {
         "title": { "type": "string" },
+        "state": {
+            "type": "string",
+            "enum": [
+                "abandoned",
+                "in-progress",
+                "success/retired",
+                "success/current",
+                "success/expanding"
+            ]
+        },
         "dates": { "$ref": "./date-list.schema.json" },
         "urls": { "$ref": "./project-urls.schema.json" },
         "ratingRaw": { "$ref": "./project-rating.schema.json" },
@@ -20,5 +30,13 @@
             "items": { "$ref": "./project-section.schema.json" }
         }
     },
-    "required": ["title", "dates", "ratingRaw", "summary", "tools", "comments"]
+    "required": [
+        "title",
+        "state",
+        "dates",
+        "ratingRaw",
+        "summary",
+        "tools",
+        "comments"
+    ]
 }

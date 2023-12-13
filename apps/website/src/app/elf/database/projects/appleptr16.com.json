@@ -1,9 +1,10 @@
 {
     "$schema": "../schema/project.schema.json",
     "title": "appleptr16.com",
+    "state": "success/current",
     "ratingRaw": {
         "impact": 5.5,
-        "difficulty": 3.5,
+        "difficulty": 4.5,
         "size": 4.5
     },
     "urls": {
@@ -38,6 +39,10 @@
         }
     ],
     "summary": ["Developing and maintaining website to showcase projects"],
+    "comments": [
+        "This is a small, yet rewarding project because it explains my experiences in a more interesting way than a resume.",
+        "It's is essentially a work journal to keep records of notable projects."
+    ],
     "tools": {
         "React": {},
         "Typescript": {},
@@ -46,9 +51,5 @@
         "NX": {},
         "VSCode": {},
         "Cloudflare": {}
-    },
-    "comments": [
-        "This is a small, yet rewarding project because it explains my experiences in a more interesting way than a resume.",
-        "It's is essentially a work journal to keep records of notable projects."
-    ]
+    }
 }

@@ -1,11 +1,12 @@
 {
     "$schema": "../schema/project.schema.json",
     "ratingRaw": {
-        "impact": 7.0,
+        "impact": 5.0,
         "difficulty": 5.0,
         "size": 6.0
     },
     "title": "Ambrosia Loans",
+    "state": "in-progress",
     "urls": {
         "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" }
     },

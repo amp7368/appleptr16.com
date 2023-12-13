@@ -10,13 +10,13 @@ import { enableElfProdMode } from '@ngneat/elf';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './app/App';
 import { defaultTheme } from './app/util/appTheme';
-import { useIsPathname } from './app/util/routes';
+import { useIsPathnameResume } from './app/util/routes';
 import { environment } from './environments/environment';
 
 if (environment.production) enableElfProdMode();
 
 function WebPage() {
-    if (useIsPathname('/resume')) return <App />;
+    if (useIsPathnameResume()) return <App />;
     return (
         <Stack justifyContent="space-between" minHeight="100vh">
             <App />

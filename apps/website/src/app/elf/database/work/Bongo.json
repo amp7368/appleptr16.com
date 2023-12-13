@@ -1,11 +1,11 @@
 {
     "$schema": "../schema/work.schema.json",
-    "company": "Bongo LLC",
+    "content": "Bongo LLC",
     "role": "Developer",
     "dates": {
         "dateApproximation": "DAY",
         "startDate": "2023-04-01",
-        "endDate": "current"
+        "endDate": "2023-08-20"
     },
     "summary": [
         "Gave feedback and advice about what technical challenges may lay in the way of specific tasks and offered other improvements.",

@@ -1,0 +1,53 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "state": "success/expanding",
+    "ratingRaw": {
+        "impact": 6.5,
+        "difficulty": 5.5,
+        "size": 6.0
+    },
+    "title": "Cloverbot",
+    "urls": {
+        "Website": { "link": "https://wynncloud.com/player" },
+        "Github-App": { "link": "https://github.com/amp7368/CloverBot" },
+        "Github-Web": { "link": "https://github.com/amp7368/CloverWeb" },
+        "Github-Archive v2": {
+            "link": "https://github.com/amp7368/CloverBot2.0"
+        }
+    },
+    "dates": [
+        {
+            "dateApproximation": "MONTH",
+            "startDate": "2020-10-24",
+            "endDate": "2020-10-27"
+        },
+        {
+            "dateApproximation": "MONTH",
+            "startDate": "2021-08-05",
+            "endDate": "2021-09-01"
+        },
+        {
+            "dateApproximation": "MONTH",
+            "startDate": "2023-02-13",
+            "endDate": "current"
+        }
+    ],
+    "summary": [
+        "Originally, developed a Discord bot to create activity reports for guilds sorting by the last time the player logged into Wynncraft.",
+        "Expanded to include how many hours of playtime each player had within the last # of weeks.",
+        "Later added a basic website to graph player activity, raids, and other stats depending on a search query."
+    ],
+    "comments": [
+        "The database is large with over 350 million rows as of Dec 2023"
+    ],
+    "tools": {
+        "IntelliJ": {},
+        "Github": {},
+        "JDA": {},
+        "Java": {},
+        "SQL": {},
+        "Ebean": {},
+        "Javalin": {},
+        "RESTful API": {}
+    }
+}
