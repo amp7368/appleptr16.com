@@ -46,7 +46,7 @@ function ProjectComponent(project: ProjectComponentProps) {
         <ProjectContainer>
             <Stack
                 justifyContent="space-between"
-                alignItems="center"
+                alignItems="start"
                 direction="column"
                 spacing={1}
             >

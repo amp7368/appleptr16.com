@@ -1,4 +1,7 @@
 import './app/init';
+// import 'highlight.js/styles/base16/windows-nt.min.css';
+import 'highlight.js/styles/base16/solar-flare.min.css';
+import './app.css';
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';

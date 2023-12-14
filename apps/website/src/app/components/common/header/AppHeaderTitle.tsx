@@ -11,7 +11,7 @@ export function AppHeaderTitle() {
             alignSelf="start"
             height="auto"
             width="auto"
-            bgcolor={appBarColor}
+            bgcolor={lighten(appBarColor, 0.05)}
             zIndex={({ zIndex }: Theme) => zIndex.appBar - 1000}
             sx={{ transform: 'perspective(10px) rotateX(-1deg)' }}
             paddingLeft="2.5rem"
