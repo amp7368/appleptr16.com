@@ -8,6 +8,7 @@ import { AppTypography } from '../../components/base/AppTypography';
 import { Page } from '../../components/common/Page';
 import { SectionHeader } from '../projects/common/SectionHeader';
 import { OverviewHintToNavigate } from './OverviewHintToNavigate';
+import { AboutMeCode } from './AboutMeCode';
 
 interface OverviewSectionProps {
     title: string;
@@ -116,6 +117,7 @@ export function OverviewPage() {
                     }
                 />
             </Stack>
+            <AboutMeCode/>
         </Page>
     );
 }

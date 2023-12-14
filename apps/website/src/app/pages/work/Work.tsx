@@ -22,7 +22,7 @@ export function Work(props: WorkProps) {
             >
                 <Stack
                     justifyContent="space-between"
-                    alignItems="center"
+                    alignItems="start"
                     direction="column"
                 >
                     <WorkTitle company={props.company} role={props.role} />

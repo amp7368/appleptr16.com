@@ -1,6 +1,6 @@
 {
     "$schema": "../schema/work.schema.json",
-    "content": "Bongo LLC",
+    "company": "Bongo LLC",
     "role": "Developer",
     "dates": {
         "dateApproximation": "DAY",

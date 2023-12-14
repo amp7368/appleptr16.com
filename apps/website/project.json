@@ -25,7 +25,8 @@
                 "tsConfig": "apps/website/tsconfig.app.json",
                 "assets": ["apps/website/src/favicon.ico"],
                 "styles": [],
-                "scripts": []
+                "scripts": [],
+                "webpackConfig": "apps/website/webpack.config.js"
             },
             "configurations": {
                 "development": {
@@ -40,8 +41,7 @@
                     "optimization": false,
                     "sourceMap": true,
                     "vendorChunk": true,
-                    "isolatedConfig": true,
-                    "webpackConfig": "apps/website/webpack.config.js"
+                    "isolatedConfig": true
                 },
                 "production": {
                     "fileReplacements": [

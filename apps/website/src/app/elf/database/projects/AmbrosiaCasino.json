@@ -35,7 +35,7 @@
         },
         {
             "title": "Roulette",
-            "description": "Created Roulette (with a SPINNING WHEEL) utilizing the profile system",
+            "description": "Created Roulette (with a spinning wheel!!) utilizing the profile system",
             "summary": [
                 "Because Discord is a messaging app, I had to think of a clever solution to show a spinning wheel. I send unique GIFs of the spinning wheel landing on the number that is chosen",
                 "I created a program to pregenerate GIFs for each number it could land on with 10 variations each number chaning the time or velocity",

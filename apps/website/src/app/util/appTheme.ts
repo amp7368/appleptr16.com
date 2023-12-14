@@ -45,5 +45,5 @@ export const defaultThemeOptions: ThemeOptions = {
         error: { main: '#753535' },
     },
 };
-export const appBarColor = '#333333';
+export const appBarColor = '#011627';
 export const defaultTheme = createTheme(defaultThemeOptions);

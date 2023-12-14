@@ -6,6 +6,18 @@ module.exports = composePlugins(
     withReact({ svgr: true }),
     (config, { options, context }) => {
         // customize webpack config here
-        return config;
+        return {
+            ...config,
+            module: {
+                ...config.module,
+                rules: [
+                    ...config.module.rules,
+                    {
+                        test: /\.(java)$/i,
+                        use: 'file-loader',
+                    },
+                ],
+            }
+        };
     }
 );
