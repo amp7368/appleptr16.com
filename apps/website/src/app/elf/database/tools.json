@@ -11,8 +11,8 @@
     },
     "Github": {
         "comments": [
-            "Git is great for revisiting old code",
-            "It's important to visualize what changes you've made to create a feature"
+            "Git serves as a checkpoint system to remove the fear of 'what if this changes breaks something else?'",
+            "It's also great for collaboration on a project so you can parallelize working on a project"
         ],
         "tags": ["UTILITY"]
     },

@@ -39,3 +39,4 @@ testem.log
 Thumbs.db
 **/ssl
 serve/website/static/fonts/
+.nx/

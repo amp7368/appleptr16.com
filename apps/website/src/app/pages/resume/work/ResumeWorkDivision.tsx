@@ -10,7 +10,7 @@ export function ResumeWorkDivision() {
             <ResumeSectionHeader>Work Experience</ResumeSectionHeader>
             <Stack marginTop={2} spacing={2}>
                 {work.map((w) => (
-                    <ResumeWork {...w} />
+                    <ResumeWork key={`${w.company}.${w.role}`} {...w} />
                 ))}
             </Stack>
         </Box>

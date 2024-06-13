@@ -1,9 +1,9 @@
 {
     "$schema": "../schema/project.schema.json",
     "ratingRaw": {
-        "impact": 5.0,
-        "difficulty": 5.0,
-        "size": 6.0
+        "impact": 6.0,
+        "difficulty": 7.0,
+        "size": 7.5
     },
     "title": "Ambrosia Loans",
     "state": "in-progress",
@@ -23,19 +23,18 @@
         }
     ],
     "summary": [
-        "Developing a website to manage investments and loans of players in an in-game business in Wynncraft."
+        "Designed and implemented a banking discord bot and database to manage loans and investments of the Ambroisa business within Wynncraft.",
+        "Staff manage loans and investments through 35+ unique discord commands.",
+        "Implemented a fully functional interest system that distributes profits to investors according to their investment stake."
     ],
     "tools": {
-        "React": {},
-        "Typescript": {},
-        "@mui/material": {},
-        "@ngneat/elf": {},
-        "SQL": {},
-        "NX": {},
         "Docker": {},
-        "VSCode": {}
+        "Ebean": {},
+        "IntelliJ": {},
+        "Java": {},
+        "SQL": {}
     },
     "comments": [
-        "This is a very experimental project to experiment with different styles that compliment the libraries being used"
+        "Additionally, several tables have a history, so staff can use undo/redo commands to fix any mistakes they may make."
     ]
 }

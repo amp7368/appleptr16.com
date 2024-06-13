@@ -9,7 +9,7 @@ export function ResumeProjectDivision() {
             <ResumeSectionHeader>Projects</ResumeSectionHeader>
             <Stack marginTop={2} spacing={2}>
                 {projects.map((proj) => (
-                    <ResumeProject {...proj} />
+                    <ResumeProject key={proj.title} {...proj} />
                 ))}
             </Stack>
         </Box>

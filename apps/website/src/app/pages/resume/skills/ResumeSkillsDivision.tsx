@@ -7,7 +7,7 @@ export function ResumeSkillsDivision() {
     return (
         <Stack spacing={1} direction="row">
             {skills.map((skill) => (
-                <ResumeSkill skill={skill} />
+                <ResumeSkill key={skill} skill={skill} />
             ))}
         </Stack>
     );

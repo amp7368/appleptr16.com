@@ -1,1 +1,1 @@
-To test locally, verify that Google's Roboto font is install, and restart browser
+To test locally, verify that Google's Roboto font is installed, and restart browser

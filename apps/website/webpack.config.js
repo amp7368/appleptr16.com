@@ -13,7 +13,7 @@ module.exports = composePlugins(
                 rules: [
                     ...config.module.rules,
                     {
-                        test: /\.(java)$/i,
+                        test: [/\.(java)$/i, /\.md$/i],
                         use: 'file-loader',
                     },
                 ],
