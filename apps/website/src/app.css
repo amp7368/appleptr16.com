@@ -15,8 +15,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
-    src: local('roboto-v30-latin-300') format('woff2')
-        url('https://appleptr16.com/static/fonts/roboto-v30-latin-300.woff2')
+    src: url('https://appleptr16.com/static/fonts/roboto-v30-latin-300.woff2')
         format('woff2');
 }
 /* roboto-regular - latin */
@@ -25,8 +24,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: local('roboto-v30-latin-regular') format('woff2')
-        url('https://appleptr16.com/static/fonts/roboto-v30-latin-regular.woff2')
+    src: url('https://appleptr16.com/static/fonts/roboto-v30-latin-regular.woff2')
         format('woff2');
 }
 /* roboto-500 - latin */
@@ -35,8 +33,7 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    src: local('roboto-v30-latin-500') format('woff2')
-        url('https://appleptr16.com/static/fonts/roboto-v30-latin-500.woff2')
+    src: url('https://appleptr16.com/static/fonts/roboto-v30-latin-500.woff2')
         format('woff2');
 }
 

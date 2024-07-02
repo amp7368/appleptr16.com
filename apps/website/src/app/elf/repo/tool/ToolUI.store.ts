@@ -1,15 +1,15 @@
-import { Optional } from '@app/util';
 import { createStore, propsArrayFactory, withProps } from '@ngneat/elf';
 import { hasEntity, withEntities } from '@ngneat/elf-entities';
 
 import { environment } from '../../../../environments/environment';
+import { stripSchemaProp } from '../../../util/jsonUtil';
 import { persist } from '../../Elf';
 import toolsJson from '../../database/tools.json';
-import { Tool, ToolTag, ToolValue, allToolTags } from '../../types/ToolTypes';
+import { Tool, ToolRaw, ToolTag, allToolTags } from '../../types/ToolTypes';
 
 export type ToolUIEnv = {
     toolTags: ToolTag[];
-    active: Optional<Tool>;
+    active: Tool | undefined;
 };
 
 export const toolTagsArrayFactory = propsArrayFactory('toolTags', {
@@ -18,11 +18,18 @@ export const toolTagsArrayFactory = propsArrayFactory('toolTags', {
 const { withToolTags } = toolTagsArrayFactory;
 
 function getToolData(): Record<string, Tool> {
-    const tools: Tool[] = Object.entries<ToolValue>(
-        toolsJson as Record<string, ToolValue>
-    )
-        .sort(([a], [b]) => a.localeCompare(b))
-        .map(([id, tool]) => ({ id, ...tool }));
+    const rawData = stripSchemaProp(toolsJson) as Record<string, ToolRaw>;
+
+    const tools: Tool[] = Object.entries(rawData)
+        .sort(([aName], [bName]) => aName.localeCompare(bName))
+        .map(([id, tool]) => ({
+            ...tool,
+            id,
+            comments: tool.comments ?? [],
+            extra: tool.extra ?? [],
+            links: tool.links ?? [],
+        }));
+
     assertToolTagsExist(tools);
     const toolEntries: [string, Tool][] = tools.map((tool) => [tool.id, tool]);
     return Object.fromEntries(toolEntries);
@@ -50,4 +57,4 @@ export const toolStore = createStore(
     withToolTags()
 );
 
-persist(toolStore, { getEntities: () => getToolData() });
+persist(toolStore, { getEntities: getToolData });

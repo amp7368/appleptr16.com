@@ -1,18 +1,28 @@
 {
+    "$schema": "./schema/tools-list.schema.json",
     "IntelliJ": {
         "comments": ["I use this IDE for Java development"],
+        "links": [
+            {
+                "href": "https://www.jetbrains.com/idea/"
+            }
+        ],
         "tags": ["IDE"]
     },
     "VSCode": {
         "comments": [
-            "I use this IDE for development in languages besides Java and C#"
+            "I use this IDE for development in languages besides Java, SQL, and C#"
         ],
+        "links": [{ "href": "https://code.visualstudio.com/" }],
         "tags": ["IDE"]
     },
     "Github": {
         "comments": [
             "Git serves as a checkpoint system to remove the fear of 'what if this changes breaks something else?'",
             "It's also great for collaboration on a project so you can parallelize working on a project"
+        ],
+        "links": [
+            { "title": "My Profile", "href": "https://github.com/amp7368/" }
         ],
         "tags": ["UTILITY"]
     },
@@ -27,10 +37,26 @@
             "Used to develop plugins for minecraft servers that are hosted using Paper",
             "Paper adds some utilities for controlling almost anything in a server through code"
         ],
+        "links": [
+            {
+                "href": "https://docs.papermc.io/paper",
+                "title": "Main Website"
+            },
+            {
+                "href": "https://docs.papermc.io/paper/dev/how-do-plugins-work",
+                "title": "How Plugins Work"
+            },
+            {
+                "href": "https://docs.papermc.io/paper/dev/how-do-plugins-work#event-listeners",
+                "title": "Event Listeners"
+            }
+        ],
+
         "tags": ["LIBRARY"]
     },
     "JDA": {
         "comments": ["A java library to make Discord bots"],
+        "links": [{ "href": "https://jda.wiki/" }],
         "tags": ["LIBRARY"]
     },
     "React": {
@@ -48,6 +74,7 @@
         "comments": [
             "A react library for styling and building React components"
         ],
+        "links": [{ "href": "https://mui.com/material-ui/" }],
         "tags": ["LIBRARY"]
     },
     "@ngneat/elf": {
@@ -55,6 +82,7 @@
             "\"A Reactive Store with Magical Powers\"",
             "Useful for managing state in react"
         ],
+        "links": [{ "href": "https://ngneat.github.io/elf/" }],
         "tags": ["LIBRARY"]
     },
     "NX": {
@@ -112,11 +140,15 @@
         "tags": ["SERVICE"]
     },
     "Ebean": {
-        "comments": ["A java ORM library for interactions with SQL"],
+        "comments": [
+            "A java ORM library and annotation-processor for writing SQL queries and interaction with SQL databases"
+        ],
+        "links": [{ "href": "https://ebean.io/" }],
         "tags": ["LIBRARY"]
     },
     "Javalin": {
         "comments": ["A lightweight web framework for Java"],
+        "links": [{ "href": "https://javalin.io/" }],
         "tags": ["LIBRARY"]
     },
     "SQL": {
@@ -127,7 +159,7 @@
         "comments": [
             "A cloud hosting provider with an extensive selection of software"
         ],
-        "tags": ["OTHER"]
+        "tags": ["SERVICE"]
     },
     "MS-Teams": {
         "comments": [],

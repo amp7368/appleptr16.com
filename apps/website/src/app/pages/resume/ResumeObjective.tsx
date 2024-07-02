@@ -12,11 +12,10 @@ export function ResumeObjective() {
                 Objective
             </AppTypography>
             <AppTypography variant="body1">
-                Looking to continue applying creative thinking to build
-                interesting solutions to problems.
-                <br />
-                Seeking a co-op for the Spring or Fall of 2024 and a full-time
-                position starting the Summer of 2025.
+                Creative and driven Computer Science student seeking a co-op for
+                Fall 2025 and a full-time position starting Summer 2025.
+                Passionate about writing artistic code with a safety-first
+                mindset.
             </AppTypography>
         </Stack>
     );

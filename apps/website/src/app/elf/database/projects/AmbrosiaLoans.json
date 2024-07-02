@@ -1,14 +1,17 @@
 {
     "$schema": "../schema/project.schema.json",
     "ratingRaw": {
-        "impact": 6.0,
+        "impact": 7.6,
         "difficulty": 7.0,
         "size": 7.5
     },
     "title": "Ambrosia Loans",
-    "state": "in-progress",
+    "state": "success/expanding",
     "urls": {
-        "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" }
+        "Github": { "link": "https://github.com/amp7368/AmbrosiaLoans" },
+        "Ambrosia Loans TOS": {
+            "link": "https://drive.google.com/file/d/1vvterxdNJx7Uyww3xu_O3zvor9f1QCP-/view"
+        }
     },
     "dates": [
         {
@@ -35,6 +38,6 @@
         "SQL": {}
     },
     "comments": [
-        "Additionally, several tables have a history, so staff can use undo/redo commands to fix any mistakes they may make."
+        "Several tables have a history, so staff can use undo/redo commands to fix any mistakes they may make."
     ]
 }

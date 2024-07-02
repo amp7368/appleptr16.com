@@ -44,7 +44,7 @@
         ],
         "summary": [
             "Created a Discord bot for a Casino using Wynncraft's in-game currency.",
-            "Programmed logic and a database to store profiles, game results, and every currency transaction.",
+            "Programmed logic and a database to store profiles, game results, and currency transactions.",
             "Developed GUIs and game logic for BlackJack along with Roulette with 370 spinning wheel GIFs."
         ],
         "tools": {
