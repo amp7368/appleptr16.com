@@ -1,12 +1,17 @@
 export type ToolNotes = {
     extra?: string[];
 };
-export type ToolValue = {
+export type ToolLink = {
+    title?: string;
+    href: string;
+};
+export type ToolRaw = {
     extra?: string[];
     comments?: string[];
+    links?: ToolLink[];
     tags: ToolTag[];
 };
-export type Tool = ToolValue & { id: string };
+export type Tool = Required<ToolRaw> & { id: string };
 
 export const allToolTags: ToolTag[] = [
     'LANGUAGE',

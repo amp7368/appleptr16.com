@@ -1,6 +1,6 @@
 {
     "$schema": "../schema/project.schema.json",
-    "state": "success/expanding",
+    "state": "success/current",
     "ratingRaw": {
         "impact": 6.5,
         "difficulty": 5.5,

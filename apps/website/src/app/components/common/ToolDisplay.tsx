@@ -9,6 +9,7 @@ import { urls, useIsPathname } from '../../util/routes';
 import { AppLink } from '../base/AppLink';
 import { AppTypography } from '../base/AppTypography';
 import { ToolTipTypography } from '../base/ToolTipTypography';
+import { Variant } from '@mui/material/styles/createTypography';
 
 type ToolID = {
     id: string;
