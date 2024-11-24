@@ -85,39 +85,8 @@ export function OverviewPage() {
                         </AppTypography>
                     }
                 />
-                <OverviewSection
-                    title="Mental Health"
-                    summary={
-                        <Stack spacing={1} alignItems="center">
-                            <AppTypography fontWeight={500}>
-                                I'm an advocate for mental health awareness.
-                                Currently, my challenge stems from the
-                                following:
-                            </AppTypography>
-                            <Quote quoteSize="medium" color="text.primary">
-                                <AppTypography
-                                    variant="body1"
-                                    fontWeight={600}
-                                    textAlign="center"
-                                >
-                                    What are you going to do and accomplish now
-                                    that you feel better?
-                                </AppTypography>
-                            </Quote>
-                            <Quote quoteSize="small" color="text.secondary">
-                                <AppTypography
-                                    variant="h5"
-                                    fontStyle="oblique"
-                                    textAlign="center"
-                                >
-                                    less
-                                </AppTypography>
-                            </Quote>
-                        </Stack>
-                    }
-                />
             </Stack>
-            <AboutMeCode/>
+            <AboutMeCode />
         </Page>
     );
 }

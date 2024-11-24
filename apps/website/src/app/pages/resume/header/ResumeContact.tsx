@@ -2,10 +2,10 @@ import { Stack } from '@mui/material';
 import { ReactNode } from 'react';
 import { AppTypography } from '../../../components/base/AppTypography';
 
-import { Email, GitHub, LinkedIn, Web } from '@mui/icons-material';
+import { Email, GitHub, LinkedIn, Phone, Web } from '@mui/icons-material';
 import { AppBar, Box, Divider } from '@mui/material';
-import { ResumeSectionHeader } from '../common/ResumeSectionHeader';
 import { AppLink } from '../../../components/base/AppLink';
+import { ResumeSectionHeader } from '../common/ResumeSectionHeader';
 
 export function ResumeContact() {
     return (

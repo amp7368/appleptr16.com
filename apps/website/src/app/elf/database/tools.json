@@ -135,13 +135,25 @@
         ],
         "tags": ["LANGUAGE"]
     },
+    "SQLAlchemy": {
+        "comments": [
+            "A Python ORM library for writing SQL queries and interact with SQL databases"
+        ],
+        "tags": ["LIBRARY"]
+    },
+    "numpy": {
+        "comments": [
+            "A python library for doing efficient matrix and vector transformations"
+        ],
+        "tags": ["LIBRARY"]
+    },
     "Cloudflare": {
         "comments": ["I used it for SSL certs, proxying traffic, and as a CDN"],
         "tags": ["SERVICE"]
     },
     "Ebean": {
         "comments": [
-            "A java ORM library and annotation-processor for writing SQL queries and interaction with SQL databases"
+            "A Java ORM library and annotation-processor for writing SQL queries and interaction with SQL databases"
         ],
         "links": [{ "href": "https://ebean.io/" }],
         "tags": ["LIBRARY"]

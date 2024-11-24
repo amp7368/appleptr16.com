@@ -1,6 +1,37 @@
 [
     {
+        "title": "N-Lotka Volterra",
+        "type": "Research",
+        "ratingRaw": {
+            "impact": 7.8,
+            "difficulty": 6,
+            "size": 6.0
+        },
+        "urls": {
+            "Github": { "link": "https://github.com/amp7368/N-Lotka-Volterra" }
+        },
+        "dates": {
+            "dateApproximation": "DAY",
+            "startDate": "2024-4-20",
+            "endDate": "current"
+        },
+        "description": [
+            "Simulating N-Species Lotka-Volterra models to explain observed food-web structures."
+        ],
+        "tools": {
+            "Python": {},
+            "SQLAlchemy": {},
+            "numpy": {}
+        },
+        "summary": [
+            "Analyzing simulation data from N-Species Lotka-Volterra models to bridge the gap between observed and predicted ecosystem populations.",
+            "Developed GPU kernals to run many simulations for data analysis to understand the role that structure plays in food-web stability over time.",
+            "Writing a research manuscript to publish the findings."
+        ]
+    },
+    {
         "title": "Voltskiya",
+        "type": "Personal",
         "dates": [
             {
                 "dateApproximation": "MONTH",
@@ -20,40 +51,36 @@
         ],
         "description": "Programmed Minecraft plugins to create a unique experience in a survival server.",
         "summary": [
-            "Created an extensive library of mob abilities so 'GameMasters' can mix and match to create new mobs.",
+            "Created an extensive library of mob abilities for GameMasters.",
             "Engineered a series of game features such as Temperature, Thirst, Stamina, and skill points.",
             "Developed a MobSystem with customizable spawning contexts that pregenerates 50k mobs to fill the map."
         ],
         "comments": [
-            "Working to develop for an ever-changing environment taught me the importance of writing code that leaves room for expansion"
+            "Working to develop for an ever-changing environment taught me the importance of writing code that leaves room for expansion."
         ]
     },
     {
-        "title": "Ambrosia Casino",
+        "type": "Personal",
+        "title": "Ambrosia Loans",
         "dates": [
             {
                 "dateApproximation": "DAY",
-                "startDate": "2022-11-20",
-                "endDate": "2022-12-20"
+                "startDate": "2022-05-08",
+                "endDate": "2022-12-27"
             },
             {
                 "dateApproximation": "DAY",
-                "startDate": "2023-7-16",
-                "endDate": "2023-07-24"
+                "startDate": "2023-08-27",
+                "endDate": "current"
             }
         ],
-        "summary": [
-            "Created a Discord bot for a Casino using Wynncraft's in-game currency.",
-            "Programmed logic and a database to store profiles, game results, and currency transactions.",
-            "Developed GUIs and game logic for BlackJack along with Roulette with 370 spinning wheel GIFs."
+        "description": [
+            "Implemented a banking discord bot and database to manage loans and investments of Ambroisa Loans."
         ],
-        "tools": {
-            "Java": {},
-            "JDA": {},
-            "Ebean": {},
-            "SQL": {},
-            "IntelliJ": {},
-            "Github": {}
-        }
+        "summary": [
+            "Several tables have a history, so staff can use undo/redo commands to fix any mistakes they may make.",
+            "Staff manage loans and investments through 35+ discord commands.",
+            "Implemented a fully functional interest system that distributes profits to investors according to their investment stake."
+        ]
     }
 ]

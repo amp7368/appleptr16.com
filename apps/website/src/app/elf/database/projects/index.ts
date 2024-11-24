@@ -7,6 +7,7 @@ import BuildBot from './BuildBot.json';
 import Excursion from './Excursion.json';
 import MAllyene from './MAllyene.json';
 import Voltskiya from './Voltskiya.json';
+import NLotkaVolterra from './NLotkaVolterra.json';
 import Cloverbot from './Cloverbot.json';
 export default [
     AmbrosiaCasino,
@@ -18,6 +19,7 @@ export default [
     MAllyene,
     Voltskiya,
     Cloverbot,
+    NLotkaVolterra,
     // Colourful,
     // Pushups,
     // QuestBot,
