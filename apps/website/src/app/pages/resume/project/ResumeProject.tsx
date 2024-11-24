@@ -8,7 +8,7 @@ export function ResumeProject(project: ResumeProjectProps) {
     return (
         <Stack>
             <AppTypography variant="h3">
-                <u>{project.title}</u> - Personal
+                <u>{project.title}</u> - {project.type}
             </AppTypography>
             <AppTypography>{project.description}</AppTypography>
             <Stack direction="row" marginTop={2} spacing={2}>

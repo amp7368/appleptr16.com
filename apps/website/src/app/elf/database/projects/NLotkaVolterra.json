@@ -1,0 +1,32 @@
+{
+    "$schema": "../schema/project.schema.json",
+    "title": "N-Lotka Volterra",
+    "state": "in-progress",
+    "ratingRaw": {
+        "impact": 7.8,
+        "difficulty": 6,
+        "size": 6.0
+    },
+    "urls": {
+        "Github": { "link": "https://github.com/amp7368/N-Lotka-Volterra" }
+    },
+    "dates": {
+        "dateApproximation": "DAY",
+        "startDate": "2024-4-20",
+        "endDate": "current"
+    },
+    "summary": [
+        "Working on a research project studying multi-species ecosystems by analyzing simulation data to predict the general stability of ecosystem populations"
+    ],
+    "tools": {
+        "Python": {},
+        "SQLAlchemy": {},
+        "numpy": {}
+    },
+    "comments": [
+        "Intending to write a paper after the research to hopefully publish the results",
+        "The Lotka-Volterra model only handles 2 species, but it can be closely approximated using Euler's method to extend to N species.",
+        "Practicing writing in Python and using SQLAlchemy, and numpy.",
+        "Will be generating and working with BigData after migrating the running of simulations to use the GPU."
+    ]
+}

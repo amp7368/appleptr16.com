@@ -2,6 +2,7 @@ import { FullDateRangeProps, FullDateRangeRaw } from './DateTypes';
 
 export interface ResumeProjectRaw {
     title: string;
+    type: string;
     url?: string;
     dates: FullDateRangeRaw;
     description: string;
